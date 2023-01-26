@@ -1,0 +1,12 @@
+.banner {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  top: 40%;
+  
+  padding: 0 15%;
+  width: 75%;
+  max-width: 1200px;
+}
