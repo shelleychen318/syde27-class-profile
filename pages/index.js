@@ -1,7 +1,6 @@
-import Head from 'next/head'
+import Head from "next/head";
 import { NavBar } from "../components";
-import styles from '../styles/Home.module.scss';
-
+import styles from "../styles/Home.module.scss";
 
 export default function Home() {
   return (
@@ -11,9 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.banner}>
-        <NavBar />
-      </div>
+      <NavBar />
     </>
-  )
+  );
 }
