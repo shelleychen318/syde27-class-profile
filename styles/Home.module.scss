@@ -1,27 +1,38 @@
 .banner {
   position: absolute;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  top: 40%;
-  padding: 0 15%;
+  flex-direction: row;
+  align-items: center;
+  // top: 25%;
+  padding: 0 10%;
   width: fit-content;
 
-  .button {
-    text-decoration: none;
-    font-size: 20px;
-    padding: 12px 20px;
-    border: 3px solid var(--primary);
-    background-color: var(--primary);
-    color: var(--bg);
-    border-width: 2;
-    border-radius: 12px;
+  .title {
+    display: flex;
+    flex-direction: column;
+
+    .button {
+      text-decoration: none;
+      font-size: 20px;
+      padding: 12px 20px;
+      border: 3px solid var(--primary);
+      background-color: var(--primary);
+      color: var(--bg);
+      border-width: 2;
+      border-radius: 12px;
+      width: fit-content;
+    }
+
+    .button:hover {
+      border: 3px solid var(--primary);
+      background-color: var(--bg);
+      color: var(--primary);
+      border-color: var(--primary);
+    }
   }
 
-  .button:hover {
-    border: 3px solid var(--primary);
-    background-color: var(--bg);
-    color: var(--primary);
-    border-color: var(--primary);
+  .image {
+    width: 650px;
+    height: auto;
   }
 }
