@@ -15,8 +15,8 @@ export default function Home() {
       <div className={styles.banner}>
         <div className={styles.title}>
           <h1>Systems Design Engineering 2027 Class Profile!</h1>
-          <a className={styles.button} href="/demographics">
-            Go to Profile
+          <a href="/demographics">
+            <h4 className={styles.button}>Go to Profile</h4>
           </a>
         </div>
         <img
