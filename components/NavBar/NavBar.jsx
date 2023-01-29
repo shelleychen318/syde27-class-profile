@@ -19,16 +19,21 @@ const NavBar = () => {
     },
     {
       id: 3,
+      link: "High School",
+      href: "/highschool",
+    },
+    {
+      id: 4,
       link: "Academics",
       href: "/academics",
     },
     {
-      id: 4,
+      id: 5,
       link: "Co-op",
       href: "/co-op",
     },
     {
-      id: 4,
+      id: 6,
       link: "Lifestyle",
       href: "/lifestyle",
     },

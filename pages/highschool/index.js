@@ -2,22 +2,21 @@ import Head from "next/head";
 import { NavBar } from "../../components";
 import styles from "../profile.module.scss";
 
-export default function Demographics() {
+export default function HighSchool() {
   return (
     <>
       <Head>
-        <title>Demographics | SYDE '27</title>
+        <title>High School | SYDE '27</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <NavBar />
 
       <div className={styles.content}>
-        <div className={styles.demographics}>
-          <h2>Demographics</h2>
+        <div className={styles.highschool}>
+          <h2>High School</h2>
           <h4>
-            What are the characteristics of the individuals who make up the SYDE
-            2027 cohort?
+            What were we up to in high school?
           </h4>
         </div>
       </div>

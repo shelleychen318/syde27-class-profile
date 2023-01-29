@@ -1,0 +1,37 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem auto;
+  padding: 0 2.5rem;
+  max-width: 1200px;
+}
+
+.demographics {
+  h2 {
+    color: var(--secondary);
+  }
+}
+
+.highschool {
+  h2 {
+    color: #8C6D89;
+  }
+}
+
+.academics {
+  h2 {
+    color: #E98C8D;
+  }
+}
+
+.coop {
+  h2 {
+    color: #738BB0;
+  }
+}
+
+.lifestyle {
+  h2 {
+    color: #81BA66;
+  }
+}

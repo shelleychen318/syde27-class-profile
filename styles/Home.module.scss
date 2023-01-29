@@ -12,20 +12,16 @@
 
     .button {
       text-decoration: none;
-      padding: 12px 20px;
+      padding: 16px 20px;
       background-color: var(--primary);
       color: var(--bg);
-      border: 3px solid var(--primary);
       border-radius: 12px;
       width: fit-content;
     }
 
     .button:hover {
       cursor: pointer;
-      border: 3px solid var(--primary);
-      background-color: var(--bg);
-      color: var(--primary);
-      border-color: var(--primary);
+      background-color: var(--secondary);
     }
   }
 
