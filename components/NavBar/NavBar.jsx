@@ -27,6 +27,11 @@ const NavBar = () => {
       link: "Co-op",
       href: "/co-op",
     },
+    {
+      id: 4,
+      link: "Lifestyle",
+      href: "/lifestyle",
+    },
   ];
 
   return (

@@ -2,8 +2,8 @@
 
 :root {
   --bg: #f8f4ec;
-  --primary: #1f1d1d;
-  --secondary: #000;
+  --primary:  #8eccc1;
+  --secondary: red;
   --tertiary: #303040;
   --main-text: #1f1d1d;
   --sub-text: #ddd;
@@ -24,4 +24,10 @@ body {
   padding: 0;
   margin: 0;
   color: var(--main-text);
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 68px;
 }

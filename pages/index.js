@@ -11,6 +11,13 @@ export default function Home() {
       </Head>
 
       <NavBar />
+
+      <div className={styles.banner}>
+        <h1>SYDE 2027 Class Profile!</h1>
+        <a className={styles.button} href="/demographics">
+          Go to Profile
+        </a>
+      </div>
     </>
   );
 }
