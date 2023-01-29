@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About SYDE '27</title>
+        <title>About | SYDE '27</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -14,7 +14,7 @@ export default function About() {
 
       <div className={styles.content}>
         <div>
-          <h2 className={styles.heading}>About Systems Design Engineering </h2>
+          <h2 className={styles.heading}>About the Program</h2>
           <p className={styles.paragraph}>
             Systems Design Engineering is a unique interdisciplinary engineering
             program at the University of Waterloo that explores problem solving
