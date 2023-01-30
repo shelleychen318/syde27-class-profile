@@ -26,11 +26,16 @@ export default function About() {
             away from exploring the site.
           </p>
           <br />
-          <img
-            src="/assets/class_pic.jpg"
-            alt="class picture"
-            className={styles.image}
-          />
+          <div className={styles.imageContainer}>
+            <img
+              src="/assets/class_pic.jpg"
+              alt="class picture"
+              className={styles.image}
+            />
+            <div className={styles.caption}>
+              Class photo taken in E7 after our SYDE 121 final.
+            </div>
+          </div>
           <br />
           <h2 className={styles.heading}>Preface</h2>
           <p className={styles.paragraph}>
@@ -46,7 +51,7 @@ export default function About() {
             progresses over time!
           </p>
           <br />
-          <h2 className={styles.heading}>Credits</h2>
+          <h2 className={styles.heading}>Contributors</h2>
           <div className={styles.linksContainer}>
             <a
               className={styles.link}
