@@ -19,6 +19,8 @@ export default function Demographics() {
             What are the characteristics of the individuals who make up the SYDE
             2027 cohort?
           </h4>
+          <br />
+          <h3>Gender and Sexuality</h3>
         </div>
       </div>
     </>

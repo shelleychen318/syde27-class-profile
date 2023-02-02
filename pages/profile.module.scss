@@ -2,36 +2,51 @@
   display: flex;
   flex-direction: column;
   margin: 1.5rem auto;
-  padding: 0 10rem 0 10rem;
+  padding: 0 10rem;
   max-width: 1200px;
 }
 
 .demographics {
   h2 {
-    color: var(--secondary);
+    color: #e98c8d;
+  }
+  h3 {
+    color: #9a464a;
   }
 }
 
 .highschool {
   h2 {
-    color: #8C6D89;
+    color: #8fbedc;
+  }
+  h3 {
+    color: #6698d4;
   }
 }
 
 .academics {
   h2 {
-    color: #E98C8D;
+    color: #ff9d5c;
+  }
+  h3 {
+    color: #d27637;
   }
 }
 
 .coop {
   h2 {
-    color: #738BB0;
+    color: #b491c8;
+  }
+  h3 {
+    color: #6F5082;
   }
 }
 
 .lifestyle {
   h2 {
-    color: #81BA66;
+    color: var(--primary);
+  }
+  h3 {
+    color: var(--secondary);
   }
 }

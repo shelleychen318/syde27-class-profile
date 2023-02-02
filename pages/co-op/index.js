@@ -16,6 +16,8 @@ export default function Coop() {
         <div className={styles.coop}>
           <h2>Co-op</h2>
           <h4>Where is SYDE 2027 working?</h4>
+          <br />
+          <h3>Co-op Round vs. Type</h3>
         </div>
       </div>
     </>

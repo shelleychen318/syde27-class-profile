@@ -18,6 +18,8 @@ export default function HighSchool() {
           <h4>
             What were we up to in high school?
           </h4>
+          <br />
+          <h3>High School Average</h3>
         </div>
       </div>
     </>

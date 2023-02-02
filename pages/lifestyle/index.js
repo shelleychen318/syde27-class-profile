@@ -16,6 +16,8 @@ export default function Lifestyle() {
         <div className={styles.lifestyle}>
           <h2>Lifestyle</h2>
           <h4>How's life?</h4>
+          <br />
+          <h3>Hobbies</h3>
         </div>
       </div>
     </>
