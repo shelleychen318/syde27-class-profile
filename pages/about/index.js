@@ -16,14 +16,14 @@ export default function About() {
         <div>
           <h2 className={styles.heading}>About the Program</h2>
           <p className={styles.paragraph}>
-            Systems Design Engineering is a unique interdisciplinary engineering
-            program at the University of Waterloo that explores problem solving
-            through a systems-thinking methodology. Our class, the class of
-            2025, has had a first term experience unlike any other as all of our
-            courses were taught online due to the pandemic. We hope that this
-            class profile will reflect some of the different perspectives that
-            our class may hold, and that you as the user will take something
-            away from exploring the site.
+            Systems Design Engineering (SYDE) is an interdisciplinary
+            engineering program offered at the University of Waterloo. This
+            unique program encourages big-picture thinking with a heavy emphasis
+            on design to develop creative solutions to complex problems. During
+            our first term in the program, we accomplished a lot: we balanced
+            university academics and our first co-op search, adjusted to life in
+            a new city, and most importantly, built gardening tools for
+            non-existent aliens.
           </p>
           <br />
           <div className={styles.imageContainer}>
@@ -39,16 +39,17 @@ export default function About() {
           <br />
           <h2 className={styles.heading}>Preface</h2>
           <p className={styles.paragraph}>
-            The objective of this website was to better understand the histories
-            of the students in the Systems Design Engineering (SYDE) class of
-            2025, as well as understanding the personalities of the students.
-            This was also an opportunity to display and test our skills in
-            design, data science, frontend development, and team collaboration.
-            94 students in our first year class responded to this survey. The
-            data from each question is displayed throughout the website. This is
-            an iterative project that we are committed to working on for the
-            entirety of our degree, so we look forward to seeing how it
-            progresses over time!
+            Inspired by past SYDE cohorts, we have put together this class
+            profile to shed light on students' experiences in our first term of
+            the program. We hope that this profile provides you with insight on
+            the SYDE experience for the class of 2027, as well as the
+            individuals who make up this diverse program.
+          </p>
+          <p className={styles.paragraph}>
+            The findings in this profile were derived from the results of a
+            class survey conducted by SYDE '27 students. 75 out of 113 students
+            (66%) of students in our first year class responded to the survey.
+            All questions were optional.
           </p>
           <br />
           <h2 className={styles.heading}>Contributors</h2>
