@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { NavBar } from "../../components";
+import { NavBar2 } from "../../components";
 import styles from "../profile.module.scss";
 
 export default function Lifestyle() {
@@ -10,7 +11,8 @@ export default function Lifestyle() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <NavBar />
+      {/* <NavBar /> */}
+      <NavBar2 />
 
       <div className={styles.content}>
         <div className={styles.lifestyle}>
