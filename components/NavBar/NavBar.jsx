@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./NavBar.module.scss";
 import Link from "next/link";
-import { HiBars3, HiXMark } from "react-icons/hi2";
+import { HiBars2, HiXMark } from "react-icons/hi2";
 import { Variant, motion } from "framer-motion";
 
 const NavBar = () => {
@@ -86,7 +86,7 @@ const NavBar = () => {
           ))}
         </ul>
         <div className={styles.menu}>
-          <HiBars3
+          <HiBars2
             onClick={() => {
               setToggle(true);
             }}

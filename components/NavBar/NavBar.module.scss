@@ -31,11 +31,11 @@
 }
 
 .menu {
-  width: 4rem;
-  height: 4rem;
-  position: absolute;
-  right: 0;
-  top: 0;
+  // width: 4rem;
+  // height: 4rem;
+  // position: absolute;
+  // right: 0;
+  // top: 0;
   cursor: pointer;
   display: none;
 
@@ -47,9 +47,11 @@
   }
 
   svg {
-    width: 70%;
-    height: 70%;
-    top: 2rem;
+
+    width: 2.5rem;
+    height: 2.5rem;
+    position:absolute;
+    top: 1rem;
     right: 2rem;
   }
 }
