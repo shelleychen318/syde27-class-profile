@@ -5,7 +5,6 @@ import { HiBars2, HiXMark } from "react-icons/hi2";
 import { Variant, motion } from "framer-motion";
 
 const NavBar = () => {
-  // const [nav, setNav] = useState(false);
 
   const [toggle, setToggle] = useState(false);
 
@@ -25,7 +24,6 @@ const NavBar = () => {
   const navLinkVariants = {
     hidden: {
       display: "none",
-
       opacity: 0,
     },
     visible: {
@@ -78,10 +76,8 @@ const NavBar = () => {
         </Link>
         <ul className={styles.navLinks}>
           {links.map(({ id, link, href }) => (
-            <li>
-              <a key={id} href={href}>
-                {link}
-              </a>
+            <li key={id}>
+              <a href={href}>{link}</a>
             </li>
           ))}
         </ul>
@@ -98,19 +94,19 @@ const NavBar = () => {
           initial="hidden"
           animate={toggle ? "visible" : "hidden"}
         ></motion.div>
-        <motion.div className={styles.menuX}
-        variants={navLinkVariants}
-        animate={toggle ? "visible" : "hidden"}>
+        <motion.div
+          className={styles.menuX}
+          variants={navLinkVariants}
+          animate={toggle ? "visible" : "hidden"}
+        >
           <HiXMark
             onClick={() => {
               setToggle(false);
             }}
           />
           {links.map(({ id, link, href }) => (
-            <li>
-              <a key={id} href={href}>
-                {link}
-              </a>
+            <li key={id}>
+              <a href={href}>{link}</a>
             </li>
           ))}
         </motion.div>

@@ -3,8 +3,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   padding: 0 10%;
   width: fit-content;
+  height: auto;
   top: 10%;
 
   .title {
@@ -29,5 +31,17 @@
   .image {
     width: 650px;
     height: auto;
+
+    @media screen and (max-width: 480px) {
+  
+    display: none;
+  
+}
   }
 }
+
+// @media screen and (max-width: 480px) {
+//   .image{
+//     display: none;
+//   }
+// }

@@ -96,6 +96,14 @@ a {
   :root {
       font-size:12px;
   }
+  h1 {
+      font-size: 40px;
+      line-height: 55px;
+  }
+  h2 {
+      font-size: 32px;
+      line-height: 50px;
+  }
 }
 
 @media screen and (max-width: 360px) {
