@@ -11,8 +11,7 @@ export default function Lifestyle() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <NavBar /> */}
-      <NavBar2 />
+      <NavBar />
 
       <div className={styles.content}>
         <div className={styles.lifestyle}>
