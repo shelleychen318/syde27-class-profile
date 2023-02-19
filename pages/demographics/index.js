@@ -3,6 +3,7 @@ import Head from "next/head";
 import { NavBar } from "../../components";
 import styles from "../profile.module.scss";
 import { PieChart } from "../../components";
+import { Chart } from "../../components"
 
 export default function Demographics() {
 
@@ -42,8 +43,10 @@ export default function Demographics() {
           </h4>
           <br />
           <h3>Gender and Sexuality</h3>
-          
-          <PieChart data={data} options={options}/>
+
+          {/* <PieChart data={data} options={options} /> */}
+
+          <Chart type="Pie" data={data} position="left" options={options} />
         </div>
       </div>
     </>

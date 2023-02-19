@@ -14,13 +14,13 @@ const PieChart = ({ data, options }) => {
             position: "right",
             display: true,
           },
-          title: {
-            display: true,
-            text: options.title,
-            fontSize: 15,
-            fontColor: "black",
-            padding: 14,
-          },
+          // title: {
+          //   display: true,
+          //   text: options.title,
+          //   fontSize: 15,
+          //   fontColor: "black",
+          //   padding: 14,
+          // },
         }}
         height="100%"
         width="100%"
