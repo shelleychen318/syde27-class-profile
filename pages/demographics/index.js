@@ -2,7 +2,6 @@ import Head from "next/head";
 
 import { NavBar } from "../../components";
 import styles from "../profile.module.scss";
-import { PieChart } from "../../components";
 import { Chart } from "../../components"
 
 export default function Demographics() {
