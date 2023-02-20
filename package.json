@@ -12,6 +12,7 @@
     "@next/font": "13.1.5",
     "chart.js": "^4.2.1",
     "framer-motion": "^9.0.1",
+    "googleapis": "^111.0.0",
     "next": "13.1.5",
     "react": "18.2.0",
     "react-chartjs-2": "^5.2.0",
