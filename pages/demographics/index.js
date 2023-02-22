@@ -2,26 +2,15 @@ import Head from "next/head";
 
 import { NavBar } from "../../components";
 import styles from "../profile.module.scss";
-import { Chart } from "../../components"
+import { Chart } from "../../components";
 
 export default function Demographics() {
-
   // TEST DATA
   const data = {
-    labels: ["Male", "Female", "Non-binary"],
-    datasets: [
-      {
-        // label: "Genders",
-        data: [29, 42, 3],
-        backgroundColor: ["#9a464a", "#e98c8d", "#FFE4E0"],
-      },
-    ],
-  };
-
-  const options = {
-    title: {
-      text: "Gender Ratio",
-    },
+    label: ["Male", "Female", "Non-binary"],
+    val: [29, 42, 3],
+    color: ["#9a464a", "#e98c8d", "#FFDBDB"],
+    title: "Gender Ratio",
   };
 
   return (
@@ -43,9 +32,9 @@ export default function Demographics() {
           <br />
           <h3>Gender and Sexuality</h3>
 
-          {/* <PieChart data={data} options={options} /> */}
+          {/* <PieChart data={data} options={options} className={styles.left}/> */}
 
-          <Chart type="Pie" data={data} position="left" options={options} />
+          <Chart type="pie" data={data} position="left" />
         </div>
       </div>
     </>

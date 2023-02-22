@@ -3,10 +3,13 @@ import PieChart from "./PieChart";
 import styles from "./Chart.module.scss";
 
 const Chart = ({ type, data, position, options }) => {
+
+  // const chartPosition = position;
+
   switch (type) {
-    case "Pie":
+    case "pie":
       return (
-        <div className={styles.position}>
+        <div className={`${styles[position]}`}>
           <PieChart data={data} options={options} />
         </div>
       );

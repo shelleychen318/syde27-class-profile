@@ -2,11 +2,22 @@ import React, { useState } from "react";
 import "chart.js/auto";
 import { Pie } from "react-chartjs-2";
 
-const PieChart = ({ data, options }) => {
+const PieChart = ({ data }) => {
   return (
     <div>
       <Pie
-        data={data}
+        data={{
+          labels: data.label,
+          datasets: [
+            {
+              label: "# of Students",
+              data: data.val,
+              backgroundColor: data.color,
+              borderColor: "white",
+              borderWidth: 2,
+            },
+          ],
+        }}
         options={{
           responsive: true,
           maintainAspectRatio: true,
@@ -14,16 +25,13 @@ const PieChart = ({ data, options }) => {
             position: "right",
             display: true,
           },
-          // title: {
-          //   display: true,
-          //   text: options.title,
-          //   fontSize: 15,
-          //   fontColor: "black",
-          //   padding: 14,
-          // },
+          title: {
+            display: true,
+            text: data.title,
+          },
         }}
-        height="100%"
-        width="100%"
+        height="450px"
+        width="450px"
       />
     </div>
   );
