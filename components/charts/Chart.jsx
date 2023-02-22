@@ -1,5 +1,6 @@
 import React from "react";
 import PieChart from "./PieChart";
+import DoughnutChart from "./DoughnutChart";
 import BarChart from "./BarChart";
 import HorizontalBarChart from "./HorizontalBarChart";
 import styles from "./Chart.module.scss";
@@ -10,6 +11,12 @@ const Chart = ({ type, data, position }) => {
       return (
         <div className={`${styles[position]}`}>
           <PieChart data={data} />
+        </div>
+      );
+    case "doughnut":
+      return (
+        <div className={`${styles[position]}`}>
+          <DoughnutChart data={data} />
         </div>
       );
     case "bar":
