@@ -5,12 +5,21 @@ import styles from "../profile.module.scss";
 import { Chart } from "../../components";
 
 export default function Demographics() {
+  const colorTheme = ["#9a464a", "#e98c8d", "#FFDBDB"];
+
   // TEST DATA
-  const data = {
+  const genderData = {
     label: ["Male", "Female", "Non-binary"],
     val: [29, 42, 3],
-    color: ["#9a464a", "#e98c8d", "#FFDBDB"],
+    color: colorTheme,
     title: "Gender Ratio",
+  };
+
+  const sexualityData = {
+    label: ["Heterosexual", "Bisexual", "Asexual"],
+    val: [58, 12, 2],
+    color: colorTheme,
+    title: "Sexualities",
   };
 
   return (
@@ -34,7 +43,10 @@ export default function Demographics() {
 
           {/* <PieChart data={data} options={options} className={styles.left}/> */}
 
-          <Chart type="pie" data={data} position="left" />
+          <div>
+            <Chart type="pie" data={genderData} position="left" />
+            <Chart type="pie" data={sexualityData} position="right" />
+          </div>
         </div>
       </div>
     </>
