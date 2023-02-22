@@ -1,14 +1,20 @@
 import React from "react";
 import PieChart from "./PieChart";
+import BarChart from "./BarChart";
 import styles from "./Chart.module.scss";
 
-const Chart = ({ type, data, position, options }) => {
-
+const Chart = ({ type, data, position }) => {
   switch (type) {
     case "pie":
       return (
         <div className={`${styles[position]}`}>
-          <PieChart data={data} options={options} />
+          <PieChart data={data} />
+        </div>
+      );
+    case "bar":
+      return (
+        <div className={`${styles[position]}`}>
+          <BarChart data={data} />
         </div>
       );
     default:

@@ -3,6 +3,7 @@ import { NavBar } from "../../components";
 import styles from "../profile.module.scss";
 
 export default function Academics() {
+
   return (
     <>
       <Head>
