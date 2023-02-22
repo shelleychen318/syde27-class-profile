@@ -4,8 +4,6 @@ import styles from "./Chart.module.scss";
 
 const Chart = ({ type, data, position, options }) => {
 
-  // const chartPosition = position;
-
   switch (type) {
     case "pie":
       return (

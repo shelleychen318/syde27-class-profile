@@ -3,7 +3,6 @@ import "chart.js/auto";
 import { Pie } from "react-chartjs-2";
 import styles from "./Chart.module.scss";
 
-
 const PieChart = ({ data }) => {
   return (
     <div className={styles.chart}>

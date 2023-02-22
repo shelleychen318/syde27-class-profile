@@ -42,8 +42,8 @@ export default function Demographics() {
           <h3>Gender and Sexuality</h3>
 
           {/* <PieChart data={data} options={options} className={styles.left}/> */}
-
-          <div>
+          
+          <div className={styles.doubleChart}>
             <Chart type="pie" data={genderData} position="left" />
             <Chart type="pie" data={sexualityData} position="right" />
           </div>
