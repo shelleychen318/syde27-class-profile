@@ -3,6 +3,7 @@ import PieChart from "./PieChart";
 import DoughnutChart from "./DoughnutChart";
 import BarChart from "./BarChart";
 import HorizontalBarChart from "./HorizontalBarChart";
+import Histogram from "./Histogram";
 import styles from "./Chart.module.scss";
 
 const Chart = ({ type, data, position }) => {
@@ -29,6 +30,12 @@ const Chart = ({ type, data, position }) => {
       return (
         <div className={`${styles[position]}`}>
           <HorizontalBarChart data={data} />
+        </div>
+      );
+    case "histogram":
+      return (
+        <div className={`${styles[position]}`}>
+          <Histogram data={data} />
         </div>
       );
     default:

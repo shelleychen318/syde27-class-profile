@@ -15,6 +15,7 @@ fetch(url)
     console.log(json.demographics);
   });
   
+  const primaryColor = "#9a464a";
   const colorTheme = ["#9a464a", "#e98c8d", "#FFDBDB"];
 
   // TEST DATA
@@ -30,6 +31,7 @@ fetch(url)
     label: ["Heterosexual", "Bisexual", "Asexual"],
     val: [58, 12, 2],
     color: colorTheme,
+    primaryColor: "#9a464a",
     title: "Sexualities",
     n: 74,
     xAxis: "Sexualities",
@@ -59,7 +61,7 @@ fetch(url)
 
           <div className={styles.doubleChart}>
             <Chart type="doughnut" data={genderData} position="left" />
-            <Chart type="bar" data={sexualityData} position="right" />
+            <Chart type="histogram" data={sexualityData} position="right" />
           </div>
         </div>
       </div>
