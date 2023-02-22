@@ -3,7 +3,7 @@ import "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 import styles from "./Chart.module.scss";
 
-const BarChart = ({ data }) => {
+const HorizontalBarChart = ({ data }) => {
   return (
     <div className={styles.chart}>
       <Bar
@@ -20,6 +20,7 @@ const BarChart = ({ data }) => {
           ],
         }}
         options={{
+          indexAxis: "y",
           responsive: true,
           maintainAspectRatio: true,
           scales: {
@@ -70,4 +71,4 @@ const BarChart = ({ data }) => {
   );
 };
 
-export default BarChart;
+export default HorizontalBarChart;

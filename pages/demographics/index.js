@@ -59,7 +59,7 @@ fetch(url)
 
           <div className={styles.doubleChart}>
             <Chart type="pie" data={genderData} position="left" />
-            <Chart type="bar" data={sexualityData} position="right" />
+            <Chart type="horizontalBar" data={sexualityData} position="right" />
           </div>
         </div>
       </div>
