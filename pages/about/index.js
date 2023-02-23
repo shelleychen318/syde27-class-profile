@@ -53,17 +53,14 @@ export default function About() {
           </p>
           <br />
           <h2 className={styles.heading}>Contributors</h2>
-          <div className={styles.linksContainer}>
-            <a
-              className={styles.link}
-              href="https://github.com/shelleychen318/syde27-class-profile"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
-            <a className={styles.link}>Data Report</a>
-          </div>
+          <a
+            className={styles.github}
+            href="https://github.com/shelleychen318/syde27-class-profile"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className={styles.github}>View GitHub repo {">"}</div>
+          </a>
         </div>
       </div>
     </>

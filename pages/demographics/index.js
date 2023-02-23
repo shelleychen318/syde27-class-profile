@@ -60,11 +60,15 @@ fetch(url)
           {/* <PieChart data={data} options={options} className={styles.left}/> */}
 
           <div className={styles.doubleChart}>
-            <Chart type="doughnut" data={genderData} position="left" />
-            <Chart type="histogram" data={sexualityData} position="right" />
+            <Chart type="pie" data={genderData} position="left" />
+            <Chart type="pie" data={sexualityData} position="right" />
           </div>
         </div>
       </div>
     </>
   );
 }
+
+
+
+
