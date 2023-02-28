@@ -1,12 +1,12 @@
 import React from "react";
 import "chart.js/auto";
-import { Pie } from "react-chartjs-2";
+import { Doughnut } from "react-chartjs-2";
 import styles from "./Chart.module.scss";
 
-const PieChart = ({ data }) => {
+const DoughnutChart = ({ data }) => {
   return (
     <div className={styles.chart}>
-      <Pie
+      <Doughnut
         data={{
           labels: data.label,
           datasets: [
@@ -53,6 +53,6 @@ const PieChart = ({ data }) => {
       />
     </div>
   );
-};
+}
 
-export default PieChart;
+export default DoughnutChart

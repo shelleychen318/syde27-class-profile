@@ -1,12 +1,12 @@
 import React from "react";
 import "chart.js/auto";
-import { Pie } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 import styles from "./Chart.module.scss";
 
-const PieChart = ({ data }) => {
+const HorizontalBarChart = ({ data }) => {
   return (
     <div className={styles.chart}>
-      <Pie
+      <Bar
         data={{
           labels: data.label,
           datasets: [
@@ -20,16 +20,32 @@ const PieChart = ({ data }) => {
           ],
         }}
         options={{
+          indexAxis: "y",
           responsive: true,
           maintainAspectRatio: true,
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: data.xAxis,
+                font: {
+                  size: 15,
+                },
+              },
+            },
+            y: {
+              title: {
+                display: true,
+                text: data.yAxis,
+                font: {
+                  size: 15,
+                },
+              },
+            },
+          },
           plugins: {
             legend: {
-              position: "bottom",
-              labels: {
-                usePointStyle: true,
-                padding: 16,
-              },
-              display: true,
+              display: false,
             },
             title: {
               display: true,
@@ -55,4 +71,4 @@ const PieChart = ({ data }) => {
   );
 };
 
-export default PieChart;
+export default HorizontalBarChart;

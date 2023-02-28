@@ -33,26 +33,12 @@
   }
 }
 
-.linksContainer {
+.github {
   display: flex;
   flex-direction: row;
-  column-gap: 2rem;
 
-  .link {
-    padding: 12px 20px;
-    background-color: var(--tertiary);
-    color: var(--bg);
-    border: 3px solid var(--tertiary);
-    border-radius: 12px;
-    width: fit-content;
-  }
-
-  .link:hover {
-    cursor: pointer;
-    border: 3px solid var(--tertiary);
-    background-color: var(--bg);
-    color: var(--tertiary);
-    border-color: var(--tertiary);
+  .github:hover {
+    color: var(--primary);
   }
 }
 

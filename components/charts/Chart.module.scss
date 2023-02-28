@@ -1,5 +1,17 @@
-.position {
-  display: inline-block;
-  width: 33% !important;
-  padding-right: 2%;
+.chart {
+  margin-bottom: 64px;
+  padding: 2rem 2rem;
+  margin: auto 10px;
 }
+
+.left {
+  display: inline-block;
+  margin: auto auto auto 0;
+}
+
+.right {
+  display: inline-block;
+  margin: auto 0 auto auto;
+}
+
+// ADJUST POSITIONING OF CHARTS BASED ON SCREEN RESIZE

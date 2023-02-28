@@ -38,7 +38,7 @@
     color: #b491c8;
   }
   h3 {
-    color: #6F5082;
+    color: #6f5082;
   }
 }
 
@@ -49,4 +49,10 @@
   h3 {
     color: var(--secondary);
   }
+}
+
+.doubleChart {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }

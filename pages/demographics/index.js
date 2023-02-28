@@ -1,27 +1,41 @@
 import Head from "next/head";
-
 import { NavBar } from "../../components";
+import { Chart } from "../../components";
 import styles from "../profile.module.scss";
-import { Chart } from "../../components"
 
 export default function Demographics() {
 
+// SHEETY API
+let url =
+  "https://api.sheety.co/548ac0c82933b0ac3f74d465f7df8446/1AData/demographics";
+fetch(url)
+  .then((response) => response.json())
+  .then((json) => {
+    // Do something with the data
+    console.log(json.demographics);
+  });
+  
+  const primaryColor = "#9a464a";
+  const colorTheme = ["#9a464a", "#e98c8d", "#FFDBDB"];
+
   // TEST DATA
-  const data = {
-    labels: ["Male", "Female", "Non-binary"],
-    datasets: [
-      {
-        // label: "Genders",
-        data: [29, 42, 3],
-        backgroundColor: ["#9a464a", "#e98c8d", "#FFE4E0"],
-      },
-    ],
+  const genderData = {
+    label: ["Male", "Female", "Non-binary"],
+    val: [29, 42, 3],
+    color: colorTheme,
+    title: "Gender Ratio",
+    n: 74 // number of respondents
   };
 
-  const options = {
-    title: {
-      text: "Gender Ratio",
-    },
+  const sexualityData = {
+    label: ["Heterosexual", "Bisexual", "Asexual"],
+    val: [58, 12, 2],
+    color: colorTheme,
+    primaryColor: "#9a464a",
+    title: "Sexualities",
+    n: 74,
+    xAxis: "Sexualities",
+    yAxis: "Number of Students"
   };
 
   return (
@@ -43,11 +57,18 @@ export default function Demographics() {
           <br />
           <h3>Gender and Sexuality</h3>
 
-          {/* <PieChart data={data} options={options} /> */}
+          {/* <PieChart data={data} options={options} className={styles.left}/> */}
 
-          <Chart type="Pie" data={data} position="left" options={options} />
+          <div className={styles.doubleChart}>
+            <Chart type="pie" data={genderData} position="left" />
+            <Chart type="pie" data={sexualityData} position="right" />
+          </div>
         </div>
       </div>
     </>
   );
 }
+
+
+
+

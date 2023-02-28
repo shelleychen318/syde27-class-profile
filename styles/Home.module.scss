@@ -31,17 +31,8 @@
   .image {
     width: 650px;
     height: auto;
-
     @media screen and (max-width: 480px) {
-  
-    display: none;
-  
-}
+      display: none;
+    }
   }
 }
-
-// @media screen and (max-width: 480px) {
-//   .image{
-//     display: none;
-//   }
-// }
