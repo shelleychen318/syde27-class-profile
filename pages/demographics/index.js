@@ -14,8 +14,8 @@ export const getStaticProps = async () => {
 }
 
 export default function Demographics(data) {
-  const primaryColor = "#9a464a";
-  const colorTheme = ["#9a464a", "#e98c8d", "#FFDBDB"];
+  const colorTheme = ["#9a464a", "#D87576", "#F5C8C8", "#FFE4E4"];
+  const primaryColor = colorTheme[0];
 
   const genderData = {
     label: data.genders,
