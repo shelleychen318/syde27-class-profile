@@ -1,40 +1,64 @@
 import Head from "next/head";
 import { NavBar } from "../../components";
 import { Chart } from "../../components";
+import { PieChart } from "../../components";
 import styles from "../profile.module.scss";
-import { getSortedDemographicsData } from "../../lib/sort/getSortedDemographicsData"
+import { getSortedDemographicsData } from "../../lib/sort/getSortedDemographicsData";
 
 export const getStaticProps = async () => {
   const data = await getSortedDemographicsData();
   return {
     props: {
-      ...data
-    }
-  }
-}
+      ...data,
+    },
+  };
+};
 
 export default function Demographics(data) {
   const colorTheme = ["#9a464a", "#D87576", "#F5C8C8", "#FFE4E4"];
-  const primaryColor = colorTheme[0];
+  // const primaryColor = colorTheme[0];
 
   const genderData = {
     label: data.genders,
     val: data.genderValues,
     color: colorTheme,
     title: "Gender Ratio",
-    n: data.genderRespondents // number of respondents
+    n: data.genderRespondents, // number of respondents
   };
 
   const sexualityData = {
     label: data.sexualities,
     val: data.sexualityValues,
     color: colorTheme,
-    primaryColor: "#9a464a",
     title: "Sexualities",
     n: data.sexualityRespondents,
-    xAxis: "Sexualities",
-    yAxis: "Number of Students"
   };
+
+  const ethnicityData = {
+    label: data.ethnicities,
+    val: data.ethnicityValues,
+    color: colorTheme[1],
+    title: "Ethnicities",
+    n: data.ethnicityRespondents,
+  };
+
+  const religionData = {
+    label: data.religions,
+    val: data.religionValues,
+    color: colorTheme[1],
+    title: "Religions",
+    n: data.religionRespondents,
+  };
+
+  const hometownData = {
+    label: data.hometowns,
+    val: data.hometownValues,
+    color: colorTheme[1],
+    title: "Hometowns",
+    n: data.hometownRespondents,
+  };
+
+
 
   return (
     <>
@@ -54,18 +78,23 @@ export default function Demographics(data) {
           <br />
           <h3>Gender and Sexuality</h3>
 
-          {/* <PieChart data={data} options={options} className={styles.left}/> */}
-
           <div className={styles.doubleChart}>
             <Chart type="pie" data={genderData} position="left" />
             <Chart type="pie" data={sexualityData} position="right" />
+          </div>
+
+          <h3>Ethnicities and Religion</h3>
+          <div className={styles.doubleChart}>
+            <Chart type="bar" data={ethnicityData} position="right" />
+            <Chart type="bar" data={religionData} position="left" />
+          </div>
+
+          <h3>Hometowns</h3>
+          <div className={styles.singleChart}>
+            <Chart type="horizontalBar" data={hometownData} position="center" />
           </div>
         </div>
       </div>
     </>
   );
 }
-
-
-
-

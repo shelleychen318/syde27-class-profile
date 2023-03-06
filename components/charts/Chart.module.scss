@@ -1,6 +1,5 @@
 .chart {
-  margin-bottom: 64px;
-  padding: 2rem 2rem;
+  padding: 2rem 2rem 4rem;
   margin: auto 10px;
 }
 
@@ -14,4 +13,14 @@
   margin: auto 0 auto auto;
 }
 
+.center {
+  display: inline-block;
+  // margin: auto;
+  width: 100%;
+  height:65%;
+  margin-left: auto;
+  margin-right: auto;
+  // justify-content: center;
+  // align-content: center;
+}
 // ADJUST POSITIONING OF CHARTS BASED ON SCREEN RESIZE
