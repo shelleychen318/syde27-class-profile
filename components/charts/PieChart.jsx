@@ -48,8 +48,8 @@ const PieChart = ({ data }) => {
             },
           },
         }}
-        height="450px"
-        width="450px"
+        // height="450px"
+        // width="450px"
       />
     </div>
   );

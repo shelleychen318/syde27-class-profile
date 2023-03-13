@@ -58,8 +58,6 @@ export default function Demographics(data) {
     n: data.hometownRespondents,
   };
 
-
-
   return (
     <>
       <Head>
@@ -78,20 +76,26 @@ export default function Demographics(data) {
           <br />
           <h3>Gender and Sexuality</h3>
 
-          <div className={styles.doubleChart}>
-            <Chart type="pie" data={genderData} position="left" />
-            <Chart type="pie" data={sexualityData} position="right" />
-          </div>
+          <div className={styles.chartConatiner}>
+            <div className={styles.doubleChart}>
+              <Chart type="pie" data={genderData} position="left" />
+              <Chart type="pie" data={sexualityData} position="right" />
+            </div>
 
-          <h3>Ethnicities and Religion</h3>
-          <div className={styles.doubleChart}>
-            <Chart type="bar" data={ethnicityData} position="right" />
-            <Chart type="bar" data={religionData} position="left" />
-          </div>
+            <h3>Ethnicities and Religion</h3>
+            <div className={styles.doubleChart}>
+              <Chart type="bar" data={ethnicityData} position="right" />
+              <Chart type="bar" data={religionData} position="left" />
+            </div>
 
-          <h3>Hometowns</h3>
-          <div className={styles.singleChart}>
-            <Chart type="horizontalBar" data={hometownData} position="center" />
+            <h3>Hometowns</h3>
+            <div className={styles.singleChart}>
+              <Chart
+                type="horizontalBar"
+                data={hometownData}
+                position="center"
+              />
+            </div>
           </div>
         </div>
       </div>

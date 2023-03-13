@@ -64,8 +64,8 @@ const HorizontalBarChart = ({ data }) => {
             },
           },
         }}
-        height="450px"
-        width="450px"
+        height="500px"
+        width="500px"
       />
     </div>
   );

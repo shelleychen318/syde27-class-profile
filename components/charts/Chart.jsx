@@ -10,31 +10,31 @@ const Chart = ({ type, data, position }) => {
   switch (type) {
     case "pie":
       return (
-        <div className={`${styles[position]}`}>
+        <div className={styles.graph}>
           <PieChart data={data} />
         </div>
       );
     case "doughnut":
       return (
-        <div className={`${styles[position]}`}>
+        <div className={styles.graph}>
           <DoughnutChart data={data} />
         </div>
       );
     case "bar":
       return (
-        <div className={`${styles[position]}`}>
+        <div className={styles.graph}>
           <BarChart data={data} />
         </div>
       );
     case "horizontalBar":
       return (
-        <div className={`${styles[position]}`}>
+        <div className={styles.graph}>
           <HorizontalBarChart data={data} />
         </div>
       );
     case "histogram":
       return (
-        <div className={`${styles[position]}`}>
+        <div className={styles.graph}>
           <Histogram data={data} />
         </div>
       );

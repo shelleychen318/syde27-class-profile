@@ -5,34 +5,26 @@
   padding: 2rem 10rem;
   max-width: 1200px;
 
-  .chartContainer {
-  display: flex;
-  justify-content: center;
-  position:relative;
+  @media screen and (max-width: 800px) {
+    padding: 4rem 3rem;
+  }
 
-  margin: 1.5rem auto;
-  padding: 0 10rem;
-  max-width: 1200px;
-  // margin:auto;
-  // max-width: 1200px;
-
-  // .singleChart{
+  // .chartContainer {
   //   display: flex;
-  //   justify-content: center;
-  //   padding-bottom: 2rem;
+  //   flex-direction: column;
+  //   justify-content: space-between;
+
+  //   .doubleChart {
+  //     text-align: center;
+  //     display: flex;
+  //     padding-bottom: 8rem;
+  //     flex-direction: row;
+  //     justify-content: center;
+  //     align-items: center;
+  //     width: 100%;
+  //     text-align: center;
+  //   }
   // }
-
-  // .doubleChart {
-    // text-align: center;
-    // display: flex;
-    // padding-bottom: 8rem;
-    // flex-direction: row;
-    // justify-content: space-between;
-  // }
-
-  
-}
-
 }
 
 .demographics {
@@ -79,5 +71,3 @@
     color: var(--secondary);
   }
 }
-
-
