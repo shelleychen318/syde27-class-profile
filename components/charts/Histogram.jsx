@@ -13,7 +13,7 @@ const Histogram = ({ data }) => {
             {
               label: "# of Students",
               data: data.val,
-              backgroundColor: data.primaryColor,
+              backgroundColor: data.color,
               barPercentage: 1,
               categoryPercentage: 1,
             },
@@ -68,6 +68,6 @@ const Histogram = ({ data }) => {
       />
     </div>
   );
-}
+};
 
-export default Histogram
+export default Histogram;

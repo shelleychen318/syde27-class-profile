@@ -16,14 +16,13 @@ export const getStaticProps = async () => {
 
 export default function Demographics(data) {
   const colorTheme = ["#9a464a", "#D87576", "#F5C8C8", "#FFE4E4"];
-  // const primaryColor = colorTheme[0];
 
   const genderData = {
     label: data.genders,
     val: data.genderValues,
     color: colorTheme,
     title: "Gender Ratio",
-    n: data.genderRespondents, // number of respondents
+    n: data.genderRespondents, 
   };
 
   const sexualityData = {
@@ -78,14 +77,14 @@ export default function Demographics(data) {
 
           <div className={styles.chartConatiner}>
             <div className={styles.doubleChart}>
-              <Chart type="pie" data={genderData} position="left" />
-              <Chart type="pie" data={sexualityData} position="right" />
+              <Chart type="pie" data={genderData} />
+              <Chart type="pie" data={sexualityData} />
             </div>
 
             <h3>Ethnicities and Religion</h3>
             <div className={styles.doubleChart}>
-              <Chart type="bar" data={ethnicityData} position="right" />
-              <Chart type="bar" data={religionData} position="left" />
+              <Chart type="bar" data={ethnicityData} />
+              <Chart type="bar" data={religionData} />
             </div>
 
             <h3>Hometowns</h3>
@@ -93,7 +92,6 @@ export default function Demographics(data) {
               <Chart
                 type="horizontalBar"
                 data={hometownData}
-                position="center"
               />
             </div>
           </div>

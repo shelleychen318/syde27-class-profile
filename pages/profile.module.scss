@@ -9,6 +9,22 @@
     padding: 4rem 3rem;
   }
 
+  .doubleChart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    .text {
+      padding: 4rem;
+    }
+  }
+
+  .singleChart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
   // .chartContainer {
   //   display: flex;
   //   flex-direction: column;
