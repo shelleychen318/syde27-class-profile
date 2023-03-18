@@ -6,7 +6,7 @@ import HorizontalBarChart from "./HorizontalBarChart";
 import Histogram from "./Histogram";
 import styles from "./Chart.module.scss";
 
-const Chart = ({ type, data, position }) => {
+const Chart = ({ type, data }) => {
   switch (type) {
     case "pie":
       return (
