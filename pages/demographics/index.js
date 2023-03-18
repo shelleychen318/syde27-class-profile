@@ -58,8 +58,8 @@ export default function Demographics(data) {
     val: data.hometownValues,
     color: colorTheme[1],
     title: "Hometowns",
-    xAxis: "Hometown",
-    yAxis: "# of Students",
+    xAxis: "# of Students",
+    yAxis: "Hometown",
     n: data.hometownRespondents,
   };
 
