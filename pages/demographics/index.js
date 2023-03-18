@@ -34,7 +34,7 @@ export default function Demographics(data) {
   };
 
   const ethnicityData = {
-    label: data.ethnicities,
+    label: data.ethinicUniques,
     val: data.ethnicityValues,
     color: colorTheme[1],
     title: "Ethnicities",
