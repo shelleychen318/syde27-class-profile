@@ -35,14 +35,14 @@ export default function Demographics(data) {
 
   const ethnicityData = {
     label: data.ethinicUniques,
-    val: data.ethnicityValues,
+    val: data.ethnicValues,
     color: colorTheme[1],
     title: "Ethnicities",
     n: data.ethnicityRespondents,
   };
 
   const religionData = {
-    label: data.religions,
+    label: data.religionUniques,
     val: data.religionValues,
     color: colorTheme[1],
     title: "Religions",
