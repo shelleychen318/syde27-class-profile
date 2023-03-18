@@ -34,18 +34,22 @@ export default function Demographics(data) {
   };
 
   const ethnicityData = {
-    label: data.ethinicUniques,
+    label: data.ethnicityUniques,
     val: data.ethnicityValues,
     color: colorTheme[1],
     title: "Ethnicities",
+    xAxis: "Ethnicity",
+    yAxis: "# of Students",
     n: data.ethnicityRespondents,
   };
 
   const religionData = {
-    label: data.religions,
+    label: data.religionUniques,
     val: data.religionValues,
     color: colorTheme[1],
     title: "Religions",
+    xAxis: "Religion",
+    yAxis: "# of Students",
     n: data.religionRespondents,
   };
 
@@ -54,6 +58,8 @@ export default function Demographics(data) {
     val: data.hometownValues,
     color: colorTheme[1],
     title: "Hometowns",
+    xAxis: "Hometown",
+    yAxis: "# of Students",
     n: data.hometownRespondents,
   };
 
