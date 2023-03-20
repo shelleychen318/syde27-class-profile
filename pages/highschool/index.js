@@ -39,7 +39,7 @@ export default function Highschool(data) {
   const extraTypeData = {
     label: data.extracurricularType,
     val: data.extraTypeValues,
-    color: colorTheme,
+    color: colorTheme[0],
     title: "What extracurriculars did we do?",
     xAxis: "Extracurricular Type",
     yAxis: "# of Students",
@@ -55,11 +55,11 @@ export default function Highschool(data) {
   };
 
   const enrichData = {
-    label: data.enrichs,
+    label: data.enrichUniques,
     val: data.enrichValues,
     color: colorTheme,
-    title: "Enrichement Data",
-    n: data.enrichsRespondents,
+    title: "Enrichment Data",
+    n: data.enrichRespondents,
   };
 
   const postChoiceData = {
@@ -140,7 +140,7 @@ export default function Highschool(data) {
           <h3>Extracurriculars</h3>
           <div className={styles.doubleChart}>
             <Chart type="histogram" data={extraNumData} />
-            <Chart type="pie" data={extraTypeData} />
+            <Chart type="bar" data={extraTypeData} />
           </div>
 
           <h3>Enrichment Programs</h3>
