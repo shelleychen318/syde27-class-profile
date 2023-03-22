@@ -170,11 +170,18 @@ export default function Highschool(data) {
             <Chart type="horizontalBar" data={topChoiceData} layout="double" />
           </div>
           <br />
-          {/* <div className={styles.doubleChart}>
-            <Chart type="pie" data={postChoiceData} layout="double" />
-            <Chart type="horizontalBar" data={considerData} layout="double" />
-          </div> */}
 
+          <h3>Top Choice</h3>
+          <p className={styles.text}>
+            For those of us who said SYDE was not our top choice, these are the programs we were striving for in high school. 
+          </p>
+          <div className={styles.wordCloudContainer}>
+            <img
+              src="/assets/topChoiceWordCloud.png"
+              alt="class picture"
+              className={styles.wordCloud}
+            />
+          </div>
         </div>
       </div>
     </>
