@@ -14,8 +14,6 @@ const HorizontalBarChart = ({ data }) => {
               label: "# of Students",
               data: data.val,
               backgroundColor: data.color,
-              borderColor: "white",
-              borderWidth: 2,
             },
           ],
         }}

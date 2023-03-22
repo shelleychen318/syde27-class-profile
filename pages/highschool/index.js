@@ -47,10 +47,12 @@ export default function Highschool(data) {
   };
 
   const extraRoleData = {
-    label: data.extraRoles,
+    label: data.extraRoleUniques,
     val: data.extraRoleValues,
-    color: colorTheme,
+    color: colorTheme[1],
     title: "Roles in Extracurriculars",
+    xAxis: "Extracurricular Role",
+    yAxis: "Number of Students",
     n: data.extraRoleRespondents,
   };
 
@@ -139,15 +141,22 @@ export default function Highschool(data) {
             </p>
           </div>
 
-          <h3>Extracurriculars</h3>
-          <div className={styles.doubleChart}>
-            <Chart type="histogram" data={extraNumData} layout="double" />
-            <Chart type="bar" data={extraTypeData} layout="double" />
-          </div>
-
           <h3>Enrichment Programs</h3>
           <div className={styles.singleChart}>
             <Chart type="horizontalBar" data={enrichData} layout="single" />
+          </div>
+
+          <h3>Extracurriculars</h3>
+          <div className={styles.doubleChart}>
+            <Chart type="histogram" data={extraNumData} layout="double" />
+            <p className={styles.text}>
+              Add some interesting text about extra curriculars. Blah blah blah.
+            </p>
+          </div>
+
+          <div className={styles.singleChart}>
+            <Chart type="bar" data={extraTypeData} layout="double" />
+            <Chart type="bar" data={extraRoleData} layout="double" />
           </div>
 
           <h3>Miscellaneous</h3>
@@ -160,25 +169,12 @@ export default function Highschool(data) {
             <Chart type="pie" data={sydeBoolData} layout="double" />
             <Chart type="horizontalBar" data={topChoiceData} layout="double" />
           </div>
-
+          <br />
           {/* <div className={styles.doubleChart}>
-            <Chart type="pie" data={enrichData} position="left" />
-            <Chart type="pie" data={postChoiceData} position="right" />
-          </div>
-
-          <div className={styles.doubleChart}>
-            <Chart type="pie" data={sydeBoolData} position="left" />
-            <Chart type="pie" data={topChoiceData} position="right" />
-          </div>
-
-          <div className={styles.doubleChart}>
-            <Chart type="pie" data={considerData} position="left" />
-            <Chart type="pie" data={decisionData} position="right" />
-          </div>
-
-          <div className={styles.doubleChart}>
-            <Chart type="pie" data={prepData} position="right" />
+            <Chart type="pie" data={postChoiceData} layout="double" />
+            <Chart type="horizontalBar" data={considerData} layout="double" />
           </div> */}
+
         </div>
       </div>
     </>
