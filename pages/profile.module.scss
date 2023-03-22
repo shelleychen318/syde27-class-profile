@@ -17,6 +17,10 @@
     .text {
       padding: 4rem;
     }
+
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+    }
   }
 
   .singleChart {
@@ -24,23 +28,6 @@
     flex-direction: row;
     justify-content: center;
   }
-
-  // .chartContainer {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: space-between;
-
-  //   .doubleChart {
-  //     text-align: center;
-  //     display: flex;
-  //     padding-bottom: 8rem;
-  //     flex-direction: row;
-  //     justify-content: center;
-  //     align-items: center;
-  //     width: 100%;
-  //     text-align: center;
-  //   }
-  // }
 }
 
 .demographics {

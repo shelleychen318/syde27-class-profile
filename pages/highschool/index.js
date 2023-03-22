@@ -22,7 +22,7 @@ export default function Highschool(data) {
     color: colorTheme[1],
     title: "High School Admission Averages",
     xAxis: "Average (%)",
-    yAxis: "# of Students",
+    yAxis: "Number of Students",
     n: data.averageRespondents,
   };
 
@@ -31,8 +31,8 @@ export default function Highschool(data) {
     val: data.extraNumValues,
     color: colorTheme[1],
     title: "How many extracurriculars were we part of?",
-    xAxis: "# of Extracurriculars",
-    yAxis: "# of Students",
+    xAxis: "Number of Extracurriculars",
+    yAxis: "Number of Students",
     n: data.extraNumRespondents,
   };
 
@@ -42,7 +42,7 @@ export default function Highschool(data) {
     color: colorTheme[0],
     title: "What extracurriculars did we do?",
     xAxis: "Extracurricular Type",
-    yAxis: "# of Students",
+    yAxis: "Number of Students",
     n: data.extraTypeRespondents,
   };
 
@@ -59,6 +59,8 @@ export default function Highschool(data) {
     val: data.enrichValues,
     color: colorTheme,
     title: "Enrichment Data",
+    xAxis: "Number of Students",
+    yAxis: "Enrichment Program",
     n: data.enrichRespondents,
   };
 
@@ -108,7 +110,7 @@ export default function Highschool(data) {
     color: colorTheme[1],
     title: "On a scale of 1-10, how well did high school prepare you for SYDE?",
     xAxis: "Level of Preparedness",
-    yAxis: "# of Students",
+    yAxis: "Number of Students",
     n: data.prepareRespondents,
   };
 
@@ -129,7 +131,7 @@ export default function Highschool(data) {
 
           <h3>High School Admission Average</h3>
           <div className={styles.doubleChart}>
-            <Chart type="histogram" data={averageData} />
+            <Chart type="histogram" data={averageData} layout="double" />
             <p className={styles.text}>
               The admission average for SYDE 2027 was (insert average) %. Some
               more text about interesting admission average facts blah blah
@@ -139,24 +141,24 @@ export default function Highschool(data) {
 
           <h3>Extracurriculars</h3>
           <div className={styles.doubleChart}>
-            <Chart type="histogram" data={extraNumData} />
-            <Chart type="bar" data={extraTypeData} />
+            <Chart type="histogram" data={extraNumData} layout="double" />
+            <Chart type="bar" data={extraTypeData} layout="double" />
           </div>
 
           <h3>Enrichment Programs</h3>
           <div className={styles.singleChart}>
-            <Chart type="horizontalBar" data={enrichData} />
+            <Chart type="horizontalBar" data={enrichData} layout="single" />
           </div>
 
           <h3>Miscellaneous</h3>
           <div className={styles.doubleChart}>
-            <Chart type="bar" data={decisionData} />
-            <Chart type="histogram" data={prepData} />
+            <Chart type="bar" data={decisionData} layout="double" />
+            <Chart type="histogram" data={prepData} layout="double" />
           </div>
           <br />
           <div className={styles.doubleChart}>
-            <Chart type="pie" data={sydeBoolData} />
-            <Chart type="horizontalBar" data={topChoiceData} />
+            <Chart type="pie" data={sydeBoolData} layout="double" />
+            <Chart type="horizontalBar" data={topChoiceData} layout="double" />
           </div>
 
           {/* <div className={styles.doubleChart}>

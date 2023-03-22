@@ -1,13 +1,7 @@
-// .chart {
-//   padding: 2rem 2rem 4rem;
-//   margin: auto 10px;
-// }
-
-.graph {
+.double {
   display: inline-block;
   width: 450px;
   height: 100%;
-  // margin: 0 auto;
   padding: 2rem 2rem 4rem;
 
   @media screen and (max-width: 800px) {
@@ -16,5 +10,14 @@
   }
 }
 
-// ADJUST POSITIONING OF CHARTS BASED ON SCREEN RESIZE
+.single {
+  display: inline-block;
+  width: 700px;
+  height: 100%;
+  padding: 2rem 2rem 4rem;
 
+  @media screen and (max-width: 800px) {
+    width: 400px;
+    padding: 1rem 1rem 2rem;
+  }
+}

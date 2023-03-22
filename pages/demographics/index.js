@@ -39,7 +39,7 @@ export default function Demographics(data) {
     color: colorTheme[1],
     title: "Ethnicities",
     xAxis: "Ethnicity",
-    yAxis: "# of Students",
+    yAxis: "Number of Students",
     n: data.ethnicityRespondents,
   };
 
@@ -49,7 +49,7 @@ export default function Demographics(data) {
     color: colorTheme[1],
     title: "Religions",
     xAxis: "Religion",
-    yAxis: "# of Students",
+    yAxis: "Number of Students",
     n: data.religionRespondents,
   };
 
@@ -58,7 +58,7 @@ export default function Demographics(data) {
     val: data.hometownValues,
     color: colorTheme[1],
     title: "Hometowns",
-    xAxis: "# of Students",
+    xAxis: "Number of Students",
     yAxis: "Hometown",
     n: data.hometownRespondents,
   };
@@ -83,22 +83,19 @@ export default function Demographics(data) {
 
           <div className={styles.chartConatiner}>
             <div className={styles.doubleChart}>
-              <Chart type="pie" data={genderData} />
-              <Chart type="pie" data={sexualityData} />
+              <Chart type="pie" data={genderData} layout="double" />
+              <Chart type="pie" data={sexualityData} layout="double" />
             </div>
 
             <h3>Ethnicities and Religion</h3>
             <div className={styles.doubleChart}>
-              <Chart type="bar" data={ethnicityData} />
-              <Chart type="bar" data={religionData} />
+              <Chart type="bar" data={ethnicityData} layout="double" />
+              <Chart type="bar" data={religionData} layout="double" />
             </div>
 
             <h3>Hometowns</h3>
             <div className={styles.singleChart}>
-              <Chart
-                type="horizontalBar"
-                data={hometownData}
-              />
+              <Chart type="horizontalBar" data={hometownData} layout="single" />
             </div>
           </div>
         </div>
