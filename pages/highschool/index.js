@@ -140,11 +140,13 @@ export default function Highschool(data) {
               blah.
             </p>
           </div>
+          <br />
 
           <h3>Enrichment Programs</h3>
           <div className={styles.singleChart}>
             <Chart type="horizontalBar" data={enrichData} layout="single" />
           </div>
+          <br />
 
           <h3>Extracurriculars</h3>
           <div className={styles.doubleChart}>
@@ -153,34 +155,52 @@ export default function Highschool(data) {
               Add some interesting text about extra curriculars. Blah blah blah.
             </p>
           </div>
-
           <div className={styles.singleChart}>
             <Chart type="bar" data={extraTypeData} layout="double" />
             <Chart type="bar" data={extraRoleData} layout="double" />
           </div>
+          <br />
+
+          <h3>Other Universities We Considered</h3>
+          <p className={styles.text}>
+            Some text about university considerations. State some interesting
+            facts or jokes about these unis. idk
+          </p>
+          <div className={styles.singleChart}>
+            <div className={styles.uniConsiderationsContainer}>
+              <img
+                src="/assets/uniConsiderations.png"
+                alt="other university considerations"
+                className={styles.uniConsiderations}
+              />
+            </div>
+          </div>
+          <br />
+
+          <h3>Top Choice</h3>
+          <div className={styles.doubleChart}>
+            <Chart type="pie" data={sydeBoolData} layout="double" />
+            <p className={styles.text}>
+              Some interesting text. Maybe a clever joke about SYDE.
+            </p>
+          </div>
+          <p className={styles.text}>
+            For those of us who said SYDE was not our top choice, these are the
+            programs we were striving for in high school.
+          </p>
+          <div className={styles.topChoiceContainer}>
+            <img
+              src="/assets/topChoice.png"
+              alt="top choice programs"
+              className={styles.topChoice}
+            />
+          </div>
+          <br />
 
           <h3>Miscellaneous</h3>
           <div className={styles.doubleChart}>
             <Chart type="bar" data={decisionData} layout="double" />
             <Chart type="histogram" data={prepData} layout="double" />
-          </div>
-          <br />
-          <div className={styles.doubleChart}>
-            <Chart type="pie" data={sydeBoolData} layout="double" />
-            <Chart type="horizontalBar" data={topChoiceData} layout="double" />
-          </div>
-          <br />
-
-          <h3>Top Choice</h3>
-          <p className={styles.text}>
-            For those of us who said SYDE was not our top choice, these are the programs we were striving for in high school. 
-          </p>
-          <div className={styles.wordCloudContainer}>
-            <img
-              src="/assets/topChoiceWordCloud.png"
-              alt="class picture"
-              className={styles.wordCloud}
-            />
           </div>
         </div>
       </div>

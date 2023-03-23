@@ -28,7 +28,7 @@ export default function About() {
           <br />
           <div className={styles.imageContainer}>
             <img
-              src="/assets/class_pic.jpg"
+              src="/assets/classPic.jpg"
               alt="class picture"
               className={styles.image}
             />

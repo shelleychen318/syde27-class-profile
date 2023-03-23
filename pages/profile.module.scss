@@ -18,7 +18,7 @@
       padding: 4rem;
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
       flex-direction: column;
     }
   }
@@ -29,14 +29,34 @@
     justify-content: center;
   }
 
-  .wordCloudContainer {
+  .uniConsiderationsContainer {
+    width: fit-content;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
+    padding: 1rem;
+
+    .uniConsiderations {
+      width: 800px;
+      height: auto;
+
+      @media screen and (max-width: 900px) {
+        width: 500px;
+      }
+    }
+  }
+
+  .topChoiceContainer {
     width: fit-content;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding: 1rem;
 
-    .wordCloud {
-      width: 800px;
+    .topChoice {
+      width: 100%;
       height: auto;
     }
   }

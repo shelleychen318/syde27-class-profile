@@ -20,7 +20,7 @@ export default function Home() {
           </a>
         </div>
         <img
-          src="/assets/home_img.png"
+          src="/assets/homeImg.png"
           alt="home image"
           className={styles.image}
         />
