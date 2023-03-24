@@ -21,9 +21,9 @@ export default function Highschool(data) {
     val: data.averageValues,
     color: colorTheme[1],
     title: "High School Admission Averages",
+    n: data.averageRespondents,
     xAxis: "Average (%)",
     yAxis: "Number of Students",
-    n: data.averageRespondents,
   };
 
   const extraNumData = {
@@ -31,9 +31,9 @@ export default function Highschool(data) {
     val: data.extraNumValues,
     color: colorTheme[1],
     title: "How many extracurriculars were we part of?",
+    n: data.extraNumRespondents,
     xAxis: "Number of Extracurriculars",
     yAxis: "Number of Students",
-    n: data.extraNumRespondents,
   };
 
   const extraTypeData = {
@@ -41,9 +41,9 @@ export default function Highschool(data) {
     val: data.extraTypeValues,
     color: colorTheme[0],
     title: "What extracurriculars did we do?",
+    n: data.extraTypeRespondents,
     xAxis: "Extracurricular Type",
     yAxis: "Number of Students",
-    n: data.extraTypeRespondents,
   };
 
   const extraRoleData = {
@@ -51,9 +51,9 @@ export default function Highschool(data) {
     val: data.extraRoleValues,
     color: colorTheme[1],
     title: "Roles in Extracurriculars",
+    n: data.extraRoleRespondents,
     xAxis: "Extracurricular Role",
     yAxis: "Number of Students",
-    n: data.extraRoleRespondents,
   };
 
   const enrichData = {
@@ -61,9 +61,9 @@ export default function Highschool(data) {
     val: data.enrichValues,
     color: colorTheme,
     title: "Enrichment Data",
+    n: data.enrichRespondents,
     xAxis: "Number of Students",
     yAxis: "Enrichment Program",
-    n: data.enrichRespondents,
   };
 
   const postChoiceData = {
@@ -111,9 +111,9 @@ export default function Highschool(data) {
     val: data.prepareValues,
     color: colorTheme[1],
     title: "On a scale of 1-10, how well did high school prepare you for SYDE?",
+    n: data.prepareRespondents,
     xAxis: "Level of Preparedness",
     yAxis: "Number of Students",
-    n: data.prepareRespondents,
   };
 
   return (

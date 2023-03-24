@@ -14,7 +14,7 @@ export const getStaticProps = async () => {
 };
 
 export default function Demographics(data) {
-  const colorTheme = ["#9a464a", "#D87576", "#F5C8C8", "#FFE4E4"];
+  const colorTheme = ["#9a464a", "#e98c8d", "#F5C8C8", "#FFE4E4"];
 
   const genderData = {
     label: data.genders,
@@ -37,9 +37,9 @@ export default function Demographics(data) {
     val: data.ethnicityValues,
     color: colorTheme[1],
     title: "Ethnicities",
+    n: data.ethnicityRespondents,
     xAxis: "Ethnicity",
     yAxis: "Number of Students",
-    n: data.ethnicityRespondents,
   };
 
   const religionData = {
@@ -47,9 +47,9 @@ export default function Demographics(data) {
     val: data.religionValues,
     color: colorTheme[1],
     title: "Religions",
+    n: data.religionRespondents,
     xAxis: "Religion",
     yAxis: "Number of Students",
-    n: data.religionRespondents,
   };
 
   const hometownData = {
@@ -57,9 +57,9 @@ export default function Demographics(data) {
     val: data.hometownValues,
     color: colorTheme[1],
     title: "Hometowns",
+    n: data.hometownRespondents,
     xAxis: "Number of Students",
     yAxis: "Hometown",
-    n: data.hometownRespondents,
   };
 
   return (
