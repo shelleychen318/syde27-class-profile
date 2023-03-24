@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { NavBar } from "../../components";
 import { Chart } from "../../components";
-import { PieChart } from "../../components";
 import styles from "../profile.module.scss";
 import { getSortedDemographicsData } from "../../lib/sort/getSortedDemographicsData";
 
@@ -80,8 +79,6 @@ export default function Demographics(data) {
           </h4>
           <br />
           <h3>Gender and Sexuality</h3>
-
-          <div className={styles.chartConatiner}>
             <div className={styles.doubleChart}>
               <Chart type="pie" data={genderData} layout="double" />
               <Chart type="pie" data={sexualityData} layout="double" />
@@ -99,7 +96,6 @@ export default function Demographics(data) {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 }
