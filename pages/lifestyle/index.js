@@ -16,24 +16,24 @@ export const getStaticProps = async () => {
 export default function Lifestyle(data) {
   const colorTheme = ["#518C63", "#85C296", "#BDE0C5"];
 
-  const sleepTimeData = {
-    label: data.sleepTimes,
-    val: data.sleepTimeValues,
-    color: colorTheme[1],
-    title: "On average, how many hours of sleep did you get each night in 1A?",
-    xAxis: "Hours of Sleep Per Night",
-    yAxis: "Number of Students",
-    n: data.sleepTimeRespondents,
-  };
-
   const studyTimeData = {
     label: data.studyTimes,
     val: data.studyTimeValues,
     color: colorTheme[1],
-    title: "Average time spent studying per day in 1A",
-    xAxis: "Hours Spent Studying Per Night",
+    title: "Average Time Spent Studying Per Day in 1A",
+    xAxis: "Hours Spent Studying Per Day",
     yAxis: "Number of Students",
     n: data.studyTimeRespondents,
+  }; 
+
+  const sleepTimeData = {
+    label: data.sleepTimes,
+    val: data.sleepTimeValues,
+    color: colorTheme[1],
+    title: "Average Hours of Sleep Per Night in 1A",
+    xAxis: "Hours of Sleep Per Night",
+    yAxis: "Number of Students",
+    n: data.sleepTimeRespondents,
   };
 
   const stressLevelData = {
@@ -83,10 +83,14 @@ export default function Lifestyle(data) {
           <h4>How's life?</h4>
           <br />
 
-          <h3>Sleep and Study</h3>
+          <h3>Study and Sleep Time</h3>
+          <p>
+            The average SYDE student spends x amount of time studying and x
+            amount of time sleeping. Add a joke or something.
+          </p>
           <div className={styles.doubleChart}>
-            <Chart type="bar" data={sleepTimeData} layout="double" />
             <Chart type="bar" data={studyTimeData} layout="double" />
+            <Chart type="bar" data={sleepTimeData} layout="double" />
           </div>
 
           <h3>Friends in SYDE</h3>
@@ -103,7 +107,6 @@ export default function Lifestyle(data) {
           <div className={styles.singleChart}>
             <Chart type="bar" data={purityData} layout="single" />
           </div>
-
         </div>
       </div>
     </>
