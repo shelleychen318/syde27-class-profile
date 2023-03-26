@@ -3,6 +3,9 @@ import { NavBar } from "../../components";
 import { Chart } from "../../components";
 import styles from "../profile.module.scss";
 import { getSortedDemographicsData } from "../../lib/sort/getSortedDemographicsData";
+import { BoxPlot } from "../../components";
+import { BoxPlot2 } from "../../components";
+
 
 export const getStaticProps = async () => {
   const data = await getSortedDemographicsData();
@@ -79,23 +82,56 @@ export default function Demographics(data) {
           </h4>
           <br />
           <h3>Gender and Sexuality</h3>
-            <div className={styles.doubleChart}>
-              <Chart type="pie" data={genderData} layout="double" />
-              <Chart type="pie" data={sexualityData} layout="double" />
-            </div>
+          <div className={styles.doubleChart}>
+            <Chart type="pie" data={genderData} layout="double" />
+            <Chart type="pie" data={sexualityData} layout="double" />
+          </div>
 
-            <h3>Ethnicities and Religion</h3>
-            <div className={styles.doubleChart}>
-              <Chart type="bar" data={ethnicityData} layout="double" />
-              <Chart type="bar" data={religionData} layout="double" />
-            </div>
+          <h3>Ethnicities and Religion</h3>
+          <div className={styles.doubleChart}>
+            <Chart type="bar" data={ethnicityData} layout="double" />
+            <Chart type="bar" data={religionData} layout="double" />
+          </div>
 
-            <h3>Hometowns</h3>
-            <div className={styles.singleChart}>
-              <Chart type="horizontalBar" data={hometownData} layout="single" />
-            </div>
+          <h3>Hometowns</h3>
+          <div className={styles.singleChart}>
+            <Chart type="horizontalBar" data={hometownData} layout="single" />
           </div>
         </div>
+
+        {/* <BoxPlot
+          data={[
+            {
+              name: "Group 1",
+              q1: 1,
+              q2: 2,
+              q3: 3,
+              whiskerMin: 0,
+              whiskerMax: 4,
+              outliers: [5],
+            },
+            {
+              name: "Group 2",
+              q1: 2,
+              q2: 3,
+              q3: 4,
+              whiskerMin: 1,
+              whiskerMax: 5,
+              outliers: [],
+            },
+            {
+              name: "Group 3",
+              q1: 3,
+              q2: 4,
+              q3: 5,
+              whiskerMin: 2,
+              whiskerMax: 6,
+              outliers: [],
+            },
+          ]}
+        /> */}
+
+      </div>
     </>
   );
 }

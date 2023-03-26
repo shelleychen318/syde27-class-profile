@@ -4,4 +4,5 @@ export { default as DoughnutChart } from "./charts/DoughnutChart";
 export { default as BarChart } from "./charts/BarChart";
 export { default as HorizontalBarChart } from "./charts/HorizontalBarChart";
 export { default as Histogram } from "./charts/Histogram";
+export { default as BoxPlot } from "./charts/BoxPlot";
 export { default as Chart } from "./charts/Chart";
