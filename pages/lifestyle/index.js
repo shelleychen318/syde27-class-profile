@@ -21,6 +21,8 @@ export default function Lifestyle(data) {
     val: data.sleepTimeValues,
     color: colorTheme[1],
     title: "On average, how many hours of sleep did you get each night in 1A?",
+    xAxis: "Hours of Sleep Per Night",
+    yAxis: "Number of Students",
     n: data.sleepTimeRespondents,
   };
 
@@ -29,6 +31,8 @@ export default function Lifestyle(data) {
     val: data.studyTimeValues,
     color: colorTheme[1],
     title: "Average time spent studying per day in 1A",
+    xAxis: "Hours Spent Studying Per Night",
+    yAxis: "Number of Students",
     n: data.studyTimeRespondents,
   };
 
