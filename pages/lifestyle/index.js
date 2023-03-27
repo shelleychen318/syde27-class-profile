@@ -24,7 +24,7 @@ export default function Lifestyle(data) {
     xAxis: "Hours Spent Studying Per Day",
     yAxis: "Number of Students",
     n: data.studyTimeRespondents,
-  }; 
+  };
 
   const sleepTimeData = {
     label: data.sleepTimes,
@@ -69,6 +69,8 @@ export default function Lifestyle(data) {
     val: data.purityValues,
     color: colorTheme[1],
     title: "Rice Purity Scores",
+    xAxis: "Rice Purity Score Ranges",
+    yAxis: "Number of Students",
     n: data.purityRespondents,
   };
 
@@ -107,7 +109,11 @@ export default function Lifestyle(data) {
             <Chart type="bar" data={homeTimeData} layout="single" />
           </div>
 
-          <h3>Rice Purity</h3>
+          <h3>Rice Purity 😳</h3>
+          <p>
+            Looks like many of us aim for 90s even outside of school! In all
+            seriousness, the average rice purity score is x.
+          </p>
           <div className={styles.singleChart}>
             <Chart type="bar" data={purityData} layout="single" />
           </div>
