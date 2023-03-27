@@ -29,7 +29,7 @@ export default function Highschool(data) {
   const extraNumData = {
     label: data.extracurricularNum,
     val: data.extraNumValues,
-    color: colorTheme[1],
+    color: colorTheme[2],
     title: "Number of Extracurriculars We Were Part of in High School",
     n: data.extraNumRespondents,
     xAxis: "Number of Extracurriculars",
@@ -40,7 +40,7 @@ export default function Highschool(data) {
     label: data.extracurricularType,
     val: data.extraTypeValues,
     color: colorTheme[1],
-    title: "High School Extracurriculars",
+    title: "Extracurriculars Types",
     n: data.extraTypeRespondents,
     xAxis: "Extracurricular Type",
     yAxis: "Number of Students",
@@ -149,17 +149,16 @@ export default function Highschool(data) {
           <br />
 
           <h3>Extracurriculars</h3>
-          <div className={styles.doubleChart}>
-            <Chart type="histogram" data={extraNumData} layout="double" />
-            <p className={styles.text}>
-              Add some interesting text about extra curriculars. Blah blah blah.
-            </p>
-          </div>
+          <p className={styles.text}>
+            Add some interesting text about extra curriculars. Blah blah blah.
+          </p>
           <div className={styles.singleChart}>
-            <Chart type="bar" data={extraTypeData} layout="double" />
-            <Chart type="bar" data={extraRoleData} layout="double" />
+            <Chart type="bar" data={extraTypeData} layout="single" />
           </div>
-          <br />
+          <div className={styles.doubleChart}>
+            <Chart type="bar" data={extraRoleData} layout="double" />
+            <Chart type="bar" data={extraNumData} layout="double" />
+          </div>
 
           <h3>Other Universities We Considered</h3>
           <p className={styles.text}>
