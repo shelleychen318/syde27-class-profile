@@ -198,6 +198,12 @@ export default function Highschool(data) {
           <br />
 
           <h3>Miscellaneous</h3>
+          <p className={styles.text}>
+            Some insight on how high school influenced our SYDE experience. Most
+            of us decided we wanted to be part of the SYDE gang in our final
+            year of high school, but one person had their heart set on SYDE
+            before entering grade 9!
+          </p>
           <div className={styles.doubleChart}>
             <Chart type="doughnut" data={decisionData} layout="double" />
             <Chart type="histogram" data={prepData} layout="double" />
