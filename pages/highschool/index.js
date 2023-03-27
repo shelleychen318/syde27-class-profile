@@ -14,7 +14,7 @@ export const getStaticProps = async () => {
 };
 
 export default function Highschool(data) {
-  const colorTheme = ["#6698d4", "#8fbedc", "#C1E1F4"];
+  const colorTheme = ["#C1E1F4", "#8fbedc", "#6698d4", "#4278b2", "#165a91"];
 
   const averageData = {
     label: data.averages,
@@ -39,7 +39,7 @@ export default function Highschool(data) {
   const extraTypeData = {
     label: data.extracurricularType,
     val: data.extraTypeValues,
-    color: colorTheme[0],
+    color: colorTheme[1],
     title: "What extracurriculars did we do?",
     n: data.extraTypeRespondents,
     xAxis: "Extracurricular Type",
@@ -49,7 +49,7 @@ export default function Highschool(data) {
   const extraRoleData = {
     label: data.extraRoleUniques,
     val: data.extraRoleValues,
-    color: colorTheme[1],
+    color: colorTheme[2],
     title: "Roles in Extracurriculars",
     n: data.extraRoleRespondents,
     xAxis: "Extracurricular Role",
@@ -59,7 +59,7 @@ export default function Highschool(data) {
   const enrichData = {
     label: data.enrichUniques,
     val: data.enrichValues,
-    color: colorTheme,
+    color: colorTheme[3],
     title: "Enrichment Data",
     n: data.enrichRespondents,
     xAxis: "Number of Students",
@@ -77,7 +77,7 @@ export default function Highschool(data) {
   const sydeBoolData = {
     label: data.sydeBools,
     val: data.sydeBoolValues,
-    color: colorTheme,
+    color: [colorTheme[1], colorTheme[2]],
     title: "Was SYDE your top choice?",
     n: data.sydeBoolRespondents,
   };
@@ -101,7 +101,7 @@ export default function Highschool(data) {
   const decisionData = {
     label: data.decisions,
     val: data.decisionValues,
-    color: colorTheme[0],
+    color: colorTheme,
     title: "When did you decide you wanted to go into SYDE?",
     n: data.decisionRespondents,
   };
@@ -110,7 +110,7 @@ export default function Highschool(data) {
     label: data.preparation,
     val: data.prepareValues,
     color: colorTheme[1],
-    title: "On a scale of 1-10, how well did high school prepare you for SYDE?",
+    title: "On a scale of 1-5, how well did high school prepare you for SYDE?",
     n: data.prepareRespondents,
     xAxis: "Level of Preparedness",
     yAxis: "Number of Students",
@@ -199,7 +199,7 @@ export default function Highschool(data) {
 
           <h3>Miscellaneous</h3>
           <div className={styles.doubleChart}>
-            <Chart type="bar" data={decisionData} layout="double" />
+            <Chart type="doughnut" data={decisionData} layout="double" />
             <Chart type="histogram" data={prepData} layout="double" />
           </div>
         </div>

@@ -49,6 +49,8 @@ export default function Lifestyle(data) {
     val: data.friendsValues,
     color: colorTheme[1],
     title: "How easy did you find it was to make friends? (5 being very easy)",
+    xAxis: "Level of Ease",
+    yAxis: "Number of Students",
     n: data.friendsRespondents,
   };
 
@@ -57,6 +59,8 @@ export default function Lifestyle(data) {
     val: data.homeTimeValues,
     color: colorTheme[1],
     title: "On average, how many times did you visit home each month in 1A?",
+    xAxis: "Number of Home Visits Per Month",
+    yAxis: "Number of Students",
     n: data.homeTimeRespondents,
   };
 

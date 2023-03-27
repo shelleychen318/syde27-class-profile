@@ -12,6 +12,7 @@ const BoxPlot = ({ data }) => {
       // If so, destroy the chart instance before creating a new one
       chart.destroy();
     }
+
     const updatedChart = new Chart(canvas, {
       type: "boxplot",
       data: {
