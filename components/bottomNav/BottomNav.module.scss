@@ -1,0 +1,40 @@
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 0 2rem;
+
+  .linkContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1rem;
+
+    @media screen and (max-width: 640px) {
+      flex-direction: column;
+
+      .text {
+        order: 1;
+      }
+
+      .arrow {
+        order: 2;
+      }
+    }
+
+    .text {
+      font-weight: 500;
+
+      &:hover {
+        color: var(--primary);
+        transition-duration: 0.3s;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .arrow {
+    max-width: 200px;
+    width: 100%;
+  }
+}

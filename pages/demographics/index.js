@@ -6,7 +6,6 @@ import { getSortedDemographicsData } from "../../lib/sort/getSortedDemographicsD
 import { BoxPlot } from "../../components";
 import { BoxPlot2 } from "../../components";
 
-
 export const getStaticProps = async () => {
   const data = await getSortedDemographicsData();
   return {
@@ -24,7 +23,7 @@ export default function Demographics(data) {
     val: data.genderValues,
     color: colorTheme,
     title: "Gender Ratio",
-    n: data.genderRespondents, 
+    n: data.genderRespondents,
   };
 
   const sexualityData = {
@@ -73,33 +72,32 @@ export default function Demographics(data) {
       </Head>
 
       <NavBar />
-      <div className={styles.content}>
-        <div className={styles.demographics}>
-          <h2>Demographics</h2>
-          <h4>
-            What are the characteristics of the individuals who make up the SYDE
-            2027 cohort?
-          </h4>
-          <br />
-          <h3>Gender and Sexuality</h3>
-          <div className={styles.doubleChart}>
-            <Chart type="pie" data={genderData} layout="double" />
-            <Chart type="pie" data={sexualityData} layout="double" />
-          </div>
-
-          <h3>Ethnicities and Religion</h3>
-          <div className={styles.doubleChart}>
-            <Chart type="bar" data={ethnicityData} layout="double" />
-            <Chart type="bar" data={religionData} layout="double" />
-          </div>
-
-          <h3>Hometowns</h3>
-          <div className={styles.singleChart}>
-            <Chart type="horizontalBar" data={hometownData} layout="single" />
-          </div>
+      <div className={`${styles.content} ${styles.demographics}`}>
+        <h2>Demographics</h2>
+        <h4>
+          What are the characteristics of the individuals who make up the SYDE
+          2027 cohort?
+        </h4>
+        <br />
+        <h3>Gender and Sexuality</h3>
+        <div className={styles.doubleChart}>
+          <Chart type="pie" data={genderData} layout="double" />
+          <Chart type="pie" data={sexualityData} layout="double" />
         </div>
 
-        {/* <BoxPlot
+        <h3>Ethnicities and Religion</h3>
+        <div className={styles.doubleChart}>
+          <Chart type="bar" data={ethnicityData} layout="double" />
+          <Chart type="bar" data={religionData} layout="double" />
+        </div>
+
+        <h3>Hometowns</h3>
+        <div className={styles.singleChart}>
+          <Chart type="horizontalBar" data={hometownData} layout="single" />
+        </div>
+      </div>
+
+      {/* <BoxPlot
           data={[
             {
               name: "Group 1",
@@ -130,8 +128,6 @@ export default function Demographics(data) {
             },
           ]}
         /> */}
-
-      </div>
     </>
   );
 }

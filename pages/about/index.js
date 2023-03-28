@@ -13,7 +13,6 @@ export default function About() {
       <NavBar />
 
       <div className={styles.content}>
-        <div>
           <h2 className={styles.heading}>About the Program</h2>
           <p className={styles.paragraph}>
             Systems Design Engineering (SYDE) is an interdisciplinary
@@ -61,7 +60,6 @@ export default function About() {
           >
             <div className={styles.github}>View GitHub repo {">"}</div>
           </a>
-        </div>
       </div>
     </>
   );

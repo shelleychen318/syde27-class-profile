@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { NavBar } from "../../components";
+import { BottomNav } from "../../components";
 import styles from "../profile.module.scss";
 
 export default function Academics() {
-
   return (
     <>
       <Head>
@@ -13,13 +13,12 @@ export default function Academics() {
 
       <NavBar />
 
-      <div className={styles.content}>
-        <div className={styles.academics}>
-          <h2>Academics</h2>
-          <h4>What were our favourite courses and professors in SYDE? </h4>
-          <br />
-          <h3>1A Average</h3>
-        </div>
+      <div className={`${styles.content} ${styles.academics}`}>
+        <h2>Academics</h2>
+        <h4>What were our favourite courses and professors in SYDE? </h4>
+        <br />
+        <h3>1A Average</h3>
+        <BottomNav currentPage="academics" />
       </div>
     </>
   );

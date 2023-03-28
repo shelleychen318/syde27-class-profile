@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { NavBar } from "../../components";
 import { Chart } from "../../components";
+import { BottomNav } from "../../components";
 import styles from "../profile.module.scss";
 import { getSortedLifestyleData } from "../../lib/sort/getSortedLifestyleData";
 
@@ -83,41 +84,36 @@ export default function Lifestyle(data) {
 
       <NavBar />
 
-      <div className={styles.content}>
-        <div className={styles.lifestyle}>
-          <h2>Lifestyle</h2>
-          <h4>How's life?</h4>
-          <br />
-
-          <h3>Study and Sleep Time</h3>
-          <p>
-            The average SYDE student spends x amount of time studying and x
-            amount of time sleeping. Add a joke or something.
-          </p>
-          <div className={styles.doubleChart}>
-            <Chart type="bar" data={studyTimeData} layout="double" />
-            <Chart type="bar" data={sleepTimeData} layout="double" />
-          </div>
-
-          <h3>Friends in SYDE</h3>
-          <div className={styles.singleChart}>
-            <Chart type="bar" data={friendsData} layout="single" />
-          </div>
-
-          <h3>Home</h3>
-          <div className={styles.singleChart}>
-            <Chart type="bar" data={homeTimeData} layout="single" />
-          </div>
-
-          <h3>Rice Purity 😳</h3>
-          <p>
-            Looks like many of us aim for 90s even outside of school! In all
-            seriousness, the average rice purity score is x.
-          </p>
-          <div className={styles.singleChart}>
-            <Chart type="bar" data={purityData} layout="single" />
-          </div>
+      <div className={`${styles.content} ${styles.lifestyle}`}>
+        <h2>Lifestyle</h2>
+        <h4>How's life?</h4>
+        <br />
+        <h3>Study and Sleep Time</h3>
+        <p>
+          The average SYDE student spends x amount of time studying and x amount
+          of time sleeping. Add a joke or something.
+        </p>
+        <div className={styles.doubleChart}>
+          <Chart type="bar" data={studyTimeData} layout="double" />
+          <Chart type="bar" data={sleepTimeData} layout="double" />
         </div>
+        <h3>Friends in SYDE</h3>
+        <div className={styles.singleChart}>
+          <Chart type="bar" data={friendsData} layout="single" />
+        </div>
+        <h3>Home</h3>
+        <div className={styles.singleChart}>
+          <Chart type="bar" data={homeTimeData} layout="single" />
+        </div>
+        <h3>Rice Purity 😳</h3>
+        <p>
+          Looks like many of us aim for 90s even outside of school! In all
+          seriousness, the average rice purity score is x.
+        </p>
+        <div className={styles.singleChart}>
+          <Chart type="bar" data={purityData} layout="single" />
+        </div>
+        <BottomNav currentPage="lifestyle" />
       </div>
     </>
   );
