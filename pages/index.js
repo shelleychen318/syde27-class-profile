@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { NavBar } from "../components";
 import styles from "../styles/Home.module.scss";
 
@@ -15,9 +16,9 @@ export default function Home() {
       <div className={styles.banner}>
         <div className={styles.title}>
           <h1>Systems Design Engineering 2027 Class Profile!</h1>
-          <a href="/demographics">
+          <Link href="/demographics">
             <h4 className={styles.button}>Go to Profile</h4>
-          </a>
+          </Link>
         </div>
         <img
           src="/assets/homeImg.png"

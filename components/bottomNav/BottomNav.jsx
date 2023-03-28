@@ -3,13 +3,17 @@ import Link from "next/link";
 import Arrow from "@elsdoerfer/react-arrow";
 import styles from "./BottomNav.module.scss";
 
-const NavButtons = ({ currentPage }) => {
+const BottomNav = ({ currentPage }) => {
   let backPageLink;
   let backPageName;
   let nextPageLink;
   let nextPageName;
 
   switch (currentPage) {
+    case "about":
+      nextPageLink = "/demographics";
+      nextPageName = "Demographics";
+      break;
     case "demographics":
       backPageLink = "/about";
       backPageName = "About";
@@ -41,7 +45,7 @@ const NavButtons = ({ currentPage }) => {
   }
 
   return (
-    <div className={styles.navContainer}>
+    <div className={`${styles.navContainer} ${currentPage == "about" ? styles.nextLinkOnly : ""}`}>
       {backPageLink && (
         <Link href={backPageLink}>
           <div className={styles.linkContainer}>
@@ -75,4 +79,4 @@ const NavButtons = ({ currentPage }) => {
   );
 };
 
-export default NavButtons;
+export default BottomNav;

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { NavBar } from "../../components";
 import { Chart } from "../../components";
+import { BottomNav } from "../../components";
 import styles from "../profile.module.scss";
 import { getSortedDemographicsData } from "../../lib/sort/getSortedDemographicsData";
 import { BoxPlot } from "../../components";
@@ -95,9 +96,8 @@ export default function Demographics(data) {
         <div className={styles.singleChart}>
           <Chart type="horizontalBar" data={hometownData} layout="single" />
         </div>
-      </div>
 
-      {/* <BoxPlot
+        {/* <BoxPlot
           data={[
             {
               name: "Group 1",
@@ -128,6 +128,8 @@ export default function Demographics(data) {
             },
           ]}
         /> */}
+        <BottomNav currentPage="demographics" />
+      </div>
     </>
   );
 }

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { NavBar } from "../../components";
+import { BottomNav } from "../../components";
 import styles from "./about.module.scss";
 
 export default function About() {
@@ -60,6 +61,8 @@ export default function About() {
           >
             <div className={styles.github}>View GitHub repo {">"}</div>
           </a>
+
+          <BottomNav currentPage="about" />
       </div>
     </>
   );
