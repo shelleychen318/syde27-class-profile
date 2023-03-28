@@ -39,8 +39,8 @@ const BottomNav = ({ currentPage }) => {
       nextPageName = "Lifestyle";
       break;
     case "lifestyle":
-      backPageLink = "/academics";
-      backPageName = "Academics";
+      backPageLink = "/co-op";
+      backPageName = "Co-op";
       break;
   }
 
