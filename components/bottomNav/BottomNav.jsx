@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Arrow from "@elsdoerfer/react-arrow";
 import styles from "./BottomNav.module.scss";
+import colors from "../../styles/colors.module.scss";
 
 const BottomNav = ({ currentPage }) => {
   let backPageLink;
@@ -45,7 +46,8 @@ const BottomNav = ({ currentPage }) => {
   }
 
   return (
-    <div className={`${styles.navContainer} ${currentPage == "about" ? styles.nextLinkOnly : ""}`}>
+    <div
+      className={`${styles.navContainer} ${currentPage == "about" ? styles.nextLinkOnly : ""}`}>
       {backPageLink && (
         <Link href={backPageLink}>
           <div className={styles.linkContainer}>
@@ -53,7 +55,7 @@ const BottomNav = ({ currentPage }) => {
               angle={270}
               length={75}
               lineWidth={1.1}
-              color="#1f1d1d"
+              color={colors.mainText}
               className={styles.arrow}
             />
             <div className={styles.text}>{backPageName}</div>
@@ -69,7 +71,7 @@ const BottomNav = ({ currentPage }) => {
               angle={90}
               length={75}
               lineWidth={1.1}
-              color="#1f1d1d"
+              color={colors.mainText}
               className={styles.arrow}
             />
           </div>

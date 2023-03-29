@@ -3,6 +3,7 @@ import { NavBar } from "../../components";
 import { Chart } from "../../components";
 import { BottomNav } from "../../components";
 import styles from "../profile.module.scss";
+import colors from "../../styles/colors.module.scss";
 import { getSortedLifestyleData } from "../../lib/sort/getSortedLifestyleData";
 
 export const getStaticProps = async () => {
@@ -15,7 +16,7 @@ export const getStaticProps = async () => {
 };
 
 export default function Lifestyle(data) {
-  const colorTheme = ["#518C63", "#85C296", "#BDE0C5"];
+  const colorTheme = [colors.lifestyle1, colors.lifestyle2, colors.lifestyle3];
 
   const studyTimeData = {
     label: data.studyTimes,

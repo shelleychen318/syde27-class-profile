@@ -1,3 +1,5 @@
+@import "../styles/colors.module";
+
 .content {
   display: flex;
   flex-direction: column;
@@ -64,45 +66,45 @@
 
 .demographics {
   h2 {
-    color: #e98c8d;
+    color: $demographics2;
   }
   h3 {
-    color: #9a464a;
+    color: $demographics1;
   }
 }
 
 .highschool {
   h2 {
-    color: #8fbedc;
+    color: $highschool3;
   }
   h3 {
-    color: #6698d4;
+    color: $highschool2;
   }
 }
 
 .academics {
   h2 {
-    color: #ff9d5c;
+    color: $academics2;
   }
   h3 {
-    color: #d27637;
+    color: $academics1;
   }
 }
 
 .coop {
   h2 {
-    color: #b491c8;
+    color: $coop2;
   }
   h3 {
-    color: #6f5082;
+    color: $coop1;
   }
 }
 
 .lifestyle {
   h2 {
-    color: #85C296;
+    color: $lifestyle2;
   }
   h3 {
-    color: #518C63;
+    color: $lifestyle1;
   }
 }

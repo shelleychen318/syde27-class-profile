@@ -1,0 +1,46 @@
+$background: #f8f4ec;
+$primary: #8eccc1;
+$secondary: #57958b;
+$mainText: #1f1d1d;
+
+$demographics1: #9a464a;
+$demographics2: #e98c8d;
+$demographics3: #f5c8c8;
+$demographics4: #ffe4e4;
+
+$highschool1: #165a91;
+$highschool2: #4278b2;
+$highschool3: #6698d4;
+$highschool4: #8fbedc;
+$highschool5: #c1e1f4;
+
+$academics1: #d27637;
+$academics2: #ff9d5c;
+
+$coop1: #6f5082;
+$coop2: #b491c8;
+
+$lifestyle1: #518c63;
+$lifestyle2: #85c296;
+$lifestyle3: #bde0c5;
+
+:export {
+  primary: $primary;
+  mainText: $mainText;
+  demographics1: $demographics1;
+  demographics2: $demographics2;
+  demographics3: $demographics3;
+  demographics4: $demographics4;
+  highschool1: $highschool1;
+  highschool2: $highschool2;
+  highschool3: $highschool3;
+  highschool4: $highschool4;
+  highschool5: $highschool5;
+  academics1: $academics1;
+  academics2: $academics2;
+  coop1: $coop1;
+  coop2: $coop2;
+  lifestyle1: $lifestyle1;
+  lifestyle2: $lifestyle2;
+  lifestyle3: $lifestyle3;
+}

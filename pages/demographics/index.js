@@ -3,6 +3,7 @@ import { NavBar } from "../../components";
 import { Chart } from "../../components";
 import { BottomNav } from "../../components";
 import styles from "../profile.module.scss";
+import colors from "../../styles/colors.module.scss";
 import { getSortedDemographicsData } from "../../lib/sort/getSortedDemographicsData";
 import { BoxPlot } from "../../components";
 import { BoxPlot2 } from "../../components";
@@ -17,7 +18,12 @@ export const getStaticProps = async () => {
 };
 
 export default function Demographics(data) {
-  const colorTheme = ["#9a464a", "#e98c8d", "#F5C8C8", "#FFE4E4"];
+  const colorTheme = [
+    colors.demographics1,
+    colors.demographics2,
+    colors.demographics3,
+    colors.demographics4,
+  ];
 
   const genderData = {
     label: data.genders,

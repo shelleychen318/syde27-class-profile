@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { NavBar } from "../../components";
 import styles from "../profile.module.scss";
+import colors from "../../styles/colors.module.scss";
 import { Chart } from "../../components";
 import { BottomNav } from "../../components";
 import { getSortedHighschoolData } from "../../lib/sort/getSortedHighschoolData";
@@ -15,12 +16,18 @@ export const getStaticProps = async () => {
 };
 
 export default function Highschool(data) {
-  const colorTheme = ["#C1E1F4", "#8fbedc", "#6698d4", "#4278b2", "#165a91"];
+  const colorTheme = [
+    colors.highschool1,
+    colors.highschool2,
+    colors.highschool3,
+    colors.highschool4,
+    colors.highschool5,
+  ];
 
   const averageData = {
     label: data.averages,
     val: data.averageValues,
-    color: colorTheme[1],
+    color: colorTheme[3],
     title: "High School Admission Averages",
     n: data.averageRespondents,
     xAxis: "Average (%)",
@@ -30,7 +37,7 @@ export default function Highschool(data) {
   const extraNumData = {
     label: data.extracurricularNum,
     val: data.extraNumValues,
-    color: colorTheme[2],
+    color: colorTheme[3],
     title: "Number of Extracurriculars We Were Part of in High School",
     n: data.extraNumRespondents,
     xAxis: "Number of Extracurriculars",
@@ -40,7 +47,7 @@ export default function Highschool(data) {
   const extraTypeData = {
     label: data.extracurricularType,
     val: data.extraTypeValues,
-    color: colorTheme[1],
+    color: colorTheme[3],
     title: "Extracurriculars Types",
     n: data.extraTypeRespondents,
     xAxis: "Extracurricular Type",
@@ -50,7 +57,7 @@ export default function Highschool(data) {
   const extraRoleData = {
     label: data.extraRoleUniques,
     val: data.extraRoleValues,
-    color: colorTheme[2],
+    color: colorTheme[3],
     title: "Extracurricular Roles",
     n: data.extraRoleRespondents,
     xAxis: "Extracurricular Role",
@@ -78,7 +85,7 @@ export default function Highschool(data) {
   const sydeBoolData = {
     label: data.sydeBools,
     val: data.sydeBoolValues,
-    color: [colorTheme[1], colorTheme[2]],
+    color: [colorTheme[3], colorTheme[2]],
     title: "Was SYDE our top choice?",
     n: data.sydeBoolRespondents,
   };
@@ -99,22 +106,22 @@ export default function Highschool(data) {
     n: data.considerRespondents,
   };
 
-  const decisionData = {
-    label: data.decisions,
-    val: data.decisionValues,
-    color: colorTheme,
-    title: "When did we decide we wanted to go into SYDE?",
-    n: data.decisionRespondents,
-  };
-
   const prepData = {
     label: data.preparation,
     val: data.prepareValues,
-    color: colorTheme[1],
+    color: colorTheme[3],
     title: "How well did high school prepare us for SYDE?",
     n: data.prepareRespondents,
     xAxis: "Level of Preparedness",
     yAxis: "Number of Students",
+  };
+
+  const decisionData = {
+    label: data.decisions,
+    val: data.decisionValues,
+    color: colorTheme.reverse(),
+    title: "When did we decide we wanted to go into SYDE?",
+    n: data.decisionRespondents,
   };
 
   return (

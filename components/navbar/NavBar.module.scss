@@ -1,3 +1,5 @@
+@import "../../styles/colors.module";
+
 .header {
   width: 100%;
   top: 0;
@@ -19,7 +21,7 @@
   margin-right: auto;
 
   .logo {
-    color: var(--main-text);
+    color: $mainText;
     text-decoration: none;
     font-size: 24px;
     font-weight: 600;
@@ -52,7 +54,7 @@
 }
 
 .closeMenu {
-  background: var(--bg);
+  background: $background;
   width: 4rem;
   height: 4rem;
   position: fixed;
@@ -90,7 +92,7 @@
       font-weight: 500;
 
       &:hover {
-        color: var(--primary);
+        color: $primary;
       }
     }
 
@@ -117,7 +119,7 @@
       font-weight: 500;
 
       &:hover {
-        color: var(--primary);
+        color: $primary;
       }
     }
 

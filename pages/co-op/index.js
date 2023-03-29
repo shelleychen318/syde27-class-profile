@@ -2,6 +2,7 @@ import Head from "next/head";
 import { NavBar } from "../../components";
 import { BottomNav } from "../../components";
 import styles from "../profile.module.scss";
+import colors from "../../styles/colors.module.scss"
 
 //Test
 
