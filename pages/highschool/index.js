@@ -106,6 +106,14 @@ export default function Highschool(data) {
     n: data.considerRespondents,
   };
 
+  const decisionData = {
+    label: data.decisions,
+    val: data.decisionValues,
+    color: [...colorTheme].reverse(),
+    title: "When did we decide we wanted to go into SYDE?",
+    n: data.decisionRespondents,
+  };
+
   const prepData = {
     label: data.preparation,
     val: data.prepareValues,
@@ -114,14 +122,6 @@ export default function Highschool(data) {
     n: data.prepareRespondents,
     xAxis: "Level of Preparedness",
     yAxis: "Number of Students",
-  };
-
-  const decisionData = {
-    label: data.decisions,
-    val: data.decisionValues,
-    color: colorTheme.reverse(),
-    title: "When did we decide we wanted to go into SYDE?",
-    n: data.decisionRespondents,
   };
 
   return (
