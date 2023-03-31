@@ -1,5 +1,23 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Chart from 'chart.js/auto';
+import React, { useState, useEffect, useRef } from "react";
+import Chart from "chart.js/auto";
+
+import { LinearScale, CategoryScale } from "chart.js";
+import {
+  BoxPlotController,
+  BoxAndWiskers,
+  Violin,
+  ViolinController,
+} from "@sgratzl/chartjs-chart-boxplot";
+//import { BoxPlotChart } from '@sgratzl/chartjs-chart-boxplot';
+// register controller in chart.js and ensure the defaults are set
+Chart.register(
+  BoxPlotController,
+  BoxAndWiskers,
+  Violin,
+  ViolinController,
+  LinearScale,
+  CategoryScale
+);
 
 const BoxPlot = ({ data }) => {
   const canvasRef = useRef(null);
@@ -11,24 +29,87 @@ const BoxPlot = ({ data }) => {
     if (chart) {
       // If so, destroy the chart instance before creating a new one
       chart.destroy();
-    }
+      const updatedChart = new Chart(canvas, {
+        type: "boxplot",
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          plugins: {
+            legend: { display: false },
+            title: {
+              display: true,
+              text: data.title,
+              color: "#ffffff",
+              padding: 14,
+            },
+            subtitle: {
+              display: true,
 
-    const updatedChart = new Chart(canvas, {
-      type: "boxplot",
-      data: {
-        datasets: [],
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            position: "top",
+              text: "number of respondents: " + data.n,
+              padding: {
+                bottom: 20,
+              },
+            },
+          },
+          scales: {
+            x: {
+              grid: {
+                zeroLineColor: "#fff",
+                color: "rgba(255, 255, 255, 0.05)",
+                lineWidth: 1,
+              },
+              title: {
+                display: true,
+                text: data.xAxis,
+                color: "#ffffff",
+              },
+              ticks: {
+                color: "#ffffff",
+              },
+            },
+            y: {
+              grid: {
+                zeroLineColor: "#fff",
+                color: "rgba(255, 255, 255, 0.05)",
+                lineWidth: 1,
+              },
+              title: {
+                display: true,
+                text: data.yAxis,
+                color: "#ffffff",
+              },
+              ticks: {
+                color: "#ffffff",
+              },
+              min: parseInt(data.xmin),
+              max: parseInt(data.xmax),
+            },
           },
         },
-      },
-    });
-    setChart(updatedChart);
+        data: {
+          labels: data.label,
+          datasets: [
+            {
+              //label: '',
+              data: data.val,
+              backgroundColor: data.color,
+              borderColor: "white",
+              hoverBackgroundColor: "white",
+              borderWidth: 1.5,
+              marker: {
+                color: "rgb(8,81,156)",
+                outliercolor: "rgba(219, 64, 82, 0.6)",
+                line: {
+                  outliercolor: "rgba(219, 64, 82, 1.0)",
+                  outlierwidth: 2,
+                },
+              },
+            },
+          ],
+        },
+      });
+      setChart(updatedChart);
+    }
   }, [chart]);
 
   useEffect(() => {
@@ -37,7 +118,7 @@ const BoxPlot = ({ data }) => {
         datasets: [],
       };
       // Iterate through the data and create a dataset for each set of box plot data
-      data.forEach((d, i) => {
+      data.val.forEach((d, i) => {
         updatedData.datasets.push({
           label: d.name,
           data: [
@@ -63,4 +144,3 @@ const BoxPlot = ({ data }) => {
 };
 
 export default BoxPlot;
-
