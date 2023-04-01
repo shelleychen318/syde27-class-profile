@@ -2,7 +2,7 @@ import Head from "next/head";
 import { NavBar } from "../../components";
 import styles from "../profile.module.scss";
 
-export default function Lifestyle() {
+export default function Lifestyle(data) {
   return (
     <>
       <Head>
@@ -18,6 +18,7 @@ export default function Lifestyle() {
           <h4>How's life?</h4>
           <br />
           <h3>Hobbies</h3>
+
         </div>
       </div>
     </>
