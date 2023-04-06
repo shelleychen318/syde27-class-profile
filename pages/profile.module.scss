@@ -1,3 +1,5 @@
+@import "../styles/colors.module";
+
 .content {
   display: flex;
   flex-direction: column;
@@ -12,10 +14,14 @@
   .doubleChart {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
 
     .text {
       padding: 4rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
     }
   }
 
@@ -25,65 +31,80 @@
     justify-content: center;
   }
 
-  // .chartContainer {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: space-between;
+  .uniConsiderationsContainer {
+    width: fit-content;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
+    padding: 1rem;
 
-  //   .doubleChart {
-  //     text-align: center;
-  //     display: flex;
-  //     padding-bottom: 8rem;
-  //     flex-direction: row;
-  //     justify-content: center;
-  //     align-items: center;
-  //     width: 100%;
-  //     text-align: center;
-  //   }
-  // }
+    .uniConsiderations {
+      width: 800px;
+      height: auto;
+
+      @media screen and (max-width: 900px) {
+        width: 500px;
+      }
+    }
+  }
+
+  .topChoiceContainer {
+    width: fit-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+
+    .topChoice {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .demographics {
   h2 {
-    color: #e98c8d;
+    color: $demographics2;
   }
   h3 {
-    color: #9a464a;
+    color: $demographics1;
   }
 }
 
 .highschool {
   h2 {
-    color: #8fbedc;
+    color: $highschool3;
   }
   h3 {
-    color: #6698d4;
+    color: $highschool2;
   }
 }
 
 .academics {
   h2 {
-    color: #ff9d5c;
+    color: $academics2;
   }
   h3 {
-    color: #d27637;
+    color: $academics1;
   }
 }
 
 .coop {
   h2 {
-    color: #b491c8;
+    color: $coop2;
   }
   h3 {
-    color: #6f5082;
+    color: $coop1;
   }
 }
 
 .lifestyle {
   h2 {
-    color: var(--primary);
+    color: $lifestyle2;
   }
   h3 {
-    color: var(--secondary);
+    color: $lifestyle1;
   }
 }

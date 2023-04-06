@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import styles from "./NavBar.module.scss";
 import Link from "next/link";
 import { HiBars2, HiXMark } from "react-icons/hi2";
 import { motion } from "framer-motion";
+import styles from "./NavBar.module.scss";
 
 const NavBar = () => {
 
@@ -77,7 +77,7 @@ const NavBar = () => {
         <ul className={styles.navLinks}>
           {links.map(({ id, link, href }) => (
             <li key={id}>
-              <a href={href}>{link}</a>
+              <Link href={href}>{link}</Link>
             </li>
           ))}
         </ul>
@@ -106,7 +106,7 @@ const NavBar = () => {
           />
           {links.map(({ id, link, href }) => (
             <li key={id}>
-              <a href={href}>{link}</a>
+              <Link href={href}>{link}</Link>
             </li>
           ))}
         </motion.div>

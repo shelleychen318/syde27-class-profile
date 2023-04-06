@@ -16,6 +16,8 @@ const Histogram = ({ data }) => {
               backgroundColor: data.color,
               barPercentage: 1,
               categoryPercentage: 1,
+              borderColor: "white",
+              borderWidth: 0.2,
             },
           ],
         }}

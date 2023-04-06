@@ -2,8 +2,8 @@ import Head from "next/head";
 import { NavBar } from "../../components";
 import { Chart } from "../../components";
 import { getSortedAcademicsData } from "../../lib/sort/getSortedAcademicsData";
-
 import styles from "../profile.module.scss";
+import colors from "../../styles/colors.module.scss";
 
 export const getStaticProps = async () => {
   const data = await getSortedAcademicsData();
@@ -26,6 +26,7 @@ export default function Academics(data) {
     n: data.averageRespondents, 
   };
 
+export default function Academics() {
   return (
     <>
       <Head>
@@ -35,17 +36,17 @@ export default function Academics(data) {
 
       <NavBar />
 
-      <div className={styles.content}>
-        <div className={styles.academics}>
-          <h2>Academics</h2>
-          <h4>What were our favourite courses and professors in SYDE? </h4>
-          <br />
-          <h3>1A Average</h3>
-          <div className={styles.chartConatiner}>
+      <div className={`${styles.content} ${styles.academics}`}>
+        <h2>Academics</h2>
+        <h4>What were our favourite courses and professors in SYDE? </h4>
+        <br />
+        <h3>1A Average</h3>
+                  <div className={styles.chartConatiner}>
             <div className={styles.doubleChart}>
               <Chart type="pie" data={averageData} />
             </div>
         </div>
+        <BottomNav currentPage="academics" />
       </div>
       </div>
     </>

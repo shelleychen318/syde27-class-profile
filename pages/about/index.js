@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { NavBar } from "../../components";
+import { BottomNav } from "../../components";
 import styles from "./about.module.scss";
 
 export default function About() {
@@ -13,7 +14,6 @@ export default function About() {
       <NavBar />
 
       <div className={styles.content}>
-        <div>
           <h2 className={styles.heading}>About the Program</h2>
           <p className={styles.paragraph}>
             Systems Design Engineering (SYDE) is an interdisciplinary
@@ -28,7 +28,7 @@ export default function About() {
           <br />
           <div className={styles.imageContainer}>
             <img
-              src="/assets/class_pic.jpg"
+              src="/assets/classPic.jpg"
               alt="class picture"
               className={styles.image}
             />
@@ -61,7 +61,8 @@ export default function About() {
           >
             <div className={styles.github}>View GitHub repo {">"}</div>
           </a>
-        </div>
+
+          <BottomNav currentPage="about" />
       </div>
     </>
   );
