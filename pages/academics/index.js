@@ -23,10 +23,9 @@ export default function Academics(data) {
     val: data.averageValues,
     color: colorTheme,
     title: "Average Ratio",
-    n: data.averageRespondents, 
+    n: data.averageRespondents,
   };
 
-export default function Academics() {
   return (
     <>
       <Head>
@@ -41,13 +40,12 @@ export default function Academics() {
         <h4>What were our favourite courses and professors in SYDE? </h4>
         <br />
         <h3>1A Average</h3>
-                  <div className={styles.chartConatiner}>
-            <div className={styles.doubleChart}>
-              <Chart type="pie" data={averageData} />
-            </div>
+        <div className={styles.chartConatiner}>
+          <div className={styles.doubleChart}>
+            <Chart type="pie" data={averageData} />
+          </div>
         </div>
         <BottomNav currentPage="academics" />
-      </div>
       </div>
     </>
   );

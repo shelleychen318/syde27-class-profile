@@ -76,7 +76,6 @@ export default function Lifestyle(data) {
     n: data.purityRespondents,
   };
 
-export default function Lifestyle(data) {
   return (
     <>
       <Head>
