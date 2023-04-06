@@ -15,3 +15,4 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const data = await getLifestyle();
   res.status(200).json({ lifestyle: data });
 };
+
