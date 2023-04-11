@@ -30,30 +30,30 @@ export default function Academics(data) {
     val: [
       {
         name: "AP",
-        min: data.apData[1],
-        q1: data.apData[2],
-        q2: data.apData[3],
-        q3: data.apData[4],
-        max: data.apData[5],
-        outliers: data.apData[6],
+        min: data.enrich["AP"][1],
+        q1: data.enrich["AP"][2],
+        q2: data.enrich["AP"][3],
+        q3: data.enrich["AP"][4],
+        max: data.enrich["AP"][5],
+        outliers: data.enrich["AP"][6],
       },
       {
         name: "IB",
-        min: data.ibData[1],
-        q1: data.ibData[2],
-        q2: data.ibData[3],
-        q3: data.ibData[4],
-        max: data.ibData[5],
-        outliers: data.ibData[6],
+        min: data.enrich["IB"][1],
+        q1: data.enrich["IB"][2],
+        q2: data.enrich["IB"][3],
+        q3: data.enrich["IB"][4],
+        max: data.enrich["IB"][5],
+        outliers: data.enrich["IB"][6],
       },
       {
         name: "MaCS",
-        min: data.macsData[1],
-        q1: data.macsData[2],
-        q2: data.macsData[3],
-        q3: data.macsData[4],
-        max: data.macsData[5],
-        outliers: data.macsData[6],
+        min: data.enrich["MaCS"][1],
+        q1: data.enrich["MaCS"][2],
+        q2: data.enrich["MaCS"][3],
+        q3: data.enrich["MaCS"][4],
+        max: data.enrich["MaCS"][5],
+        outliers: data.enrich["MaCS"][6],
       },
     ],
     color: colorTheme[1],
@@ -81,6 +81,15 @@ export default function Academics(data) {
           </p>
           <Chart type="histogram" data={uniAverageData} layout="double" />
         </div>
+
+        {/* <div>
+          {enrichVsAverageData.val.map((item, index) => (
+            <div key={index}>
+              <h3>{item.name}</h3>
+              <p>Min: {item.min}</p>
+            </div>
+          ))}
+        </div> */}
         <BottomNav currentPage="academics" />
       </div>
     </>
