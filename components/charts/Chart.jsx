@@ -4,6 +4,7 @@ import DoughnutChart from "./DoughnutChart";
 import BarChart from "./BarChart";
 import HorizontalBarChart from "./HorizontalBarChart";
 import Histogram from "./Histogram";
+import BoxPlotChart from "./BoxPlotChart";
 import styles from "./Chart.module.scss";
 
 const Chart = ({ type, data, layout }) => {
@@ -36,6 +37,12 @@ const Chart = ({ type, data, layout }) => {
       return (
         <div className={`${styles[layout]}`}>
           <Histogram data={data} />
+        </div>
+      );
+    case "box":
+      return (
+        <div className={`${styles[layout]}`}>
+          <BoxPlotChart data={data} />
         </div>
       );
     default:
