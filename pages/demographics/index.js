@@ -116,7 +116,7 @@ export default function Demographics(data) {
     ymax: 10,
     n: 5,
   };
-  
+
   return (
     <>
       <Head>
@@ -152,7 +152,7 @@ export default function Demographics(data) {
         {/* <BoxPlot data={boxPlotData} /> */}
 
         <div className={styles.singleChart}>
-          <Chart type="box" data={dynamicdata} layout="single"  />
+          <Chart type="box" data={dynamicdata} layout="single" />
         </div>
 
         <BottomNav currentPage="demographics" />

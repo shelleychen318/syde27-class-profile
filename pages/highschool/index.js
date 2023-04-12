@@ -48,7 +48,7 @@ export default function Highschool(data) {
     label: data.extracurricularType,
     val: data.extraTypeValues,
     color: colorTheme[3],
-    title: "Extracurriculars Types",
+    title: "High School Extracurriculars",
     n: data.extraTypeRespondents,
     xAxis: "Extracurricular Type",
     yAxis: "Number of Students",
@@ -216,7 +216,6 @@ export default function Highschool(data) {
 
         <BottomNav currentPage="highschool" />
       </div>
-      
     </>
   );
 }

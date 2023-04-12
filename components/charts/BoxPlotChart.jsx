@@ -47,7 +47,7 @@ class BoxPlotChart extends Component {
 
   componentDidMount() {
     this.myChart = new Chart(this.chartRef.current, {
-      type: 'boxplot',
+      type: "boxplot",
       options: {
         responsive: true,
         maintainAspectRatio: true,
@@ -70,23 +70,27 @@ class BoxPlotChart extends Component {
         },
         scales: {
           x: {
-            grid: {
-              color: "rgba(255, 255, 255, 0.05)",
+            gridlines: {
               lineWidth: 1,
             },
             title: {
               display: true,
               text: this.props.data.xAxis,
+              font: {
+                size: 15,
+              },
             },
           },
           y: {
-            grid: {
-              color: "rgba(255, 255, 255, 0.05)",
+            gridlines: {
               lineWidth: 1,
             },
             title: {
               display: true,
               text: this.props.data.yAxis,
+              font: {
+                size: 15,
+              },
             },
             min: this.props.data.ymin,
             max: this.props.data.ymax,
@@ -97,20 +101,11 @@ class BoxPlotChart extends Component {
         labels: this.props.data.label,
         datasets: [
           {
-
             data: this.props.data.val,
             backgroundColor: this.props.data.color,
-            borderColor: "black",
+            borderColor: "gray",
             hoverBackgroundColor: "white",
             borderWidth: 1.5,
-            marker: {
-              color: "rgb(8,81,156)",
-              outliercolor: "rgba(219, 64, 82, 0.6)",
-              line: {
-                outliercolor: "rgba(219, 64, 82, 1.0)",
-                outlierwidth: 2,
-              },
-            },
           },
         ],
       },
@@ -127,8 +122,6 @@ class BoxPlotChart extends Component {
     );
   }
 }
-
-///////////////////////////////////////////////////////
 
 export default function BoxPlot(props) {
   const [data] = useState({

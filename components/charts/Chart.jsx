@@ -7,7 +7,7 @@ import Histogram from "./Histogram";
 import BoxPlotChart from "./BoxPlotChart";
 import styles from "./Chart.module.scss";
 
-const Chart = ({ type, data, layout }) => {
+const Chart = ({ type, data, layout, width, height }) => {
   switch (type) {
     case "pie":
       return (
@@ -42,7 +42,7 @@ const Chart = ({ type, data, layout }) => {
     case "box":
       return (
         <div className={`${styles[layout]}`}>
-          <BoxPlotChart data={data} />
+          <BoxPlotChart data={data} width={width} height={height} />
         </div>
       );
     default:

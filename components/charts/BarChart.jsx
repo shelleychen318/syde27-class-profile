@@ -61,8 +61,8 @@ const BarChart = ({ data }) => {
             },
           },
         }}
-        height="450px"
-        width="450px"
+        height={data.height ? data.height : "100%"}
+        width={data.width ? data.width : "100%"}
       />
     </div>
   );
