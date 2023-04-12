@@ -26,10 +26,52 @@ export default function Academics(data) {
     n: data.uniAverageRespondents,
   };
 
+  const testing = {
+    val: [
+      {
+        min: data.enrich["AP"][0],
+        q1: data.enrich["AP"][1],
+        q1: data.enrich["AP"][2],
+        q3: data.enrich["AP"][3],
+        max: data.enrich["AP"][4],
+        outliers: data.enrich["AP"][5],
+        mean: data.enrich["AP"][6],
+        median: data.enrich["AP"][7],
+      },
+      {
+        min: data.enrich["IB"][0],
+        q1: data.enrich["IB"][1],
+        q1: data.enrich["IB"][2],
+        q3: data.enrich["IB"][3],
+        max: data.enrich["IB"][4],
+        outliers: data.enrich["IB"][5],
+        mean: data.enrich["IB"][6],
+        median: data.enrich["IB"][7],
+      },
+      {
+        min: data.enrich["MaCS"][0],
+        q1: data.enrich["MaCS"][1],
+        q1: data.enrich["MaCS"][2],
+        q3: data.enrich["MaCS"][3],
+        max: data.enrich["MaCS"][4],
+        outliers: data.enrich["MaCS"][5],
+        mean: data.enrich["MaCS"][6],
+        median: data.enrich["MaCS"][7],
+      },
+    ],
+    label: ['AP', 'IB', 'MaCs'],
+    color: colorTheme[1],
+    title: "Box Plot Chart",
+    xAxis: "X Axis",
+    yAxis: "Y Axis",
+    ymin: 65,
+    ymax: 100,
+    n: 5,
+  }
+
   const enrichVsAverageData = {
     val: [
       {
-        name: "AP",
         min: data.enrich["AP"][1],
         q1: data.enrich["AP"][2],
         q2: data.enrich["AP"][3],
@@ -38,7 +80,6 @@ export default function Academics(data) {
         outliers: data.enrich["AP"][6],
       },
       {
-        name: "IB",
         min: data.enrich["IB"][1],
         q1: data.enrich["IB"][2],
         q2: data.enrich["IB"][3],
@@ -47,7 +88,6 @@ export default function Academics(data) {
         outliers: data.enrich["IB"][6],
       },
       {
-        name: "MaCS",
         min: data.enrich["MaCS"][1],
         q1: data.enrich["MaCS"][2],
         q2: data.enrich["MaCS"][3],
@@ -58,6 +98,10 @@ export default function Academics(data) {
     ],
     color: colorTheme[1],
     title: "Box Plot Title",
+    xAxis: "X Axis",
+    yAxis: "Y Axis",
+    label: ["data1", "data2", "data3", "data4", "data5"],
+    n: 5,
   };
 
   return (
@@ -82,16 +126,21 @@ export default function Academics(data) {
           <Chart type="histogram" data={uniAverageData} layout="double" />
         </div>
 
-        {/* <div>
-          {enrichVsAverageData.val.map((item, index) => (
+        <div className={styles.doubleChart}>
+          <Chart type="box" data={testing} layout="double" />
+        </div>
+        <div>
+          {/* {enrichVsAverageData.val.map((item, index) => (
             <div key={index}>
               <h3>{item.name}</h3>
               <p>Min: {item.min}</p>
+              <Chart type="box" data={testing} layout="double" />
             </div>
-          ))}
-        </div> */}
+          ))} */}
+        </div>
         <BottomNav currentPage="academics" />
       </div>
     </>
   );
+
 }
