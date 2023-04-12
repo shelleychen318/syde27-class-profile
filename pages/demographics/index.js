@@ -6,7 +6,6 @@ import styles from "../profile.module.scss";
 import colors from "../../styles/colors.module.scss";
 import { getSortedDemographicsData } from "../../lib/sort/getSortedDemographicsData";
 import { BoxPlot } from "../../components";
-import { BoxPlotChart } from "../../components";
 
 export const getStaticProps = async () => {
   const data = await getSortedDemographicsData();
@@ -152,7 +151,9 @@ export default function Demographics(data) {
 
         {/* <BoxPlot data={boxPlotData} /> */}
 
-        <BoxPlotChart data={dynamicdata} height={500} width={500} />
+        <div className={styles.singleChart}>
+          <Chart type="box" data={dynamicdata} layout="single" />
+        </div>
 
         <BottomNav currentPage="demographics" />
       </div>
