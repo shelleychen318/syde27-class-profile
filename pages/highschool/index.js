@@ -216,6 +216,7 @@ export default function Highschool(data) {
 
         <BottomNav currentPage="highschool" />
       </div>
+      
     </>
   );
 }
