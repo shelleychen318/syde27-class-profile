@@ -16,7 +16,6 @@ Chart.register(
   LinearScale,
   CategoryScale
 );
-
 class BoxPlotChart extends Component {
   constructor(props) {
     super(props);
@@ -48,7 +47,7 @@ class BoxPlotChart extends Component {
 
   componentDidMount() {
     this.myChart = new Chart(this.chartRef.current, {
-      type: "boxplot",
+      type: 'boxplot',
       options: {
         responsive: true,
         maintainAspectRatio: true,
@@ -89,8 +88,8 @@ class BoxPlotChart extends Component {
               display: true,
               text: this.props.data.yAxis,
             },
-            min: parseInt(this.props.data.xmin),
-            max: parseInt(this.props.data.xmax),
+            min: this.props.data.ymin,
+            max: this.props.data.ymax,
           },
         },
       },
@@ -98,9 +97,11 @@ class BoxPlotChart extends Component {
         labels: this.props.data.label,
         datasets: [
           {
-            //label: '',
+
             data: this.props.data.val,
             backgroundColor: this.props.data.color,
+            borderColor: "black",
+            hoverBackgroundColor: "white",
             borderWidth: 1.5,
             marker: {
               color: "rgb(8,81,156)",
@@ -130,19 +131,18 @@ class BoxPlotChart extends Component {
 ///////////////////////////////////////////////////////
 
 export default function BoxPlot(props) {
-  const [data, setData] = useState({
+  const [data] = useState({
     val: [],
-    label: [],
   });
-
-  const [id, setId] = useState(0);
 
   useEffect(() => {
     data.title = props.data.title;
-    data.val = [props.data.val];
-    data.label = [props.data.label];
+    data.val = props.data.val;
+    data.label = props.data.label;
     data.xAxis = props.data.xAxis;
     data.yAxis = props.data.yAxis;
+    data.ymin = props.data.ymin;
+    data.ymax = props.data.ymax;
     data.color = props.data.color;
     data.n = props.data.n;
   }, []);

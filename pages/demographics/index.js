@@ -152,7 +152,7 @@ export default function Demographics(data) {
         {/* <BoxPlot data={boxPlotData} /> */}
 
         <div className={styles.singleChart}>
-          <Chart type="box" data={dynamicdata} layout="single" />
+          <Chart type="box" data={dynamicdata} layout="single"  />
         </div>
 
         <BottomNav currentPage="demographics" />
