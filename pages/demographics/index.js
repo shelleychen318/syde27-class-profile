@@ -128,31 +128,39 @@ export default function Demographics(data) {
       <div className={`${styles.content} ${styles.demographics}`}>
         <h2>Demographics</h2>
         <h4>
-          What are the characteristics of the individuals who make up the SYDE
-          2027 cohort?
+          Some insight into the characteristics of the individuals who make up
+          the SYDE 2027 cohort.
         </h4>
         <br />
         <h3>Gender and Sexuality</h3>
+        <p className={styles.text}>
+          SYDE stands out from most engineering programs due to its higher ratio
+          of women to men. This trend has been consistently observed in SYDE
+          cohorts, with the highest ratio seen in the 2027 cohort so far!
+        </p>
         <div className={styles.doubleChart}>
           <Chart type="pie" data={genderData} layout="double" />
           <Chart type="pie" data={sexualityData} layout="double" />
         </div>
 
-        <h3>Ethnicities and Religion</h3>
+        <h3>Ethnicity and Religion</h3>
+        <p className={styles.text}>
+          Our class comprises students from diverse ethnic backgrounds, with the
+          largest demographic being of East Asian descent. Students who selected
+          multiple ethnicities were counted once in each group.
+        </p>
         <div className={styles.doubleChart}>
           <Chart type="bar" data={ethnicityData} layout="double" />
           <Chart type="bar" data={religionData} layout="double" />
         </div>
 
         <h3>Hometowns</h3>
+        <p className={styles.text}>
+          Although the majority of us grew up in the GTA, there is still a
+          considerable variety of hometowns represented in our class!
+        </p>
         <div className={styles.singleChart}>
           <Chart type="horizontalBar" data={hometownData} layout="single" />
-        </div>
-
-        {/* <BoxPlot data={boxPlotData} /> */}
-
-        <div className={styles.singleChart}>
-          <Chart type="box" data={dynamicdata} layout="single" />
         </div>
 
         <BottomNav currentPage="demographics" />

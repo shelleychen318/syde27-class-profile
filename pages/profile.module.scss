@@ -20,8 +20,23 @@
       padding: 2rem;
     }
 
+    .textRight {
+      margin-left: 4rem;
+    }
+
+    .textLeft {
+      margin-right: 4rem;
+    }
+
     @media screen and (max-width: 900px) {
       flex-direction: column;
+      .textRight {
+        margin-left: 0;
+      }
+
+      .textLeft {
+        margin-right: 0;
+      }
     }
   }
 

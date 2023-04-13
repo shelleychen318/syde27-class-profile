@@ -135,20 +135,33 @@ export default function Highschool(data) {
 
       <div className={`${styles.content} ${styles.highschool}`}>
         <h2>High School</h2>
-        <h4>What were we up to in high school?</h4>
+        <h4>
+          Information about our high school academics and extracurriculars, as
+          well as university applications.
+        </h4>
         <br />
 
         <h3>High School Admission Average</h3>
         <div className={styles.doubleChart}>
           <Chart type="histogram" data={averageData} layout="double" />
-          <p className={styles.text}>
-            The admission average for SYDE 2027 was (insert average) %. Some
-            more text about interesting admission average facts blah blah blah.
+          <p className={styles.textRight}>
+            The admission average is based on a student's top 6 courses in grade
+            12, rounded to the nearest whole number. The SYDE 2027 cohort had an
+            overall average of 96.3%.
+            <br />
+            <br />
+            This surpasses the competitive benchmark of "high 80s to low 90s"
+            stated on the admissions website, indicating an increase in
+            competition to get into the program.
           </p>
         </div>
         <br />
 
         <h3>Enrichment Programs</h3>
+        <p className={styles.text}>
+          The majority of the class (86%) was involved in some sort of
+          enrichment program in high school.
+        </p>
         <div className={styles.singleChart}>
           <Chart type="horizontalBar" data={enrichData} layout="single" />
         </div>
@@ -156,7 +169,9 @@ export default function Highschool(data) {
 
         <h3>Extracurriculars</h3>
         <p className={styles.text}>
-          Add some interesting text about extra curriculars. Blah blah blah.
+          We participated in a wide range of extracurricular activities in high
+          school, among which sports emerged as the most popular. Looks like
+          SYDE 2027 has some athletes among us!
         </p>
         <div className={styles.singleChart}>
           <Chart type="bar" data={extraTypeData} layout="single" />
@@ -168,13 +183,13 @@ export default function Highschool(data) {
 
         <h3>Other Universities We Considered</h3>
         <p className={styles.text}>
-          Some text about university considerations. State some interesting
-          facts or jokes about these unis. idk
+          As many would expect, the most popular alternate university choice was
+          UofT, with McMaster coming in at a close second.
         </p>
         <div className={styles.singleChart}>
           <div className={styles.uniConsiderationsContainer}>
             <img
-              src="/assets/uniConsiderations.png"
+              src="/assets/otherUniversities.png"
               alt="other university considerations"
               className={styles.uniConsiderations}
             />
@@ -185,8 +200,9 @@ export default function Highschool(data) {
         <h3>Top Choice</h3>
         <div className={styles.doubleChart}>
           <Chart type="pie" data={sydeBoolData} layout="double" />
-          <p className={styles.text}>
-            Some interesting text. Maybe a clever joke about SYDE.
+          <p className={styles.textRight}>
+            84% of us said that SYDE was our top choice, while 16% had their
+            hearts set on a different program 😔
           </p>
         </div>
         <p className={styles.text}>
