@@ -152,7 +152,7 @@ export default function Highschool(data) {
             <br />
             This surpasses the competitive benchmark of "high 80s to low 90s"
             stated on the admissions website, indicating an increase in
-            competition to get into the program.
+            competition to get into the program in recent years.
           </p>
         </div>
         <br />
@@ -184,7 +184,9 @@ export default function Highschool(data) {
         <h3>Other Universities We Considered</h3>
         <p className={styles.text}>
           As many would expect, the most popular alternate university choice was
-          UofT, with McMaster coming in at a close second.
+          UofT, with McMaster coming in at a close second. Despite having offers
+          from many prestigious schools in Canada and the United States, we
+          ultimately decided to pursue SYDE at Waterloo!
         </p>
         <div className={styles.singleChart}>
           <div className={styles.uniConsiderationsContainer}>
@@ -202,7 +204,7 @@ export default function Highschool(data) {
           <Chart type="pie" data={sydeBoolData} layout="double" />
           <p className={styles.textRight}>
             84% of us said that SYDE was our top choice, while 16% had their
-            hearts set on a different program 😔
+            hearts set on a different program. It's okay, we still love you 😔
           </p>
         </div>
         <p className={styles.text}>

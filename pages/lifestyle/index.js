@@ -50,7 +50,7 @@ export default function Lifestyle(data) {
     label: data.friendsCount,
     val: data.friendsValues,
     color: colorTheme[1],
-    title: "How easy did you find it was to make friends? (5 being very easy)",
+    title: "How easy was it for us to make friends? (5 being very easy)",
     xAxis: "Level of Ease",
     yAxis: "Number of Students",
     n: data.friendsRespondents,
@@ -60,7 +60,7 @@ export default function Lifestyle(data) {
     label: data.homeTimes,
     val: data.homeTimeValues,
     color: colorTheme[1],
-    title: "On average, how many times did you visit home each month in 1A?",
+    title: "Home Visits in 1A",
     xAxis: "Number of Home Visits Per Month",
     yAxis: "Number of Students",
     n: data.homeTimeRespondents,
@@ -71,7 +71,7 @@ export default function Lifestyle(data) {
     val: data.purityValues,
     color: colorTheme[1],
     title: "Rice Purity Scores",
-    xAxis: "Rice Purity Score Ranges",
+    xAxis: "Rice Purity Score",
     yAxis: "Number of Students",
     n: data.purityRespondents,
   };
@@ -91,8 +91,10 @@ export default function Lifestyle(data) {
         <br />
         <h3>Study and Sleep Time</h3>
         <p>
-          The average SYDE student spends x amount of time studying and x amount
-          of time sleeping. Add a joke or something.
+          The average SYDE student spends 4.9 hours studying and 6.1 hours
+          sleeping. Shoutout to the 5 students who dedicate 9+ hours per day to
+          studying, y'all are the true embodiment of the "rise and grind"
+          mentality!
         </p>
         <div className={styles.doubleChart}>
           <Chart type="bar" data={studyTimeData} layout="double" />
@@ -108,11 +110,11 @@ export default function Lifestyle(data) {
         </div>
         <h3>Rice Purity 😳</h3>
         <p>
-          Looks like many of us aim for 90s even outside of school! In all
-          seriousness, the average rice purity score is x.
+          Looks like many of us strive for 90s even outside of school! In all
+          seriousness, the average rice purity score is 72.2.
         </p>
         <div className={styles.singleChart}>
-          <Chart type="bar" data={purityData} layout="single" />
+          <Chart type="histogram" data={purityData} layout="single" />
         </div>
         <BottomNav currentPage="lifestyle" />
       </div>

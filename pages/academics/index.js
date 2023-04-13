@@ -204,13 +204,13 @@ export default function Academics(data) {
 
       <div className={`${styles.content} ${styles.academics}`}>
         <h2>Academics</h2>
-        <h4>What were our favourite courses and professors in SYDE? </h4>
+        <h4>The nitty-gritty details of our 1A academic term in SYDE.</h4>
         <br />
         <h3>1A Average</h3>
         <div className={styles.doubleChart}>
-          <p className={styles.text}>
-            The 1A average for SYDE 2027 was %. It seems that our averages have
-            dropped slightly from high school.
+          <p className={styles.textLeft}>
+            The 1A average for SYDE 2027 was 85.6%. It seems that our averages
+            have dropped slightly from high school. 
           </p>
           <Chart type="histogram" data={uniAverageData} layout="double" />
         </div>
