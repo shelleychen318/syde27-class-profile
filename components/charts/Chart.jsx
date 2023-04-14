@@ -5,6 +5,7 @@ import BarChart from "./BarChart";
 import HorizontalBarChart from "./HorizontalBarChart";
 import Histogram from "./Histogram";
 import BoxPlotChart from "./BoxPlotChart";
+import MultiBarChart from "./MultiBarChart";
 import styles from "./Chart.module.scss";
 
 const Chart = ({ type, data, layout, width, height }) => {
@@ -43,6 +44,12 @@ const Chart = ({ type, data, layout, width, height }) => {
       return (
         <div className={`${styles[layout]}`}>
           <BoxPlotChart data={data} width={width} height={height} />
+        </div>
+      );
+    case "multiBar":
+      return (
+        <div className={`${styles[layout]}`}>
+          <MultiBarChart data={data} width={width} height={height} />
         </div>
       );
     default:

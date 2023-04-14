@@ -193,6 +193,20 @@ export default function Academics(data) {
     n: data.highschoolAverageRespondents,
   };
 
+  const favCourseData = {
+    label: data.favCourses,
+    val: [data.favCourseValues, data.leastFavCourseValues],
+    // val: {
+    //   label: data.favCourses,
+    //   data: [data.favCourseValues, data.leastFavCourseValues],
+    // },
+    color: [colorTheme[0], colorTheme[2]],
+    title: "Favourite and Least Favourite Courses in 1A",
+    n: data.favCourseRespondents,
+    xAxis: "Course",
+    yAxis: "Number of Students",
+  };
+
   return (
     <>
       <Head>
@@ -210,7 +224,7 @@ export default function Academics(data) {
         <div className={styles.doubleChart}>
           <p className={styles.textLeft}>
             The 1A average for SYDE 2027 was 85.6%. It seems that our averages
-            have dropped slightly from high school. 
+            have dropped slightly from high school.
           </p>
           <Chart type="histogram" data={uniAverageData} layout="double" />
         </div>
@@ -223,6 +237,11 @@ export default function Academics(data) {
         <h3>High School Enrichment Program vs 1A Average</h3>
         <div className={styles.singleChart}>
           <Chart type="box" data={enrichVsAverageData} layout="single" />
+        </div>
+
+        <h3>Favourite and Least Favourite Courses in 1A</h3>
+        <div className={styles.singleChart}>
+          <Chart type="multiBar" data={favCourseData} layout="single" />
         </div>
 
         <BottomNav currentPage="academics" />

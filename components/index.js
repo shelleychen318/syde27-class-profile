@@ -9,3 +9,4 @@ export { default as Chart } from "./charts/Chart";
 export { default as BottomNav } from "./bottomNav/BottomNav";
 
 export { default as BoxPlotChart } from "./charts/BoxPlotChart";
+export { default as MultiBarChart} from "./charts/MultiBarChart";

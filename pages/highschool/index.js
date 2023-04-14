@@ -54,6 +54,15 @@ export default function Highschool(data) {
     yAxis: "Number of Students",
   };
 
+  const random = {
+    label: ["B", "A", "C", "D"],
+    val: [
+      [1, 2, 3, 5],
+      [4, 5, 6, 8],
+    ],
+    color: ["red", "blue"],
+  };
+
   const extraRoleData = {
     label: data.extraRoleUniques,
     val: data.extraRoleValues,
@@ -175,6 +184,9 @@ export default function Highschool(data) {
         </p>
         <div className={styles.singleChart}>
           <Chart type="bar" data={extraTypeData} layout="single" />
+        </div>
+        <div className={styles.singleChart}>
+          <Chart type="multiBar" data={random} layout="single" />
         </div>
         <div className={styles.doubleChart}>
           <Chart type="bar" data={extraRoleData} layout="double" />
