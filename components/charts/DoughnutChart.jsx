@@ -48,8 +48,8 @@ const DoughnutChart = ({ data }) => {
             },
           },
         }}
-        height={data.height ? data.height : "100%"}
-        width={data.width ? data.width : "100%"}
+        height="450px"
+        width="450px"
       />
     </div>
   );

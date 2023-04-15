@@ -6,8 +6,7 @@ import {
   Violin,
   ViolinController,
 } from "@sgratzl/chartjs-chart-boxplot";
-//import { BoxPlotChart } from '@sgratzl/chartjs-chart-boxplot';
-// register controller in chart.js and ensure the defaults are set
+
 Chart.register(
   BoxPlotController,
   BoxAndWiskers,
@@ -138,7 +137,7 @@ export default function BoxPlot(props) {
     data.ymax = props.data.ymax;
     data.color = props.data.color;
     data.n = props.data.n;
-  }, []);
+  });
 
   return (
     <div className="chart">

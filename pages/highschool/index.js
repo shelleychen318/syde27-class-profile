@@ -46,6 +46,7 @@ export default function Highschool(data) {
 
   const extraTypeData = {
     label: data.extracurricularType,
+    // label: ["sports", "sports","sports","sports","sports","sports","sports","sports",],
     val: data.extraTypeValues,
     color: colorTheme[3],
     title: "High School Extracurriculars",
@@ -185,9 +186,9 @@ export default function Highschool(data) {
         <div className={styles.singleChart}>
           <Chart type="bar" data={extraTypeData} layout="single" />
         </div>
-        <div className={styles.singleChart}>
+        {/* <div className={styles.singleChart}>
           <Chart type="multiBar" data={random} layout="single" />
-        </div>
+        </div> */}
         <div className={styles.doubleChart}>
           <Chart type="bar" data={extraRoleData} layout="double" />
           <Chart type="bar" data={extraNumData} layout="double" />
