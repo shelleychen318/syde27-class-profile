@@ -216,6 +216,22 @@ export default function Academics(data) {
     n: data.leastFavCourseRespondents,
   };
 
+  const usefulCourseData = {
+    label: data.usefulCourses,
+    val: data.usefulCourseValues,
+    color: colorTheme,
+    title: "Most Useful Courses in 1A",
+    n: data.usefulCourseRespondents,
+  };
+
+  const difficultCourseData = {
+    label: data.difficultCourses,
+    val: data.difficultCourseValues,
+    color: colorTheme,
+    title: "Most Difficult Courses in 1A",
+    n: data.difficultCourseRespondents,
+  };
+
   return (
     <>
       <Head>
@@ -252,6 +268,12 @@ export default function Academics(data) {
         <div className={styles.doubleChart}>
           <Chart type="pie" data={favCourseData} layout="double" />
           <Chart type="pie" data={leastFavCourseData} layout="double" />
+        </div>
+
+        <h3>Most Useful and Difficult Courses in 1A</h3>
+        <div className={styles.doubleChart}>
+          <Chart type="pie" data={usefulCourseData} layout="double" />
+          <Chart type="pie" data={difficultCourseData} layout="double" />
         </div>
 
         <BottomNav currentPage="academics" />
