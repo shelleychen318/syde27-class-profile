@@ -16,7 +16,14 @@ export const getStaticProps = async () => {
 };
 
 export default function Academics(data) {
-  const colorTheme = [colors.academics1, colors.academics2, colors.academics3];
+  const colorTheme = [
+    colors.academics1,
+    colors.academics2,
+    colors.academics3,
+    colors.academics4,
+    colors.academics5,
+    colors.academics6,
+  ];
 
   const uniAverageData = {
     label: data.uniAverages,
@@ -195,16 +202,18 @@ export default function Academics(data) {
 
   const favCourseData = {
     label: data.favCourses,
-    val: [data.favCourseValues, data.leastFavCourseValues],
-    // val: {
-    //   label: data.favCourses,
-    //   data: [data.favCourseValues, data.leastFavCourseValues],
-    // },
-    color: [colorTheme[0], colorTheme[2]],
-    title: "Favourite and Least Favourite Courses in 1A",
+    val: data.favCourseValues,
+    color: colorTheme,
+    title: "Favourite Courses in 1A",
     n: data.favCourseRespondents,
-    xAxis: "Course",
-    yAxis: "Number of Students",
+  };
+
+  const leastFavCourseData = {
+    label: data.leastFavCourses,
+    val: data.leastFavCourseValues,
+    color: colorTheme,
+    title: "Least Favourite Courses in 1A",
+    n: data.leastFavCourseRespondents,
   };
 
   return (
@@ -240,8 +249,9 @@ export default function Academics(data) {
         </div>
 
         <h3>Favourite and Least Favourite Courses in 1A</h3>
-        <div className={styles.singleChart}>
-          <Chart type="multiBar" data={favCourseData} layout="single" />
+        <div className={styles.doubleChart}>
+          <Chart type="pie" data={favCourseData} layout="double" />
+          <Chart type="pie" data={leastFavCourseData} layout="double" />
         </div>
 
         <BottomNav currentPage="academics" />
