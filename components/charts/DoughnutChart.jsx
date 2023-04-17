@@ -24,7 +24,7 @@ const DoughnutChart = ({ data }) => {
           maintainAspectRatio: true,
           plugins: {
             legend: {
-              position: "bottom",
+              position: "right",
               labels: {
                 usePointStyle: true,
                 padding: 16,
@@ -48,8 +48,8 @@ const DoughnutChart = ({ data }) => {
             },
           },
         }}
-        height="450px"
-        width="450px"
+        height="475px"
+        width="475px"
       />
     </div>
   );

@@ -42,6 +42,7 @@ export default function Academics(data) {
       "Gifted",
       "IB",
       "MaCS",
+      "Private School",
       "SHSM",
       "TOPS",
       "None",
@@ -96,6 +97,16 @@ export default function Academics(data) {
         outliers: data.enrichUnique["MaCS"][5],
         mean: data.enrichUnique["MaCS"][6],
         median: data.enrichUnique["MaCS"][7],
+      },
+      {
+        min: data.enrichUnique["Private School"][0],
+        q1: data.enrichUnique["Private School"][1],
+        q2: data.enrichUnique["Private School"][2],
+        q3: data.enrichUnique["Private School"][3],
+        max: data.enrichUnique["Private School"][4],
+        outliers: data.enrichUnique["Private School"][5],
+        mean: data.enrichUnique["Private School"][6],
+        median: data.enrichUnique["Private School"][7],
       },
       {
         min: data.enrichUnique["SHSM"][0],
@@ -264,25 +275,38 @@ export default function Academics(data) {
       <div className={`${styles.content} ${styles.academics}`}>
         <h2>Academics</h2>
         <h4>
-          An overview of our 1A term in SYDE, including details on averages and
-          courses taken.
+          An overview of our 1A academic term in SYDE, including details on
+          averages and courses taken.
         </h4>
         <br />
         <h3>1A Average</h3>
         <div className={styles.doubleChart}>
           <p className={styles.textLeft}>
-            The 1A average for SYDE 2027 was 85.6%. It seems that our averages
-            have dropped slightly from high school.
+            The 1A average for SYDE 2027 was 85.8%. Unlike the relatively narrow
+            range of admission averages (89+), the 1A academic term encompassed
+            a much broader spectrum of achievement, ranging from 65% to 100%.
           </p>
           <Chart type="histogram" data={uniAverageData} layout="double" />
         </div>
 
         <h3>High School Admission Average vs 1A Average</h3>
+        <p className={styles.text}>
+          Based on the data provided, there does not appear to be a clear
+          proportional trend between high school admission averages and 1A
+          averages.
+        </p>
         <div className={styles.singleChart}>
           <Chart type="box" data={highschoolVsUniAverageData} layout="single" />
         </div>
 
         <h3>High School Enrichment Program vs 1A Average</h3>
+        <p className={styles.text}>
+          The data provided does not suggest a clear trend or pattern between
+          high school enrichment programs and 1A averages. While some programs
+          may indicate a slightly higher or lower average than others, it is
+          important to note that the sample sizes of each program vary greatly,
+          potentially skewing the results.
+        </p>
         <div className={styles.singleChart}>
           <Chart type="box" data={enrichVsAverageData} layout="single" />
         </div>
@@ -293,22 +317,43 @@ export default function Academics(data) {
           <p className={styles.textRight}>
             The drop-off is calculated by: 1A average - admission average. For
             SYDE 2027, the average drop-off rate was 10.8%.
+            <br />
+            <br />
+            While this finding suggests a decrease in academic performance for
+            the cohort as a whole upon entering university, it is important to
+            note that this trend is not necessarily indicative of the potential
+            or abilities of individual students. Instead, it may reflect the
+            significant increase in academic rigor and adjustment required for
+            university-level coursework.
           </p>
         </div>
 
         <h3>Favourite and Least Favourite Courses in 1A</h3>
+        <p className={styles.text}>
+          Majority of us said that our favourite course was SYDE 101L and our
+          least favourite course was SYDE 161. Sorry not sorry to all the
+          TsTsians out there. 🙄
+        </p>
         <div className={styles.doubleChart}>
           <Chart type="doughnut" data={favCourseData} layout="double" />
           <Chart type="doughnut" data={leastFavCourseData} layout="double" />
         </div>
 
         <h3>Most Useful and Difficult Courses in 1A</h3>
+        <p className={styles.text}>
+          Majority of us found SYDE 121 to be the most useful course. At the
+          same time, over half of us found SYDE 113 to be the most difficult
+          course, with SYDE 111 as a close second.
+        </p>
         <div className={styles.doubleChart}>
           <Chart type="doughnut" data={usefulCourseData} layout="double" />
           <Chart type="doughnut" data={difficultCourseData} layout="double" />
         </div>
 
         <h3>Lecture Attendance in 1A</h3>
+        <p className={styles.text}>
+          The average SYDE student attends lecture 63% of the time.
+        </p>
         <div className={styles.singleChart}>
           <Chart type="histogram" data={lectureData} layout="single" />
         </div>
