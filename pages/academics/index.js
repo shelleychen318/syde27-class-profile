@@ -204,7 +204,7 @@ export default function Academics(data) {
     ],
     color: colorTheme[2],
     title: "High School Admission Average vs 1A Average",
-    xAxis: "High School Average (%)",
+    xAxis: "High School Admission Average (%)",
     yAxis: "1A Average (%)",
     ymin: 60,
     ymax: 100,
@@ -306,6 +306,10 @@ export default function Academics(data) {
           may indicate a slightly higher or lower average than others, it is
           important to note that the sample sizes of each program vary greatly,
           potentially skewing the results.
+          <br />
+          <br />
+          Students who selected multiple programs (e.g. AP and Private School)
+          were accounted for in each group.
         </p>
         <div className={styles.singleChart}>
           <Chart type="box" data={enrichVsAverageData} layout="single" />
@@ -351,11 +355,13 @@ export default function Academics(data) {
         </div>
 
         <h3>Lecture Attendance in 1A</h3>
-        <p className={styles.text}>
-          The average SYDE student attends lecture 63% of the time.
-        </p>
-        <div className={styles.singleChart}>
-          <Chart type="histogram" data={lectureData} layout="single" />
+        <div className={styles.doubleChart}>
+          <Chart type="histogram" data={lectureData} layout="double" />
+          <p className={styles.textRight}>
+            On average, SYDE students attend lectures only 63% of the time. The
+            urge to hit snooze and sleep in during those 8am lectures was just
+            too strong 😴
+          </p>
         </div>
 
         <BottomNav currentPage="academics" />
