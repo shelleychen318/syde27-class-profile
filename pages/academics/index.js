@@ -48,84 +48,84 @@ export default function Academics(data) {
     ],
     val: [
       {
-        min: data.enrich["AP"][0],
-        q1: data.enrich["AP"][1],
-        q2: data.enrich["AP"][2],
-        q3: data.enrich["AP"][3],
-        max: data.enrich["AP"][4],
-        outliers: data.enrich["AP"][5],
-        mean: data.enrich["AP"][6],
-        median: data.enrich["AP"][7],
+        min: data.enrichUnique["AP"][0],
+        q1: data.enrichUnique["AP"][1],
+        q2: data.enrichUnique["AP"][2],
+        q3: data.enrichUnique["AP"][3],
+        max: data.enrichUnique["AP"][4],
+        outliers: data.enrichUnique["AP"][5],
+        mean: data.enrichUnique["AP"][6],
+        median: data.enrichUnique["AP"][7],
       },
       {
-        min: data.enrich["French Immersion"][0],
-        q1: data.enrich["French Immersion"][1],
-        q2: data.enrich["French Immersion"][2],
-        q3: data.enrich["French Immersion"][3],
-        max: data.enrich["French Immersion"][4],
-        outliers: data.enrich["French Immersion"][5],
-        mean: data.enrich["French Immersion"][6],
-        median: data.enrich["French Immersion"][7],
+        min: data.enrichUnique["French Immersion"][0],
+        q1: data.enrichUnique["French Immersion"][1],
+        q2: data.enrichUnique["French Immersion"][2],
+        q3: data.enrichUnique["French Immersion"][3],
+        max: data.enrichUnique["French Immersion"][4],
+        outliers: data.enrichUnique["French Immersion"][5],
+        mean: data.enrichUnique["French Immersion"][6],
+        median: data.enrichUnique["French Immersion"][7],
       },
       {
-        min: data.enrich["Gifted"][0],
-        q1: data.enrich["Gifted"][1],
-        q2: data.enrich["Gifted"][2],
-        q3: data.enrich["Gifted"][3],
-        max: data.enrich["Gifted"][4],
-        outliers: data.enrich["Gifted"][5],
-        mean: data.enrich["Gifted"][6],
-        median: data.enrich["Gifted"][7],
+        min: data.enrichUnique["Gifted"][0],
+        q1: data.enrichUnique["Gifted"][1],
+        q2: data.enrichUnique["Gifted"][2],
+        q3: data.enrichUnique["Gifted"][3],
+        max: data.enrichUnique["Gifted"][4],
+        outliers: data.enrichUnique["Gifted"][5],
+        mean: data.enrichUnique["Gifted"][6],
+        median: data.enrichUnique["Gifted"][7],
       },
       {
-        min: data.enrich["IB"][0],
-        q1: data.enrich["IB"][1],
-        q2: data.enrich["IB"][2],
-        q3: data.enrich["IB"][3],
-        max: data.enrich["IB"][4],
-        outliers: data.enrich["IB"][5],
-        mean: data.enrich["IB"][6],
-        median: data.enrich["IB"][7],
+        min: data.enrichUnique["IB"][0],
+        q1: data.enrichUnique["IB"][1],
+        q2: data.enrichUnique["IB"][2],
+        q3: data.enrichUnique["IB"][3],
+        max: data.enrichUnique["IB"][4],
+        outliers: data.enrichUnique["IB"][5],
+        mean: data.enrichUnique["IB"][6],
+        median: data.enrichUnique["IB"][7],
       },
       {
-        min: data.enrich["MaCS"][0],
-        q1: data.enrich["MaCS"][1],
-        q2: data.enrich["MaCS"][2],
-        q3: data.enrich["MaCS"][3],
-        max: data.enrich["MaCS"][4],
-        outliers: data.enrich["MaCS"][5],
-        mean: data.enrich["MaCS"][6],
-        median: data.enrich["MaCS"][7],
+        min: data.enrichUnique["MaCS"][0],
+        q1: data.enrichUnique["MaCS"][1],
+        q2: data.enrichUnique["MaCS"][2],
+        q3: data.enrichUnique["MaCS"][3],
+        max: data.enrichUnique["MaCS"][4],
+        outliers: data.enrichUnique["MaCS"][5],
+        mean: data.enrichUnique["MaCS"][6],
+        median: data.enrichUnique["MaCS"][7],
       },
       {
-        min: data.enrich["SHSM"][0],
-        q1: data.enrich["SHSM"][1],
-        q2: data.enrich["SHSM"][2],
-        q3: data.enrich["SHSM"][3],
-        max: data.enrich["SHSM"][4],
-        outliers: data.enrich["SHSM"][5],
-        mean: data.enrich["SHSM"][6],
-        median: data.enrich["SHSM"][7],
+        min: data.enrichUnique["SHSM"][0],
+        q1: data.enrichUnique["SHSM"][1],
+        q2: data.enrichUnique["SHSM"][2],
+        q3: data.enrichUnique["SHSM"][3],
+        max: data.enrichUnique["SHSM"][4],
+        outliers: data.enrichUnique["SHSM"][5],
+        mean: data.enrichUnique["SHSM"][6],
+        median: data.enrichUnique["SHSM"][7],
       },
       {
-        min: data.enrich["TOPS"][0],
-        q1: data.enrich["TOPS"][1],
-        q2: data.enrich["TOPS"][2],
-        q3: data.enrich["TOPS"][3],
-        max: data.enrich["TOPS"][4],
-        outliers: data.enrich["TOPS"][5],
-        mean: data.enrich["TOPS"][6],
-        median: data.enrich["TOPS"][7],
+        min: data.enrichUnique["TOPS"][0],
+        q1: data.enrichUnique["TOPS"][1],
+        q2: data.enrichUnique["TOPS"][2],
+        q3: data.enrichUnique["TOPS"][3],
+        max: data.enrichUnique["TOPS"][4],
+        outliers: data.enrichUnique["TOPS"][5],
+        mean: data.enrichUnique["TOPS"][6],
+        median: data.enrichUnique["TOPS"][7],
       },
       {
-        min: data.enrich["None"][0],
-        q1: data.enrich["None"][1],
-        q2: data.enrich["None"][2],
-        q3: data.enrich["None"][3],
-        max: data.enrich["None"][4],
-        outliers: data.enrich["None"][5],
-        mean: data.enrich["None"][6],
-        median: data.enrich["None"][7],
+        min: data.enrichUnique["None"][0],
+        q1: data.enrichUnique["None"][1],
+        q2: data.enrichUnique["None"][2],
+        q3: data.enrichUnique["None"][3],
+        max: data.enrichUnique["None"][4],
+        outliers: data.enrichUnique["None"][5],
+        mean: data.enrichUnique["None"][6],
+        median: data.enrichUnique["None"][7],
       },
     ],
     color: colorTheme[2],
@@ -232,6 +232,16 @@ export default function Academics(data) {
     n: data.difficultCourseRespondents,
   };
 
+  const lectureData = {
+    label: data.lectures,
+    val: data.lectureValues,
+    color: colorTheme[2],
+    title: "Lecture Attendance in 1A",
+    n: data.lectureRespondents,
+    xAxis: "Percentage of Lectures Attended",
+    yAxis: "Number of Students"
+  };
+
   return (
     <>
       <Head>
@@ -266,14 +276,19 @@ export default function Academics(data) {
 
         <h3>Favourite and Least Favourite Courses in 1A</h3>
         <div className={styles.doubleChart}>
-          <Chart type="pie" data={favCourseData} layout="double" />
-          <Chart type="pie" data={leastFavCourseData} layout="double" />
+          <Chart type="doughnut" data={favCourseData} layout="double" />
+          <Chart type="doughnut" data={leastFavCourseData} layout="double" />
         </div>
 
         <h3>Most Useful and Difficult Courses in 1A</h3>
         <div className={styles.doubleChart}>
-          <Chart type="pie" data={usefulCourseData} layout="double" />
-          <Chart type="pie" data={difficultCourseData} layout="double" />
+          <Chart type="doughnut" data={usefulCourseData} layout="double" />
+          <Chart type="doughnut" data={difficultCourseData} layout="double" />
+        </div>
+
+        <h3>Lecture Attendance in 1A</h3>
+        <div className={styles.singleChart}>
+          <Chart type="histogram" data={lectureData} layout="single" />
         </div>
 
         <BottomNav currentPage="academics" />
