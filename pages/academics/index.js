@@ -200,6 +200,16 @@ export default function Academics(data) {
     n: data.highschoolAverageRespondents,
   };
 
+  const averageDropoffData = {
+    label: data.averageDropoffs,
+    val: data.averageDropoffValues,
+    color: colorTheme[2],
+    title: "Average Drop-off",
+    n: data.averageDropoffRespondents,
+    xAxis: "Drop-off (%)",
+    yAxis: "Number of Students",
+  };
+
   const favCourseData = {
     label: data.favCourses,
     val: data.favCourseValues,
@@ -239,7 +249,7 @@ export default function Academics(data) {
     title: "Lecture Attendance in 1A",
     n: data.lectureRespondents,
     xAxis: "Percentage of Lectures Attended",
-    yAxis: "Number of Students"
+    yAxis: "Number of Students",
   };
 
   return (
@@ -253,7 +263,10 @@ export default function Academics(data) {
 
       <div className={`${styles.content} ${styles.academics}`}>
         <h2>Academics</h2>
-        <h4>The nitty-gritty details of our 1A academic term in SYDE.</h4>
+        <h4>
+          An overview of our 1A term in SYDE, including details on averages and
+          courses taken.
+        </h4>
         <br />
         <h3>1A Average</h3>
         <div className={styles.doubleChart}>
@@ -272,6 +285,15 @@ export default function Academics(data) {
         <h3>High School Enrichment Program vs 1A Average</h3>
         <div className={styles.singleChart}>
           <Chart type="box" data={enrichVsAverageData} layout="single" />
+        </div>
+
+        <h3>Average Dropoff</h3>
+        <div className={styles.doubleChart}>
+          <Chart type="histogram" data={averageDropoffData} layout="double" />
+          <p className={styles.textRight}>
+            The drop-off is calculated by: 1A average - admission average. For
+            SYDE 2027, the average drop-off rate was 10.8%.
+          </p>
         </div>
 
         <h3>Favourite and Least Favourite Courses in 1A</h3>
