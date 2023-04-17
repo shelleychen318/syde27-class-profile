@@ -336,7 +336,7 @@ export default function Academics(data) {
         <p className={styles.text}>
           Majority of us said that our favourite course was SYDE 101L and our
           least favourite course was SYDE 161. Sorry not sorry to all the
-          TsTsians out there. 🙄
+          TsTsians out there 🙄
         </p>
         <div className={styles.doubleChart}>
           <Chart type="doughnut" data={favCourseData} layout="double" />

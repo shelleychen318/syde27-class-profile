@@ -54,15 +54,6 @@ export default function Highschool(data) {
     yAxis: "Number of Students",
   };
 
-  const random = {
-    label: ["B", "A", "C", "D"],
-    val: [
-      [1, 2, 3, 5],
-      [4, 5, 6, 8],
-    ],
-    color: ["red", "blue"],
-  };
-
   const extraRoleData = {
     label: data.extraRoleUniques,
     val: data.extraRoleValues,
@@ -118,7 +109,8 @@ export default function Highschool(data) {
   const decisionData = {
     label: data.decisions,
     val: data.decisionValues,
-    color: [...colorTheme].reverse(),
+    // color: [...colorTheme].reverse(),
+    color: colorTheme,
     title: "When did we decide we wanted to go into SYDE?",
     n: data.decisionRespondents,
   };
