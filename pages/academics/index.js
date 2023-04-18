@@ -284,7 +284,7 @@ export default function Academics(data) {
           <p className={styles.textLeft}>
             The 1A average for SYDE 2027 was 85.8%. Unlike the relatively narrow
             range of admission averages (89+), the 1A academic term encompassed
-            a much broader spectrum of achievement, ranging from 65% to 100%.
+            a much broader spectrum of marks, ranging from 54% to 100%.
           </p>
           <Chart type="histogram" data={uniAverageData} layout="double" />
         </div>
@@ -358,9 +358,9 @@ export default function Academics(data) {
         <div className={styles.doubleChart}>
           <Chart type="histogram" data={lectureData} layout="double" />
           <p className={styles.textRight}>
-            On average, SYDE students attend lectures only 63% of the time. The
-            urge to hit snooze and sleep in during those 8am lectures was just
-            too strong 😴
+            On average, SYDE students attended lectures only 63% of the time in
+            1A. The urge to hit snooze and sleep in during those 8am lectures
+            was just too strong 😴
           </p>
         </div>
 
