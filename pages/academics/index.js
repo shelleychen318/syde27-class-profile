@@ -143,7 +143,7 @@ export default function Academics(data) {
     title: "High School Enrichment Program vs 1A Average",
     xAxis: "Enrichment Program",
     yAxis: "Average (%)",
-    ymin: 60,
+    ymin: 50,
     ymax: 100,
     n: data.enrichRespondents,
   };
@@ -206,7 +206,7 @@ export default function Academics(data) {
     title: "High School Admission Average vs 1A Average",
     xAxis: "High School Admission Average (%)",
     yAxis: "1A Average (%)",
-    ymin: 60,
+    ymin: 50,
     ymax: 100,
     n: data.highschoolAverageRespondents,
   };

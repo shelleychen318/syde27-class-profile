@@ -54,16 +54,6 @@ export default function Highschool(data) {
     yAxis: "Number of Students",
   };
 
-  const extraRoleData = {
-    label: data.extraRoleUniques,
-    val: data.extraRoleValues,
-    color: colorTheme[3],
-    title: "Extracurricular Roles",
-    n: data.extraRoleRespondents,
-    xAxis: "Extracurricular Role",
-    yAxis: "Number of Students",
-  };
-
   const enrichData = {
     label: data.enrichUniques,
     val: data.enrichValues,
@@ -77,7 +67,7 @@ export default function Highschool(data) {
   const postChoiceData = {
     label: data.postChoice,
     val: data.postChoicesValues,
-    color: colorTheme,
+    color: colorTheme[2],
     title: "Post Secondary Choices",
     n: data.postChoicesRespondents,
   };
@@ -98,18 +88,9 @@ export default function Highschool(data) {
     n: data.topChoiceRespondents,
   };
 
-  const considerData = {
-    label: data.considers,
-    val: data.considerValues,
-    color: colorTheme,
-    title: "Consideration",
-    n: data.considerRespondents,
-  };
-
   const decisionData = {
     label: data.decisions,
     val: data.decisionValues,
-    // color: [...colorTheme].reverse(),
     color: colorTheme,
     title: "When did we decide we wanted to go into SYDE?",
     n: data.decisionRespondents,
@@ -141,7 +122,6 @@ export default function Highschool(data) {
           well as university applications.
         </h4>
         <br />
-
         <h3>High School Admission Average</h3>
         <div className={styles.doubleChart}>
           <Chart type="histogram" data={averageData} layout="double" />
@@ -157,7 +137,6 @@ export default function Highschool(data) {
           </p>
         </div>
         <br />
-
         <h3>Enrichment Programs</h3>
         <p className={styles.text}>
           The majority of the class (86%) was involved in some sort of
@@ -167,7 +146,6 @@ export default function Highschool(data) {
           <Chart type="horizontalBar" data={enrichData} layout="single" />
         </div>
         <br />
-
         <h3>Extracurriculars</h3>
         <p className={styles.text}>
           We participated in a wide range of extracurricular activities in high
@@ -177,11 +155,6 @@ export default function Highschool(data) {
         <div className={styles.singleChart}>
           <Chart type="bar" data={extraTypeData} layout="single" />
         </div>
-        <div className={styles.doubleChart}>
-          <Chart type="bar" data={extraRoleData} layout="double" />
-          <Chart type="bar" data={extraNumData} layout="double" />
-        </div>
-
         <h3>Other Universities We Considered</h3>
         <p className={styles.text}>
           As many would expect, the most popular alternate university choice was
@@ -189,15 +162,15 @@ export default function Highschool(data) {
           from many prestigious schools in Canada and the United States, we
           ultimately decided to pursue SYDE at Waterloo!
         </p>
-        <div className={styles.singleChart}>
-          <div className={styles.uniConsiderationsContainer}>
-            <img
-              src="/assets/otherUniversities.png"
-              alt="other university considerations"
-              className={styles.uniConsiderations}
-            />
-          </div>
+        <div className={styles.uniConsiderationsContainer}>
+          <img
+            src="/assets/otherUniversities.png"
+            alt="other university considerations"
+            className={styles.uniConsiderations}
+          />
         </div>
+        <br />
+        <br />
         <br />
 
         <h3>Top Choice</h3>
@@ -220,7 +193,6 @@ export default function Highschool(data) {
           />
         </div>
         <br />
-
         <h3>Miscellaneous</h3>
         <p className={styles.text}>
           Some insight on how high school influenced our SYDE experience. Most
@@ -232,7 +204,6 @@ export default function Highschool(data) {
           <Chart type="doughnut" data={decisionData} layout="double" />
           <Chart type="histogram" data={prepData} layout="double" />
         </div>
-
         <BottomNav currentPage="highschool" />
       </div>
     </>
