@@ -5,7 +5,6 @@ import { BottomNav } from "../../components";
 import styles from "../profile.module.scss";
 import colors from "../../styles/colors.module.scss";
 import { getSortedDemographicsData } from "../../lib/sort/getSortedDemographicsData";
-import { BoxPlot } from "../../components";
 
 export const getStaticProps = async () => {
   const data = await getSortedDemographicsData();

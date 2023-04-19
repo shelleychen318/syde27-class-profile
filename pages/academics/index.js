@@ -2,9 +2,9 @@ import Head from "next/head";
 import { NavBar } from "../../components";
 import { Chart } from "../../components";
 import { BottomNav } from "../../components";
-import { getSortedAcademicsData } from "../../lib/sort/getSortedAcademicsData";
 import styles from "../profile.module.scss";
 import colors from "../../styles/colors.module.scss";
+import { getSortedAcademicsData } from "../../lib/sort/getSortedAcademicsData";
 
 export const getStaticProps = async () => {
   const data = await getSortedAcademicsData();
@@ -282,9 +282,12 @@ export default function Academics(data) {
         <h3>1A Average</h3>
         <div className={styles.doubleChart}>
           <p className={styles.textLeft}>
-            The 1A average for SYDE 2027 was 85.8%. Unlike the relatively narrow
-            range of admission averages (89+), the 1A academic term encompassed
-            a much broader spectrum of marks, ranging from 54% to 100%.
+            The 1A average for SYDE 2027 was 85.4%.
+            <br />
+            <br />
+            However, unlike the relatively narrow range of admission averages
+            (89+), the 1A academic term encompassed a much broader spectrum of
+            marks, ranging from a low of 54% to a high of 96%.
           </p>
           <Chart type="histogram" data={uniAverageData} layout="double" />
         </div>
@@ -320,7 +323,7 @@ export default function Academics(data) {
           <Chart type="histogram" data={averageDropoffData} layout="double" />
           <p className={styles.textRight}>
             The drop-off is calculated by: 1A average - admission average. For
-            SYDE 2027, the average drop-off rate was 10.8%.
+            SYDE 2027, the median drop-off rate was 10%.
             <br />
             <br />
             While this finding suggests a decrease in academic performance for
@@ -358,7 +361,7 @@ export default function Academics(data) {
         <div className={styles.doubleChart}>
           <Chart type="histogram" data={lectureData} layout="double" />
           <p className={styles.textRight}>
-            On average, SYDE students attended lectures only 63% of the time in
+            On average, SYDE students attended lectures only 64% of the time in
             1A. The urge to hit snooze and sleep in during those 8am lectures
             was just too strong 😴
           </p>
