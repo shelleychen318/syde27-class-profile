@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import { NavBar } from "../../components";
 import { BottomNav } from "../../components";
 import styles from "./about.module.scss";
@@ -26,9 +27,11 @@ export default function About() {
         </p>
         <br />
         <div className={styles.imageContainer}>
-          <img
+          <Image
             src="/assets/classPic.jpg"
             alt="class picture"
+            width="600"
+            height="400"
             className={styles.image}
           />
           <div className={styles.caption}>
@@ -46,9 +49,9 @@ export default function About() {
         </p>
         <p className={styles.paragraph}>
           The findings in this profile were derived from the results of a class
-          survey conducted by SYDE '27 students. 76 out of 106 students (72%) of
+          survey conducted by SYDE '27 students. 82 out of 106 students (77%) of
           students in our first year class responded to the survey. A secondary
-          survey was sent out with 51 (48%) respondents so far. All questions
+          survey was sent out with 60 (57%) respondents so far. All questions
           were optional. The data presented in this class profile may not be a
           complete reflection of the class and as such, this profile includes
           the number of respondents for each data set.

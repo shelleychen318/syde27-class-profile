@@ -4,13 +4,8 @@
   display: flex;
   flex-direction: column;
   margin: 1.5rem auto;
-  padding: 2rem 10rem;
+  padding: 2rem 10;
   max-width: 1200px;
-
-  @media screen and (max-width: 800px) {
-    margin-top: 6rem;
-    padding: 2rem 3rem;
-  }
 
   .doubleChart {
     display: flex;
@@ -118,5 +113,24 @@
   }
   h3 {
     color: $lifestyle1;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .content {
+    padding: 2rem 4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content {
+    margin: 6rem auto;
+    padding: 2rem 2rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .content {
+    padding: 0 1.5rem;
   }
 }

@@ -23,7 +23,7 @@
   margin-right: auto;
 
   .image {
-    width: 600px;
+    max-width: 100%;
     height: auto;
     border-radius: 20px;
     margin-bottom: 1rem;
@@ -44,38 +44,19 @@
   }
 }
 
-@media screen and (max-width: 1600px) {
-  .content {
-    font-size: 17px;
-  }
-}
-
-@media screen and (max-width: 1400px) {
-  .content {
-    font-size: 17px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .content {
-    font-size: 17px;
-  }
-}
-
 @media screen and (max-width: 960px) {
   .content {
-    padding: 0 4rem;
+    padding: 2rem 4rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .content {
-    margin: 5rem auto;
-    padding: 0 2.5rem;
+    margin: 6rem auto;
+    padding: 2rem 2rem;
   }
   .imageContainer {
     .image {
-
       width: 300px;
     }
   }
