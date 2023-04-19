@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
+import { BiPaperPlane } from "react-icons/bi";
 import { NavBar } from "../components";
 import styles from "../styles/Home.module.scss";
 
@@ -13,18 +15,24 @@ export default function Home() {
 
       <NavBar />
 
-      <div className={styles.banner}>
-        <div className={styles.title}>
-          <h1>Systems Design Engineering 2027 Class Profile!</h1>
-          <Link href="/demographics">
-            <h4 className={styles.button}>Go to Profile</h4>
-          </Link>
+      <div className={styles.container}>
+        <div className={styles.textContainer}>
+          <div className={styles.text}>
+            <h1>Systems Design Engineering 2027 Class Profile!</h1>
+            <Link href="/demographics">
+              <span>go to profile</span>
+              <BiPaperPlane size={25} className={styles.icon} />
+            </Link>
+          </div>
         </div>
-        <img
-          src="/assets/homeImg.png"
-          alt="home image"
-          className={styles.image}
-        />
+        <div className={styles.imageContainer}>
+          <Image
+            src="/assets/homeImg.png"
+            alt="home image"
+            width="500"
+            height="500"
+          />
+        </div>
       </div>
     </>
   );

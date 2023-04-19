@@ -50,7 +50,7 @@ export default function Lifestyle(data) {
     label: data.friendsCount,
     val: data.friendsValues,
     color: colorTheme[1],
-    title: "How easy was it for us to make friends? (5 being very easy)",
+    title: "How easy was it to make friends? (5 being very easy)",
     xAxis: "Level of Ease",
     yAxis: "Number of Students",
     n: data.friendsRespondents,
