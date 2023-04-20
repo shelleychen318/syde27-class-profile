@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { HiOutlineMenuAlt3, HiOutlineArrowRight } from "react-icons/hi";
 import { GiDuck } from "react-icons/gi";
@@ -38,16 +38,24 @@ const NavBar = () => {
     },
   ];
 
-  const [showMenu, setShowMenu] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add(styles["no-scroll"]);
+    } else {
+      document.body.classList.remove(styles["no-scroll"]);
+    }
+  }, [menuOpen]);
 
   return (
     <>
       <div
         className={`${styles.backgroundTintCommon} ${
-          showMenu ? styles.backgroundTintOn : styles.backgroundTintOff
+          menuOpen ? styles.backgroundTintOn : styles.backgroundTintOff
         }`}
         onClick={() => {
-          setShowMenu(false);
+          setMenuOpen(false);
         }}
       />
 
@@ -59,7 +67,7 @@ const NavBar = () => {
 
         <button
           onClick={() => {
-            setShowMenu(true);
+            setMenuOpen(true);
           }}
           className={styles.menuIcon}
         >
@@ -68,14 +76,14 @@ const NavBar = () => {
       </div>
 
       <div
-        className={`${styles.sideBar} ${!showMenu ? styles.sideBarClosed : ""}`}
+        className={`${styles.sideBar} ${!menuOpen ? styles.sideBarClosed : ""}`}
       >
         <div className={styles.menuContainer}>
           <div className={styles.menuHeader}>
             <h2 className={styles.menuTitle}>Sections</h2>
             <button
               onClick={() => {
-                setShowMenu(false);
+                setMenuOpen(false);
               }}
               className={`${styles.closeMenuIcon} ${styles.menuIcon}`}
             >

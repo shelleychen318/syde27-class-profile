@@ -22,6 +22,10 @@
   opacity: 0;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .headerContainer {
   display: flex;
   justify-content: space-between;
@@ -70,6 +74,7 @@
   padding-left: 3rem;
   z-index: 100;
   transition: transform 0.8s;
+  overflow: auto;
 
   .menuHeader {
     display: flex;
@@ -94,7 +99,7 @@
   }
 
   ul {
-    padding: 0;
+    padding: 0 0 8rem;
   }
   li {
     list-style: none;
