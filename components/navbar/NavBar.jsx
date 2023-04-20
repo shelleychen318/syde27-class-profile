@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { HiMenu, HiOutlineX } from "react-icons/hi";
+import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
+import { GiDuck } from "react-icons/gi";
 import styles from "./NavBar.module.scss";
 
 const NavBar = () => {
@@ -52,6 +53,7 @@ const NavBar = () => {
 
       <div className={styles.headerContainer}>
         <Link href="/" className={styles.logo}>
+          <GiDuck size={25} className={styles.icon} />
           syde 2027
         </Link>
 
@@ -61,7 +63,7 @@ const NavBar = () => {
           }}
           className={styles.menuIcon}
         >
-          <HiMenu size={35} />
+          <HiOutlineMenu size={35} />
         </button>
       </div>
 
