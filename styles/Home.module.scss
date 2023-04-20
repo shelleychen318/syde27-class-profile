@@ -60,10 +60,10 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .container {
     height: 300px;
-    padding: 12rem 4rem 0;
+    padding: 8rem 4rem 0;
 
     .imageContainer {
       display: none;
@@ -73,7 +73,7 @@
 
 @media (max-width: 640px) {
   .container {
-    padding: 16rem 2rem 0;
+    padding: 10rem 2rem 0;
 
     .textContainer > .text > a > span {
       font-size: 20px;

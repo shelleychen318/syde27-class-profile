@@ -1,40 +1,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { HiBars2, HiXMark } from "react-icons/hi2";
-import { motion } from "framer-motion";
+import { HiMenu, HiOutlineX } from "react-icons/hi";
 import styles from "./NavBar.module.scss";
 
 const NavBar = () => {
-
-  const [toggle, setToggle] = useState(false);
-
-  const menuVariants = {
-    hidden: {
-      scale: 0,
-    },
-    visible: {
-      scale: 50,
-      transition: {
-        type: "tween",
-        duration: 0.5,
-      },
-    },
-  };
-
-  const navLinkVariants = {
-    hidden: {
-      display: "none",
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      y: -30,
-      transiiton: {
-        delay: 0.7,
-      },
-    },
-  };
-
   const links = [
     {
       id: 1,
@@ -68,50 +37,62 @@ const NavBar = () => {
     },
   ];
 
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
-    <div className={styles.header}>
-      <div className={styles.navContainer}>
+    <>
+      <div
+        className={`${styles.backgroundTintCommon} ${
+          showMenu ? styles.backgroundTintOn : styles.backgroundTintOff
+        }`}
+        onClick={() => {
+          setShowMenu(false);
+        }}
+      />
+
+      <div className={styles.headerContainer}>
         <Link href="/" className={styles.logo}>
-          SYDE 2027
+          syde 2027
         </Link>
-        <ul className={styles.navLinks}>
-          {links.map(({ id, link, href }) => (
-            <li key={id}>
-              <Link href={href}>{link}</Link>
-            </li>
-          ))}
-        </ul>
-        <div className={styles.menu}>
-          <HiBars2
-            onClick={() => {
-              setToggle(true);
-            }}
-          />
-        </div>
-        <motion.div
-          className={styles.closeMenu}
-          variants={menuVariants}
-          initial="hidden"
-          animate={toggle ? "visible" : "hidden"}
-        ></motion.div>
-        <motion.div
-          className={styles.menuX}
-          variants={navLinkVariants}
-          animate={toggle ? "visible" : "hidden"}
+
+        <button
+          onClick={() => {
+            setShowMenu(true);
+          }}
+          className={styles.menuIcon}
         >
-          <HiXMark
-            onClick={() => {
-              setToggle(false);
-            }}
-          />
-          {links.map(({ id, link, href }) => (
-            <li key={id}>
-              <Link href={href}>{link}</Link>
-            </li>
-          ))}
-        </motion.div>
+          <HiMenu size={35} />
+        </button>
       </div>
-    </div>
+
+      <div
+        className={`${styles.sideBar} ${!showMenu ? styles.sideBarClosed : ""}`}
+      >
+        <div className={styles.menuContainer}>
+          <div className={styles.menuHeader}>
+            <h2 className={styles.menuTitle}>Sections</h2>
+            <button
+              onClick={() => {
+                setShowMenu(false);
+              }}
+              className={`${styles.closeMenuIcon} ${styles.menuIcon}`}
+            >
+              <HiOutlineX size={35} />
+            </button>
+          </div>
+
+          <ul className={styles.sectionsContainer}>
+            {links.map(({ id, link, href }) => (
+              <li key={id}>
+                <Link href={href}>
+                  <h4>{link}</h4>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </>
   );
 };
 

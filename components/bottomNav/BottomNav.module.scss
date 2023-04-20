@@ -14,12 +14,12 @@
     .text {
       font-weight: 500;
       font-size: 20px;
+      transition: transform 0.3s ease-in-out;
     }
 
     &:hover {
       .text {
         color: $primary;
-        transition-duration: 0.3s;
         transform: scale(1.1);
       }
     }

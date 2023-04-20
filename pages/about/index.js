@@ -64,7 +64,7 @@ export default function About() {
           target="_blank"
           rel="noreferrer"
         >
-          <div className={styles.github}>View GitHub repo {">"}</div>
+          <p>view GitHub repo</p>
         </a>
 
         <BottomNav currentPage="about" />
