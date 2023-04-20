@@ -12,10 +12,6 @@
     flex-direction: row;
     justify-content: center;
 
-    .text {
-      padding: 2rem;
-    }
-
     .textRight {
       margin-left: 4rem;
     }
@@ -42,31 +38,14 @@
     justify-content: center;
   }
 
-  .uniConsiderationsContainer {
-    width: fit-content;
-    align-items: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin: auto;
-    padding: 1rem;
+  .wordCloudContainer {
+    width: 100%;
 
-    .uniConsiderations {
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  .topChoiceContainer {
-    width: fit-content;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-
-    .topChoice {
-      width: 100%;
-      height: auto;
+    .wordCloud {
+      object-fit: contain;
+      width: 100% !important;
+      position: relative !important;
+      height: unset !important;
     }
   }
 }

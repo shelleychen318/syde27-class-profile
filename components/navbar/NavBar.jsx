@@ -78,29 +78,27 @@ const NavBar = () => {
       <div
         className={`${styles.sideBar} ${!menuOpen ? styles.sideBarClosed : ""}`}
       >
-        <div className={styles.menuContainer}>
-          <div className={styles.menuHeader}>
-            <h2 className={styles.menuTitle}>Sections</h2>
-            <button
-              onClick={() => {
-                setMenuOpen(false);
-              }}
-              className={`${styles.closeMenuIcon} ${styles.menuIcon}`}
-            >
-              <HiOutlineArrowRight size="2.5rem" />
-            </button>
-          </div>
-
-          <ul className={styles.sectionsContainer}>
-            {links.map(({ id, link, href }) => (
-              <li key={id}>
-                <Link href={href}>
-                  <h4>{link}</h4>
-                </Link>
-              </li>
-            ))}
-          </ul>
+        <div className={styles.menuHeader}>
+          <h2>Sections</h2>
+          <button
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+            className={`${styles.menuIcon} ${styles.closeMenuIcon}`}
+          >
+            <HiOutlineArrowRight size="2.5rem" />
+          </button>
         </div>
+
+        <ul className={styles.sectionsContainer}>
+          {links.map(({ id, link, href }) => (
+            <li key={id}>
+              <Link href={href}>
+                <h4>{link}</h4>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );

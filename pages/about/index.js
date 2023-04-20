@@ -26,6 +26,7 @@ export default function About() {
           and most importantly, built gardening tools for non-existent aliens.
         </p>
         <br />
+        
         <div className={styles.imageContainer}>
           <Image
             src="/assets/classPic.jpg"
@@ -39,6 +40,7 @@ export default function About() {
           </div>
         </div>
         <br />
+
         <h2 className={styles.heading}>Preface</h2>
         <p className={styles.paragraph}>
           Inspired by past SYDE cohorts, we have put together this class profile
@@ -57,6 +59,7 @@ export default function About() {
           the number of respondents for each data set.
         </p>
         <br />
+
         <h2 className={styles.heading}>Contributors</h2>
         <a
           className={styles.github}
@@ -64,7 +67,7 @@ export default function About() {
           target="_blank"
           rel="noreferrer"
         >
-          <p>view GitHub repo</p>
+          <p>View GitHub repo {">"}</p>
         </a>
 
         <BottomNav currentPage="about" />

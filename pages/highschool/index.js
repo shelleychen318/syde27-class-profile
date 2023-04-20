@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import { NavBar } from "../../components";
 import { Chart } from "../../components";
 import { BottomNav } from "../../components";
@@ -122,6 +123,7 @@ export default function Highschool(data) {
           well as university applications.
         </h4>
         <br />
+
         <h3>High School Admission Average</h3>
         <div className={styles.doubleChart}>
           <Chart type="histogram" data={averageData} layout="double" />
@@ -137,8 +139,9 @@ export default function Highschool(data) {
           </p>
         </div>
         <br />
+
         <h3>Enrichment Programs</h3>
-        <p className={styles.text}>
+        <p>
           The majority of the class (86%) was involved in some sort of
           enrichment program in high school.
         </p>
@@ -146,8 +149,9 @@ export default function Highschool(data) {
           <Chart type="horizontalBar" data={enrichData} layout="single" />
         </div>
         <br />
+
         <h3>Extracurriculars</h3>
-        <p className={styles.text}>
+        <p>
           We participated in a wide range of extracurricular activities in high
           school, among which sports emerged as the most popular. Looks like
           SYDE 2027 has some athletes among us!
@@ -155,21 +159,26 @@ export default function Highschool(data) {
         <div className={styles.singleChart}>
           <Chart type="bar" data={extraTypeData} layout="single" />
         </div>
+
         <h3>Other Universities We Considered</h3>
-        <p className={styles.text}>
-          As many would expect, the most popular alternate university choice was
-          UofT, with McMaster coming in at a close second. Despite having offers
-          from many prestigious schools in Canada and the United States, we
-          ultimately decided to pursue SYDE at Waterloo!
-        </p>
-        <div className={styles.uniConsiderationsContainer}>
-          <img
-            src="/assets/otherUniversities.png"
-            alt="other university considerations"
-            className={styles.uniConsiderations}
-          />
+        <div className={styles.doubleChart}>
+          <p className={styles.textLeft}>
+            As many would expect, the most popular alternate university choice
+            was UofT, with McMaster coming in at a close second.
+            <br />
+            <br />
+            Despite having offers from many prestigious schools in Canada and
+            the United States, we ultimately decided to pursue SYDE at Waterloo!
+          </p>
+          <div className={styles.wordCloudContainer}>
+            <Image
+              src="/assets/otherUniversities.png"
+              alt="other university considerations"
+              layout="fill"
+              className={styles.wordCloud}
+            />
+          </div>
         </div>
-        <br />
         <br />
         <br />
 
@@ -181,20 +190,22 @@ export default function Highschool(data) {
             hearts set on a different program. It's okay, we still love you 😔
           </p>
         </div>
-        <p className={styles.text}>
+        <p>
           For those of us who said SYDE was not our top choice, these are the
           programs we were striving for in high school.
         </p>
-        <div className={styles.topChoiceContainer}>
-          <img
+        <div className={styles.wordCloudContainer}>
+          <Image
             src="/assets/topChoice.png"
             alt="top choice programs"
-            className={styles.topChoice}
+            layout="fill"
+            className={styles.wordCloud}
           />
         </div>
         <br />
+
         <h3>Miscellaneous</h3>
-        <p className={styles.text}>
+        <p>
           Some insight on how high school influenced our SYDE experience. Most
           of us decided we wanted to be part of the SYDE gang in our final year
           of high school, but one person has had their heart set on SYDE before
@@ -204,6 +215,7 @@ export default function Highschool(data) {
           <Chart type="doughnut" data={decisionData} layout="double" />
           <Chart type="histogram" data={prepData} layout="double" />
         </div>
+
         <BottomNav currentPage="highschool" />
       </div>
     </>

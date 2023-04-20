@@ -279,6 +279,7 @@ export default function Academics(data) {
           averages and courses taken.
         </h4>
         <br />
+        
         <h3>1A Average</h3>
         <div className={styles.doubleChart}>
           <p className={styles.textLeft}>
@@ -293,7 +294,7 @@ export default function Academics(data) {
         </div>
 
         <h3>High School Admission Average vs 1A Average</h3>
-        <p className={styles.text}>
+        <p>
           Based on the data provided, there does not appear to be a clear
           proportional trend between high school admission averages and 1A
           averages.
@@ -303,7 +304,7 @@ export default function Academics(data) {
         </div>
 
         <h3>High School Enrichment Program vs 1A Average</h3>
-        <p className={styles.text}>
+        <p>
           The data provided does not suggest a clear trend or pattern between
           high school enrichment programs and 1A averages. While some programs
           may indicate a slightly higher or lower average than others, it is
@@ -336,7 +337,7 @@ export default function Academics(data) {
         </div>
 
         <h3>Favourite and Least Favourite Courses in 1A</h3>
-        <p className={styles.text}>
+        <p>
           Majority of us said that our favourite course was SYDE 101L and our
           least favourite course was SYDE 161. Sorry not sorry to all the
           TsTsians out there 🙄
@@ -347,7 +348,7 @@ export default function Academics(data) {
         </div>
 
         <h3>Most Useful and Difficult Courses in 1A</h3>
-        <p className={styles.text}>
+        <p>
           Majority of us found SYDE 121 to be the most useful course. At the
           same time, over half of us found SYDE 113 to be the most difficult
           course, with SYDE 111 as a close second.

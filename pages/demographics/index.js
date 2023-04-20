@@ -131,8 +131,9 @@ export default function Demographics(data) {
           the SYDE 2027 cohort.
         </h4>
         <br />
+        
         <h3>Gender and Sexuality</h3>
-        <p className={styles.text}>
+        <p>
           SYDE stands out from most engineering programs due to its higher ratio
           of women to men. This trend has been consistently observed in SYDE
           cohorts, with the highest ratio seen in the 2027 cohort so far!
@@ -143,7 +144,7 @@ export default function Demographics(data) {
         </div>
 
         <h3>Ethnicity and Religion</h3>
-        <p className={styles.text}>
+        <p>
           Our class comprises students from diverse ethnic backgrounds, with the
           largest demographic being of East Asian descent. Students who selected
           multiple ethnicities were counted once in each group.
@@ -154,7 +155,7 @@ export default function Demographics(data) {
         </div>
 
         <h3>Hometowns</h3>
-        <p className={styles.text}>
+        <p>
           Although the majority of us grew up in the GTA, there is still a
           considerable variety of hometowns represented in our class!
         </p>

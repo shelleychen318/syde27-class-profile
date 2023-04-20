@@ -100,14 +100,17 @@ export default function Lifestyle(data) {
           <Chart type="bar" data={studyTimeData} layout="double" />
           <Chart type="bar" data={sleepTimeData} layout="double" />
         </div>
+
         <h3>Friends in SYDE</h3>
         <div className={styles.singleChart}>
           <Chart type="bar" data={friendsData} layout="single" />
         </div>
+
         <h3>Home</h3>
         <div className={styles.singleChart}>
           <Chart type="bar" data={homeTimeData} layout="single" />
         </div>
+
         <h3>Rice Purity 😳</h3>
         <p>
           Looks like many of us strive for 90s even outside of school! In all
@@ -116,6 +119,7 @@ export default function Lifestyle(data) {
         <div className={styles.singleChart}>
           <Chart type="histogram" data={purityData} layout="single" />
         </div>
+
         <BottomNav currentPage="lifestyle" />
       </div>
     </>

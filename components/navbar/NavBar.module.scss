@@ -38,7 +38,7 @@
   box-sizing: border-box;
 
   .logo {
-    font-family: 'Bitter';
+    font-family: "Bitter";
     color: $mainText;
     text-decoration: none;
     font-size: 24px;
@@ -83,7 +83,7 @@
     align-items: center;
     margin-top: 1rem;
 
-    .menuTitle {
+    h2 {
       color: $secondary;
     }
 
@@ -98,20 +98,20 @@
     }
   }
 
-  ul {
+  .sectionsContainer {
     padding: 0 0 8rem;
-  }
-  li {
-    list-style: none;
-    transition: transform 0.3s ease-in-out;
 
-    h4 {
-      &:hover {
+    li {
+      list-style: none;
+      transition: transform 0.3s ease-in-out;
+
+      h4:hover {
         color: $primary;
       }
-    }
-    &:hover {
-      transform: scale(1.05);
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 }
