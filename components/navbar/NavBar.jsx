@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
+import { HiOutlineMenuAlt3, HiOutlineArrowRight } from "react-icons/hi";
 import { GiDuck } from "react-icons/gi";
 import styles from "./NavBar.module.scss";
 
@@ -63,7 +63,7 @@ const NavBar = () => {
           }}
           className={styles.menuIcon}
         >
-          <HiOutlineMenu size={35} />
+          <HiOutlineMenuAlt3 size="2.5rem" />
         </button>
       </div>
 
@@ -79,7 +79,7 @@ const NavBar = () => {
               }}
               className={`${styles.closeMenuIcon} ${styles.menuIcon}`}
             >
-              <HiOutlineX size={35} />
+              <HiOutlineArrowRight size="2.5rem" />
             </button>
           </div>
 
