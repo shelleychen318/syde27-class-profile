@@ -6,6 +6,7 @@ import HorizontalBarChart from "./HorizontalBarChart";
 import Histogram from "./Histogram";
 import BoxPlotChart from "./BoxPlotChart";
 import MultiBarChart from "./MultiBarChart";
+import ScatterPlot from "./ScatterPlot";
 import styles from "./Chart.module.scss";
 
 const Chart = ({ type, data, layout, width, height }) => {
@@ -50,6 +51,12 @@ const Chart = ({ type, data, layout, width, height }) => {
       return (
         <div className={`${styles[layout]}`}>
           <MultiBarChart data={data} width={width} height={height} />
+        </div>
+      );
+    case "scatter":
+      return (
+        <div className={`${styles[layout]}`}>
+          <ScatterPlot data={data} width={width} height={height} />
         </div>
       );
     default:

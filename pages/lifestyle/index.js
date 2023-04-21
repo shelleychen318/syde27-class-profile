@@ -89,6 +89,7 @@ export default function Lifestyle(data) {
         <h2>Lifestyle</h2>
         <h4>How's life?</h4>
         <br />
+        
         <h3>Study and Sleep Time</h3>
         <p>
           The average SYDE student spends 4.9 hours studying and 6.1 hours

@@ -62,6 +62,16 @@ export default function Coop(data) {
     yAxis: "Number of Students",
   };
 
+  const payVsSatisfactionData = {
+    val: data.pay,
+    color: colorTheme[1],
+    title: "Co-op Pay vs Job Satisfaction",
+    n: data.payRespondents,
+    xAxis: "Pay ($CAD/hr)",
+    yAxis: "Level of Satisfaction",
+    ymin: 1,
+  };
+
   return (
     <>
       <Head>
@@ -75,7 +85,7 @@ export default function Coop(data) {
         <h2>Co-op</h2>
         <h4>Where is SYDE 2027 working?</h4>
         <br />
-        
+
         <h3>Co-op Search Process</h3>
         <div className={styles.doubleChart}>
           <Chart type="bar" data={roundData} layout="double" />
@@ -94,6 +104,21 @@ export default function Coop(data) {
             Among those who had in-person jobs, most were located in the GTA.
           </p>
           <Chart type="bar" data={locationData} layout="double" />
+        </div>
+
+        <h3>Co-op Pay vs Job Satisfaction</h3>
+        <div className={styles.doubleChart}>
+          <Chart type="scatter" data={payVsSatisfactionData} layout="double" />
+          <p className={styles.textRight}>
+            This chart aims to explore the relationship between job compensation
+            and satisfaction, where a score of 1 indicates extreme
+            dissatisfaction and 5 indicates extreme satisfaction.
+            <br />
+            <br />
+            While the data reveals a discernible pattern, it is worth noting
+            that all individuals earning $25 or more rated their satisfaction
+            level 4 or higher. Maybe money does buy happiness after all 🤷‍♀️
+          </p>
         </div>
 
         <BottomNav currentPage="co-op" />

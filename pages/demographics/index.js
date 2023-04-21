@@ -160,7 +160,7 @@ export default function Demographics(data) {
           considerable variety of hometowns represented in our class!
         </p>
         <div className={styles.singleChart}>
-          <Chart type="horizontalBar" data={hometownData} layout="single" />
+          <Chart type="bar" data={hometownData} layout="single" />
         </div>
 
         <BottomNav currentPage="demographics" />

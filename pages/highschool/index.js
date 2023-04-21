@@ -138,7 +138,6 @@ export default function Highschool(data) {
             competition to get into the program in recent years.
           </p>
         </div>
-        <br />
 
         <h3>Enrichment Programs</h3>
         <p>
@@ -146,9 +145,8 @@ export default function Highschool(data) {
           enrichment program in high school.
         </p>
         <div className={styles.singleChart}>
-          <Chart type="horizontalBar" data={enrichData} layout="single" />
+          <Chart type="bar" data={enrichData} layout="single" />
         </div>
-        <br />
 
         <h3>Extracurriculars</h3>
         <p>
@@ -202,6 +200,7 @@ export default function Highschool(data) {
             className={styles.wordCloud}
           />
         </div>
+        <br />
         <br />
 
         <h3>Miscellaneous</h3>
