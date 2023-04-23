@@ -6,76 +6,118 @@
   margin: 1.5rem auto;
   padding: 2rem 10rem;
   max-width: 1200px;
-}
 
-.heading {
-  text-align: left;
+  .imageContainer {
+    width: fit-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
-  .paragraph {
-    text-align: justify;
-  }
-}
+    .image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
 
-.imageContainer {
-  width: fit-content;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-  .image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 20px;
-    margin-bottom: 1rem;
+    .caption {
+      text-align: center;
+      font-style: italic;
+    }
   }
 
-  .caption {
-    text-align: center;
-    font-style: italic;
+  .github {
+    position: relative;
+    width: fit-content;
+    color: $mainText;
+    align-self: flex-end;
+
+    p {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    &::before {
+      content: "";
+      background-color: $primary;
+      position: absolute;
+      left: 0;
+      bottom: 3px;
+      width: 100%;
+      height: 5px;
+      z-index: -1;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      height: 100%;
+      opacity: 0.6;
+    }
   }
-}
 
-.github {
-  position: relative;
-  width: fit-content;
-  color: $mainText;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 1rem;
 
-  p {
-    margin: 0;
-    font-weight: 500;
-  }
+    .gridItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 2rem;
 
-  &::before {
-    content: "";
-    background-color: $primary;
-    position: absolute;
-    left: 0;
-    bottom: 3px;
-    width: 100%;
-    height: 5px;
-    z-index: -1;
-    transition: all 0.3s ease-in-out;
-  }
+      .photoContainer {
+        width: 70%;
+        padding-bottom: 70%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-bottom: 1rem;
 
-  &:hover::before {
-    height: 100%;
-    opacity: 0.6;
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .name {
+        margin: 0;
+        font-weight: 600;
+        line-height: 25px;
+      }
+
+      .role {
+        margin: 0;
+        line-height: 25px;
+      }
+    }
   }
 }
 
 @media screen and (max-width: 960px) {
   .content {
     padding: 2rem 4rem;
+
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 
 @media screen and (max-width: 480px) {
   .content {
     padding: 2rem 2rem;
-  }
-  .imageContainer {
-    .image {
-      width: 300px;
+
+    .grid > .gridItem > .photoContainer {
+      width: 80%;
+      padding-bottom: 80%;
     }
   }
 }

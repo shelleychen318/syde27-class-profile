@@ -1,15 +1,15 @@
-import React, { useState, useEffect, useRef } from "react";
-import Chart from "chart.js/auto";
-
-import { LinearScale, CategoryScale } from "chart.js";
+import { useState, useEffect, Component, createRef } from "react";
+import { Chart, LinearScale, CategoryScale } from "chart.js";
 import {
   BoxPlotController,
   BoxAndWiskers,
   Violin,
   ViolinController,
 } from "@sgratzl/chartjs-chart-boxplot";
-//import { BoxPlotChart } from '@sgratzl/chartjs-chart-boxplot';
-// register controller in chart.js and ensure the defaults are set
+import "chart.js/auto";
+import "chartjs-chart-box-and-violin-plot/build/Chart.BoxPlot.js";
+import "chartjs-subtitle";
+
 Chart.register(
   BoxPlotController,
   BoxAndWiskers,
@@ -19,128 +19,147 @@ Chart.register(
   CategoryScale
 );
 
-const BoxPlot = ({ data }) => {
-  const canvasRef = useRef(null);
-  const [chart, setChart] = useState(null);
+class BoxPlotChart extends Component {
+  constructor(props) {
+    super(props);
+    this.chartRef = createRef();
+    // this.myChart = null;
+  }
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    // Check if there is an existing chart instance associated with the canvas element
-    if (chart) {
-      // If so, destroy the chart instance before creating a new one
-      chart.destroy();
-      const updatedChart = new Chart(canvas, {
-        type: "boxplot",
-        options: {
-          responsive: true,
-          maintainAspectRatio: true,
-          plugins: {
-            legend: { display: false },
+  componentWillUnmount() {
+    // Add this method to destroy the chart instance
+    if (this.myChart) {
+      this.myChart.destroy();
+    }
+  }
+
+  componentDidUpdate() {
+    this.myChart.data.labels = this.props.data.label;
+    this.myChart.data.datasets[0].data = this.props.data.val;
+    this.myChart.data.datasets[0].backgroundColor = this.props.data.color;
+    this.myChart.data.datasets[0].outlierColor = "rgb(255, 99, 132)";
+    this.myChart.options.plugins.title.text = this.props.data.title;
+    this.myChart.options.plugins.subtitle.text =
+      "number of respondents: " + this.props.data.n;
+    this.myChart.options.scales.x.title.text = this.props.data.xAxis;
+    this.myChart.options.scales.y.title.text = this.props.data.yAxis;
+    this.myChart.options.scales.y.min = this.props.data.ymin;
+    this.myChart.options.scales.y.max = this.props.data.ymax;
+    this.myChart.update();
+  }
+
+  componentDidMount() {
+    this.myChart = new Chart(this.chartRef.current, {
+      type: "boxplot",
+      data: {
+        labels: this.props.data.label,
+        datasets: [
+          {
+            data: this.props.data.val,
+            backgroundColor: this.props.data.color,
+            borderColor: "gray",
+            hoverBackgroundColor: "white",
+            borderWidth: 1.5,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: this.props.data.title,
+            font: {
+              size: 16,
+            },
+          },
+          subtitle: {
+            display: true,
+            text: "number of respondents: " + this.props.data.n,
+            padding: {
+              bottom: 20,
+            },
+          },
+        },
+        scales: {
+          x: {
+            gridlines: {
+              lineWidth: 1,
+            },
             title: {
               display: true,
-              text: data.title,
-              color: "#ffffff",
-              padding: 14,
+              text: this.props.data.xAxis,
+              font: {
+                size: 15,
+              },
             },
-            subtitle: {
+          },
+          y: {
+            gridlines: {
+              lineWidth: 1,
+            },
+            title: {
               display: true,
+              text: this.props.data.yAxis,
+              font: {
+                size: 15,
+              },
+            },
+            ticks: {
+              beginAtZero: true,
+              callback: function (value) {
+                if (value % 1 === 0) {
+                  return value;
+                }
+              },
+            },
+            min: this.props.data.ymin,
+            max: this.props.data.ymax,
+          },
+        },
+      },
+    });
+  }
 
-              text: "number of respondents: " + data.n,
-              padding: {
-                bottom: 20,
-              },
-            },
-          },
-          scales: {
-            x: {
-              grid: {
-                zeroLineColor: "#fff",
-                color: "rgba(255, 255, 255, 0.05)",
-                lineWidth: 1,
-              },
-              title: {
-                display: true,
-                text: data.xAxis,
-                color: "#ffffff",
-              },
-              ticks: {
-                color: "#ffffff",
-              },
-            },
-            y: {
-              grid: {
-                zeroLineColor: "#fff",
-                color: "rgba(255, 255, 255, 0.05)",
-                lineWidth: 1,
-              },
-              title: {
-                display: true,
-                text: data.yAxis,
-                color: "#ffffff",
-              },
-              ticks: {
-                color: "#ffffff",
-              },
-              min: parseInt(data.xmin),
-              max: parseInt(data.xmax),
-            },
-          },
-        },
-        data: {
-          labels: data.label,
-          datasets: [
-            {
-              //label: '',
-              data: data.val,
-              backgroundColor: data.color,
-              borderColor: "white",
-              hoverBackgroundColor: "white",
-              borderWidth: 1.5,
-              marker: {
-                color: "rgb(8,81,156)",
-                outliercolor: "rgba(219, 64, 82, 0.6)",
-                line: {
-                  outliercolor: "rgba(219, 64, 82, 1.0)",
-                  outlierwidth: 2,
-                },
-              },
-            },
-          ],
-        },
-      });
-      setChart(updatedChart);
-    }
-  }, [chart]);
+  render() {
+    return (
+      <canvas
+        ref={this.chartRef}
+        height={this.props.height}
+        width={this.props.width}
+      />
+    );
+  }
+}
+
+export default function BoxPlot(props) {
+  const [data, setData] = useState({
+    val: [],
+    label: [],
+    color: "",
+  });
+
+  const [id, setId] = useState(0);
 
   useEffect(() => {
-    if (chart) {
-      const updatedData = {
-        datasets: [],
-      };
-      // Iterate through the data and create a dataset for each set of box plot data
-      data.val.forEach((d, i) => {
-        updatedData.datasets.push({
-          label: d.name,
-          data: [
-            {
-              q1: d.q1,
-              q2: d.q2,
-              q3: d.q3,
-              whiskerMin: d.whiskerMin,
-              whiskerMax: d.whiskerMax,
-              outliers: d.outliers,
-            },
-          ],
-          borderColor: "black",
-          backgroundColor: "white",
-        });
-      });
-      chart.data = updatedData;
-      chart.update();
-    }
-  }, [data, chart]);
+    data.title = props.data.title;
+    data.val = props.data.val;
+    data.label = props.data.label;
+    data.xAxis = props.data.xAxis;
+    data.yAxis = props.data.yAxis;
+    data.ymin = props.data.ymin;
+    data.ymax = props.data.ymax;
+    data.color = props.data.color;
+    data.n = props.data.n;
+    setId(id + 1);
+    setData(data);
+  }, []);
 
-  return <canvas ref={canvasRef} />;
-};
-
-export default BoxPlot;
+  return (
+    <div>
+      <BoxPlotChart data={data} height="475px" width="475px" />
+    </div>
+  );
+}

@@ -76,6 +76,28 @@ export default function Lifestyle(data) {
     n: data.purityRespondents,
   };
 
+  const overlappingData = {
+    label: ["A", "B", "C", "D"],
+    val: [
+      {
+        label: "Dataset 1",
+        data: [10, 20, 30, 40],
+        backgroundColor: "rgba(255, 99, 132, 0.7)",
+      },
+      {
+        label: "Dataset 2",
+        data: [20, 30, 10, 50],
+        backgroundColor: "rgba(54, 162, 235, 0.7)",
+        fillOpacity: 0.5,
+      },
+    ],
+    color: ["red", "green", "blue", "yellow"],
+    xAxis: "X Axis Label",
+    yAxis: "Y Axis Label",
+    title: "Overlapping Histogram Title",
+    n: 100,
+  };
+
   return (
     <>
       <Head>
@@ -89,7 +111,7 @@ export default function Lifestyle(data) {
         <h2>Lifestyle</h2>
         <h4>How's life?</h4>
         <br />
-        
+
         <h3>Study and Sleep Time</h3>
         <p>
           The average SYDE student spends 4.9 hours studying and 6.1 hours
@@ -119,6 +141,14 @@ export default function Lifestyle(data) {
         </p>
         <div className={styles.singleChart}>
           <Chart type="histogram" data={purityData} layout="single" />
+        </div>
+
+        <div className={styles.singleChart}>
+          <Chart
+            type="overlappingHistogram"
+            data={overlappingData}
+            layout="single"
+          />
         </div>
 
         <BottomNav currentPage="lifestyle" />

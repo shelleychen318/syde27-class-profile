@@ -11,13 +11,7 @@ const BottomNav = ({ currentPage }) => {
   let nextPageName;
 
   switch (currentPage) {
-    case "about":
-      nextPageLink = "/demographics";
-      nextPageName = "Demographics";
-      break;
     case "demographics":
-      backPageLink = "/about";
-      backPageName = "About";
       nextPageLink = "/highschool";
       nextPageName = "High School";
       break;
@@ -42,12 +36,18 @@ const BottomNav = ({ currentPage }) => {
     case "lifestyle":
       backPageLink = "/co-op";
       backPageName = "Co-op";
+      nextPageLink = "/about";
+      nextPageName = "About";
+      break;
+    case "about":
+      backPageLink = "/lifestyle";
+      backPageName = "Lifestyle";
       break;
   }
 
   return (
     <div
-      className={`${styles.navContainer} ${currentPage == "about" ? styles.nextLinkOnly : ""}`}>
+      className={`${styles.navContainer} ${currentPage == "demographics" ? styles.nextLinkOnly : ""}`}>
       {backPageLink && (
         <Link href={backPageLink}>
           <div className={styles.linkContainer}>

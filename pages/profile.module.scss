@@ -10,18 +10,21 @@
   .doubleChart {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    margin-top: 2rem;
 
     .textRight {
-      margin-left: 4rem;
+      margin-left: 6rem;
     }
 
     .textLeft {
-      margin-right: 4rem;
+      margin-right: 6rem;
     }
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 768px) {
       flex-direction: column;
+      align-items: center;
+
       .textRight {
         margin-left: 0;
       }
@@ -36,6 +39,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 2rem;
   }
 
   .wordCloudContainer {
