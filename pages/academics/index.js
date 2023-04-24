@@ -141,11 +141,11 @@ export default function Academics(data) {
     ],
     color: colorTheme[2],
     title: "High School Enrichment Program vs 1A Average",
+    n: data.enrichVsAverageRespondents,
     xAxis: "Enrichment Program",
     yAxis: "Average (%)",
     ymin: 50,
     ymax: 100,
-    n: data.enrichVsAverageRespondents,
   };
 
   const highschoolVsUniAverageData = {
@@ -204,11 +204,11 @@ export default function Academics(data) {
     ],
     color: colorTheme[2],
     title: "High School Admission Average vs 1A Average",
+    n: data.highschoolVsUniAverageRespondents,
     xAxis: "High School Admission Average (%)",
     yAxis: "1A Average (%)",
     ymin: 50,
     ymax: 100,
-    n: data.highschoolVsUniAverageRespondents,
   };
 
   const averageDropoffData = {

@@ -69,53 +69,6 @@ export default function Demographics(data) {
     yAxis: "Hometown",
   };
 
-  const boxPlotData = {
-    label: ["1-10", "11-20", "21-30"],
-    val: [
-      {
-        name: "Group 1",
-        q1: 1,
-        q2: 2,
-        q3: 3,
-        whiskerMin: 0,
-        whiskerMax: 4,
-        outliers: [5],
-      },
-      {
-        name: "Group 2",
-        q1: 2,
-        q2: 3,
-        q3: 4,
-        whiskerMin: 1,
-        whiskerMax: 5,
-        outliers: [],
-      },
-      {
-        name: "Group 3",
-        q1: 3,
-        q2: 4,
-        q3: 5,
-        whiskerMin: 2,
-        whiskerMax: 6,
-        outliers: [],
-      },
-    ],
-    color: colorTheme[1],
-    title: "Box Plot Title",
-  };
-
-  const dynamicdata = {
-    val: [1, 2, 3, 4, 5],
-    label: ["data1", "data2", "data3", "data4", "data5"],
-    color: colorTheme[1],
-    title: "Box Plot Chart",
-    xAxis: "X Axis",
-    yAxis: "Y Axis",
-    ymin: 0,
-    ymax: 10,
-    n: 5,
-  };
-
   return (
     <>
       <Head>

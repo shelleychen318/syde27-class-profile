@@ -148,11 +148,11 @@ export default function Coop(data) {
     ],
     color: colorTheme[2],
     title: "1A Average vs Co-op Pay",
+    n: data.averageVsPayRespondents,
     xAxis: "1A Average (%)",
     yAxis: "Co-op Pay ($CAD/hr)",
     ymin: 15,
     ymax: 35,
-    n: data.averageVsPayRespondents,
   };
 
   const jobTypeVsPayData = {
@@ -274,11 +274,11 @@ export default function Coop(data) {
     ],
     color: colorTheme[2],
     title: "Job Type vs Pay",
+    n: data.jobTypeVsPayRespondents,
     xAxis: "Job Type",
     yAxis: "Co-op Pay ($CAD/hr)",
     ymin: 15,
     ymax: 35,
-    n: data.jobTypeVsPayRespondents,
   };
 
 

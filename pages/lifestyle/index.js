@@ -16,16 +16,22 @@ export const getStaticProps = async () => {
 };
 
 export default function Lifestyle(data) {
-  const colorTheme = [colors.lifestyle1, colors.lifestyle2, colors.lifestyle3];
+  const colorTheme = [
+    colors.lifestyle1,
+    colors.lifestyle2,
+    colors.lifestyle3,
+    colors.lifestyle4,
+    colors.lifestyle5,
+  ];
 
   const studyTimeData = {
     label: data.studyTimes,
     val: data.studyTimeValues,
     color: colorTheme[1],
     title: "Average Time Spent Studying Per Day in 1A",
+    n: data.studyTimeRespondents,
     xAxis: "Hours Spent Studying Per Day",
     yAxis: "Number of Students",
-    n: data.studyTimeRespondents,
   };
 
   const sleepTimeData = {
@@ -33,68 +39,10 @@ export default function Lifestyle(data) {
     val: data.sleepTimeValues,
     color: colorTheme[1],
     title: "Average Hours of Sleep Per Night in 1A",
+    n: data.sleepTimeRespondents,
     xAxis: "Hours of Sleep Per Night",
     yAxis: "Number of Students",
-    n: data.sleepTimeRespondents,
   };
-
-  const stressLevelData = {
-    label: data.stressLevels,
-    val: data.stressLevelValues,
-    color: colorTheme[1],
-    title: "How stressed were you in 1A? (5 being extremely stressed)",
-    n: data.stressLevelRespondents,
-  };
-
-  const friendsData = {
-    label: data.friendsCount,
-    val: data.friendsValues,
-    color: colorTheme[1],
-    title: "How easy was it to make friends? (5 being very easy)",
-    xAxis: "Level of Ease",
-    yAxis: "Number of Students",
-    n: data.friendsRespondents,
-  };
-
-  const homeTimeData = {
-    label: data.homeTimes,
-    val: data.homeTimeValues,
-    color: colorTheme[1],
-    title: "Home Visits in 1A",
-    xAxis: "Number of Home Visits Per Month",
-    yAxis: "Number of Students",
-    n: data.homeTimeRespondents,
-  };
-
-  const purityData = {
-    label: data.purities,
-    val: data.purityValues,
-    color: colorTheme[1],
-    title: "Rice Purity Scores",
-    xAxis: "Rice Purity Score",
-    yAxis: "Number of Students",
-    n: data.purityRespondents,
-  };
-
-  // const stressLevels1AData = {
-  //   label: data.stressLevels1A,
-  //   val: data.stressLevel1AValues,
-  //   color: colorTheme[1],
-  //   title: "Stress Levels in 1A",
-  //   xAxis: "Stress Level",
-  //   yAxis: "Number of Students",
-  //   n: data.stressLevel1ARespondents,
-  // };
-
-  // const stressLevelsCoopData = {
-  //   label: data.stressLevelsCoop,
-  //   val: data.stressLevelCoopValues,
-  //   color: colorTheme[1],
-  //   title: "Stress Levels in Co-op",
-  //   xAxis: "Stress Level",
-  //   yAxis: "Number of Students",
-  //   n: data.stressLevelCoopRespondents,
-  // };
 
   const stressLevelsData = {
     label: data.stressLevelsCoop,
@@ -110,10 +58,48 @@ export default function Lifestyle(data) {
         backgroundColor: colorTheme[2],
       },
     ],
-    xAxis: "Stress Level",
-    yAxis: "Number of Students",
     title: "Stress Levels in 1A vs Co-op",
     n: data.stressLevel1ARespondents,
+    xAxis: "Stress Level",
+    yAxis: "Number of Students",
+  };
+
+  const residenceData = {
+    label: data.residences,
+    val: data.residenceValues,
+    color: colorTheme,
+    title: "Living Arrangements in 1A",
+    n: data.residenceRespondents,
+  };
+
+  const friendsData = {
+    label: data.friendsCount,
+    val: data.friendsValues,
+    color: colorTheme[1],
+    title: "How easy was it to make friends?",
+    n: data.friendsRespondents,
+    xAxis: "Level of Ease",
+    yAxis: "Number of Students",
+  };
+
+  const homeTimeData = {
+    label: data.homeTimes,
+    val: data.homeTimeValues,
+    color: colorTheme[1],
+    title: "Home Visits in 1A",
+    n: data.homeTimeRespondents,
+    xAxis: "Number of Home Visits Per Month",
+    yAxis: "Number of Students",
+  };
+
+  const purityData = {
+    label: data.purities,
+    val: data.purityValues,
+    color: colorTheme[1],
+    title: "Rice Purity Scores",
+    n: data.purityRespondents,
+    xAxis: "Rice Purity Score",
+    yAxis: "Number of Students",
   };
 
   return (
@@ -142,12 +128,6 @@ export default function Lifestyle(data) {
           <Chart type="histogram" data={sleepTimeData} layout="double" />
         </div>
 
-        <h3>Friends and Home Visits</h3>
-        <div className={styles.doubleChart}>
-          <Chart type="histogram" data={friendsData} layout="double" />
-          <Chart type="histogram" data={homeTimeData} layout="double" />
-        </div>
-
         <h3>Stress Levels in 1A vs Co-op</h3>
         <div className={styles.doubleChart}>
           <Chart
@@ -167,6 +147,22 @@ export default function Lifestyle(data) {
             during 1A was 3.8, while the average stress level during co-op was
             2.4.
           </p>
+        </div>
+
+        <h3>Living Arrangements in 1A</h3>
+        <div className={styles.doubleChart}>
+          <p className={styles.textLeft}>
+            Over 90% of the cohort chose to live away from home for university.
+            The most popular on-campus housing was CMH, with UWP as the second
+            most popular.
+          </p>
+          <Chart type="doughnut" data={residenceData} layout="double" />
+        </div>
+
+        <h3>Friends and Home Visits</h3>
+        <div className={styles.doubleChart}>
+          <Chart type="histogram" data={friendsData} layout="double" />
+          <Chart type="histogram" data={homeTimeData} layout="double" />
         </div>
 
         <h3>Rice Purity 😳</h3>
