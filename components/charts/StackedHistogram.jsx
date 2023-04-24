@@ -3,16 +3,16 @@ import "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 import styles from "./Chart.module.scss";
 
-const OverlappingHistogram = ({ data }) => {
-    const datasets = data.val.map((val) => ({
-      label: val.label,
-      data: val.data,
-      backgroundColor: val.backgroundColor,
-      borderWidth: 0.2,
-      borderColor: "white",
-      barPercentage: 1,
-      categoryPercentage: 1,
-    }));
+const StackedHistogram = ({ data }) => {
+  const datasets = data.val.map((val) => ({
+    label: val.label,
+    data: val.data,
+    backgroundColor: val.backgroundColor,
+    borderWidth: 0.2,
+    borderColor: "white",
+    barPercentage: 1,
+    categoryPercentage: 1,
+  }));
 
   return (
     <div className={styles.chart}>
@@ -77,4 +77,4 @@ const OverlappingHistogram = ({ data }) => {
   );
 };
 
-export default OverlappingHistogram;
+export default StackedHistogram;

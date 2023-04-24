@@ -7,6 +7,6 @@ export { default as Histogram } from "./charts/Histogram";
 export { default as BoxPlot } from "./charts/BoxPlot";
 export { default as MultiBarChart} from "./charts/MultiBarChart";
 export { default as ScatterPlot } from "./charts/ScatterPlot";
-export { default as OverlappingHistogram } from "./charts/OverlappingHistogram";
+export { default as StackedHistogram } from "./charts/StackedHistogram";
 export { default as Chart } from "./charts/Chart";
 export { default as BottomNav } from "./bottomNav/BottomNav";

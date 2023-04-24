@@ -76,26 +76,44 @@ export default function Lifestyle(data) {
     n: data.purityRespondents,
   };
 
-  const overlappingData = {
-    label: ["A", "B", "C", "D"],
+  // const stressLevels1AData = {
+  //   label: data.stressLevels1A,
+  //   val: data.stressLevel1AValues,
+  //   color: colorTheme[1],
+  //   title: "Stress Levels in 1A",
+  //   xAxis: "Stress Level",
+  //   yAxis: "Number of Students",
+  //   n: data.stressLevel1ARespondents,
+  // };
+
+  // const stressLevelsCoopData = {
+  //   label: data.stressLevelsCoop,
+  //   val: data.stressLevelCoopValues,
+  //   color: colorTheme[1],
+  //   title: "Stress Levels in Co-op",
+  //   xAxis: "Stress Level",
+  //   yAxis: "Number of Students",
+  //   n: data.stressLevelCoopRespondents,
+  // };
+
+  const stressLevelsData = {
+    label: data.stressLevelsCoop,
     val: [
       {
-        label: "Dataset 1",
-        data: [10, 20, 30, 40],
-        backgroundColor: "rgba(255, 99, 132, 0.7)",
+        label: "1A",
+        data: data.stressLevel1AValues,
+        backgroundColor: colorTheme[0],
       },
       {
-        label: "Dataset 2",
-        data: [20, 30, 10, 50],
-        backgroundColor: "rgba(54, 162, 235, 0.7)",
-        fillOpacity: 0.5,
+        label: "Co-op",
+        data: data.stressLevelCoopValues,
+        backgroundColor: colorTheme[2],
       },
     ],
-    color: ["red", "green", "blue", "yellow"],
-    xAxis: "X Axis Label",
-    yAxis: "Y Axis Label",
-    title: "Overlapping Histogram Title",
-    n: 100,
+    xAxis: "Stress Level",
+    yAxis: "Number of Students",
+    title: "Stress Levels in 1A vs Co-op",
+    n: data.stressLevel1ARespondents,
   };
 
   return (
@@ -114,24 +132,41 @@ export default function Lifestyle(data) {
 
         <h3>Study and Sleep Time</h3>
         <p>
-          The average SYDE student spends 4.9 hours studying and 6.1 hours
+          On average, SYDE students spend 4.9 hours studying and 6.1 hours
           sleeping. Shoutout to the 5 students who dedicate 9+ hours per day to
           studying, y'all are the true embodiment of the "rise and grind"
           mentality!
         </p>
         <div className={styles.doubleChart}>
-          <Chart type="bar" data={studyTimeData} layout="double" />
-          <Chart type="bar" data={sleepTimeData} layout="double" />
+          <Chart type="histogram" data={studyTimeData} layout="double" />
+          <Chart type="histogram" data={sleepTimeData} layout="double" />
         </div>
 
-        <h3>Friends in SYDE</h3>
-        <div className={styles.singleChart}>
-          <Chart type="bar" data={friendsData} layout="single" />
+        <h3>Friends and Home Visits</h3>
+        <div className={styles.doubleChart}>
+          <Chart type="histogram" data={friendsData} layout="double" />
+          <Chart type="histogram" data={homeTimeData} layout="double" />
         </div>
 
-        <h3>Home</h3>
-        <div className={styles.singleChart}>
-          <Chart type="bar" data={homeTimeData} layout="single" />
+        <h3>Stress Levels in 1A vs Co-op</h3>
+        <div className={styles.doubleChart}>
+          <Chart
+            type="stackedHistogram"
+            data={stressLevelsData}
+            layout="double"
+          />
+          <p className={styles.textRight}>
+            Data was collected on the stress levels of students during their 1A
+            term and their first co-op term. The stress levels were rated on a
+            scale of 1 to 5, where 1 indicated little to no stress and 5
+            indicated high stress.
+            <br />
+            <br />
+            In general, students experienced lower levels of stress during their
+            co-op term compared to their 1A term, as the average stress level
+            during 1A was 3.8, while the average stress level during co-op was
+            2.4.
+          </p>
         </div>
 
         <h3>Rice Purity 😳</h3>
@@ -141,14 +176,6 @@ export default function Lifestyle(data) {
         </p>
         <div className={styles.singleChart}>
           <Chart type="histogram" data={purityData} layout="single" />
-        </div>
-
-        <div className={styles.singleChart}>
-          <Chart
-            type="overlappingHistogram"
-            data={overlappingData}
-            layout="single"
-          />
         </div>
 
         <BottomNav currentPage="lifestyle" />

@@ -7,7 +7,7 @@ import Histogram from "./Histogram";
 import BoxPlotChart from "./BoxPlot";
 import MultiBarChart from "./MultiBarChart";
 import ScatterPlot from "./ScatterPlot";
-import OverlappingHistogram from "./OverlappingHistogram";
+import StackedHistogram from "./StackedHistogram";
 import styles from "./Chart.module.scss";
 
 const Chart = ({ type, data, layout, width, height }) => {
@@ -60,10 +60,10 @@ const Chart = ({ type, data, layout, width, height }) => {
           <ScatterPlot data={data} width={width} height={height} />
         </div>
       );
-    case "overlappingHistogram":
+    case "stackedHistogram":
       return (
         <div className={`${styles[layout]}`}>
-          <OverlappingHistogram data={data} width={width} height={height} />
+          <StackedHistogram data={data} width={width} height={height} />
         </div>
       );
     default:
