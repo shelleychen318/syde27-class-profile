@@ -377,11 +377,11 @@ export default function Academics(data) {
 
         <h3>High School Enrichment Program vs 1A Average</h3>
         <p>
-          The data provided does not suggest a clear trend or pattern between
-          high school enrichment programs and 1A averages. While some programs
-          may indicate a slightly higher or lower average than others, it is
-          important to note that the sample sizes of each program vary greatly,
-          potentially skewing the results.
+          The relationship between high school enrichment programs and 1A
+          averages is inconclusive. While some programs may indicate a slightly
+          higher or lower average than others, it is important to note that the
+          sample sizes of each program vary greatly, potentially skewing the
+          results.
           <br />
           <br />
           Students who selected multiple programs (e.g. AP and Private School)
@@ -399,15 +399,15 @@ export default function Academics(data) {
             the 1A average. For SYDE 2027, the median drop-off rate was 10%.
             <br />
             <br />
-            Ultimately, everyone's average dropped in 1A 😃
+            Ultimately, everyone's average dropped after entering university 😃
           </p>
         </div>
 
         <h3>Favourite and Least Favourite Courses in 1A</h3>
         <p>
-          Majority of us said that our favourite course was SYDE 101L and our
-          least favourite course was SYDE 161. Sorry not sorry to all the
-          TsTsians out there 🙄
+          The majority of the class voted SYDE 101L as their favorite course in
+          1A, while SYDE 161 was considered to be the worst. Sorry not sorry to
+          all the TsTsians out there 🙄
         </p>
         <div className={styles.singleChart}>
           <Chart
@@ -432,8 +432,8 @@ export default function Academics(data) {
         <div className={styles.doubleChart}>
           <Chart type="box" data={exerciseVsAverageData} layout="double" />
           <p className={styles.textRight}>
-            Individuals who engaged in some form of physical exercise on a daily
-            basis had the highest median average. This suggests that higher
+            Students who engaged in some form of physical exercise on a daily
+            basis had the highest median 1A average. This suggests that higher
             exercise frequency is correlated with increased academic
             performance.
           </p>
