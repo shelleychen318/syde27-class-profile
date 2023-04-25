@@ -10,7 +10,7 @@ import ScatterPlot from "./ScatterPlot";
 import StackedHistogram from "./StackedHistogram";
 import styles from "./Chart.module.scss";
 
-const Chart = ({ type, data, layout, width, height }) => {
+export default function Chart({ type, data, layout }) {
   switch (type) {
     case "pie":
       return (
@@ -45,30 +45,28 @@ const Chart = ({ type, data, layout, width, height }) => {
     case "box":
       return (
         <div className={`${styles[layout]}`}>
-          <BoxPlotChart data={data} width={width} height={height} />
+          <BoxPlotChart data={data} />
         </div>
       );
     case "multiBar":
       return (
         <div className={`${styles[layout]}`}>
-          <MultiBarChart data={data} width={width} height={height} />
+          <MultiBarChart data={data} />
         </div>
       );
     case "scatter":
       return (
         <div className={`${styles[layout]}`}>
-          <ScatterPlot data={data} width={width} height={height} />
+          <ScatterPlot data={data} />
         </div>
       );
     case "stackedHistogram":
       return (
         <div className={`${styles[layout]}`}>
-          <StackedHistogram data={data} width={width} height={height} />
+          <StackedHistogram data={data} />
         </div>
       );
     default:
       return <h1>Invalid Chart Type!</h1>;
   }
 };
-
-export default Chart;

@@ -1,7 +1,7 @@
 @import "../../styles/colors.module";
 
 .backgroundTintCommon {
-  background-color: $background-dark;
+  background-color: $backgroundDark;
   animation: fadeIn 1s;
   position: fixed;
   z-index: 99;

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Chart, LinearScale, CategoryScale } from "chart.js";
 import {
   BoxPlotController,
@@ -17,7 +17,7 @@ Chart.register(
   CategoryScale
 );
 
-function BoxPlot({ data, height = "475px", width = "475px" }) {
+export default function BoxPlot({ data }) {
   const chartRef = useRef(null);
 
   useEffect(() => {
@@ -56,7 +56,7 @@ function BoxPlot({ data, height = "475px", width = "475px" }) {
               display: true,
               text: "number of respondents: " + data.n,
               padding: {
-                bottom: 20,
+                bottom: 10,
               },
             },
           },
@@ -106,7 +106,5 @@ function BoxPlot({ data, height = "475px", width = "475px" }) {
     };
   }, [data]);
 
-  return <canvas ref={chartRef} height={height} width={width} />;
+  return <canvas ref={chartRef} height="475px" width="475px" />;
 }
-
-export default BoxPlot;

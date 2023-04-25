@@ -3,7 +3,7 @@ import "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 import styles from "./Chart.module.scss";
 
-const HorizontalBarChart = ({ data }) => {
+export default function HorizontalBarChart({ data }) {
   return (
     <div className={styles.chart}>
       <Bar
@@ -54,7 +54,6 @@ const HorizontalBarChart = ({ data }) => {
             },
             subtitle: {
               display: true,
-              fontSize: 14,
               text: "number of respondents: " + data.n,
               padding: {
                 bottom: 10,
@@ -68,5 +67,3 @@ const HorizontalBarChart = ({ data }) => {
     </div>
   );
 };
-
-export default HorizontalBarChart;

@@ -3,7 +3,7 @@ import "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 import styles from "./Chart.module.scss";
 
-const MultiBarChart = ({ data }) => {
+export default function MultiBarChart({ data }) {
   const datasets = data.val.map((val) => ({
     label: val.label,
     data: val.data,
@@ -39,7 +39,6 @@ const MultiBarChart = ({ data }) => {
             },
             subtitle: {
               display: true,
-              fontSize: 14,
               text: "number of respondents: " + data.n,
               padding: {
                 bottom: 10,
@@ -75,5 +74,3 @@ const MultiBarChart = ({ data }) => {
     </div>
   );
 };
-
-export default MultiBarChart;

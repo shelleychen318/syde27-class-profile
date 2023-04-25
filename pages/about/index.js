@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import { NavBar } from "../../components";
-import { BottomNav } from "../../components";
+import NavBar from "../../components/navbar/NavBar";
+import BottomNav from "../../components/bottomNav/BottomNav";
 import styles from "./about.module.scss";
 
 export default function About() {

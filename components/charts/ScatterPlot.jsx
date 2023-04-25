@@ -2,7 +2,7 @@ import React from "react";
 import "chart.js/auto";
 import { Scatter } from "react-chartjs-2";
 
-const ScatterPlot = ({ data }) => {
+export default function ScatterPlot({ data }) {
   return (
     <div>
       <Scatter
@@ -66,7 +66,6 @@ const ScatterPlot = ({ data }) => {
             },
             subtitle: {
               display: true,
-              fontSize: 14,
               text: "number of respondents: " + data.n,
               padding: {
                 bottom: 10,
@@ -80,5 +79,3 @@ const ScatterPlot = ({ data }) => {
     </div>
   );
 };
-
-export default ScatterPlot;

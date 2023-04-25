@@ -1,5 +1,5 @@
 $background: #f8f4ec;
-$background-dark: #b5b5b5;
+$backgroundDark: #b5b5b5;
 $primary: #8eccc1;
 $secondary: #ad6264;
 $mainText: #1f1d1d;
@@ -35,7 +35,7 @@ $lifestyle4: #bee3ba;
 $lifestyle5: #ddf2d1;
 
 :export {
-  background-dark: $background-dark;
+  backgroundDark: $backgroundDark;
   primary: $primary;
   secondary: $secondary;
   mainText: $mainText;

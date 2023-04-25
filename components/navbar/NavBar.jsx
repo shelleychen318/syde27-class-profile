@@ -4,7 +4,7 @@ import { HiOutlineMenuAlt3, HiOutlineArrowRight } from "react-icons/hi";
 import { GiDuck } from "react-icons/gi";
 import styles from "./NavBar.module.scss";
 
-const NavBar = () => {
+export default function NavBar() {
   const links = [
     {
       id: 1,
@@ -103,5 +103,3 @@ const NavBar = () => {
     </>
   );
 };
-
-export default NavBar;

@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
-import { NavBar } from "../../components";
-import { Chart } from "../../components";
-import { BottomNav } from "../../components";
+import NavBar from "../../components/navbar/NavBar";
+import BottomNav from "../../components/bottomNav/BottomNav";
+import Chart from "../../components/charts/Chart";
 import styles from "../profile.module.scss";
 import colors from "../../styles/colors.module.scss";
 import { getSortedHighschoolData } from "../../lib/sort/getSortedHighschoolData";

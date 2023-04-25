@@ -3,7 +3,7 @@ import "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 import styles from "./Chart.module.scss";
 
-const StackedHistogram = ({ data }) => {
+export default function StackedHistogram({ data }) {
   const datasets = data.val.map((val) => ({
     label: val.label,
     data: val.data,
@@ -40,7 +40,6 @@ const StackedHistogram = ({ data }) => {
             },
             subtitle: {
               display: true,
-              fontSize: 14,
               text: "number of respondents: " + data.n,
               padding: {
                 bottom: 10,
@@ -76,5 +75,3 @@ const StackedHistogram = ({ data }) => {
     </div>
   );
 };
-
-export default StackedHistogram;

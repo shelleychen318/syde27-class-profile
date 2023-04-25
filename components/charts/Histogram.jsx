@@ -3,7 +3,7 @@ import "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 import styles from "./Chart.module.scss";
 
-const Histogram = ({ data }) => {
+export default function Histogram({ data }) {
   return (
     <div className={styles.chart}>
       <Bar
@@ -57,7 +57,6 @@ const Histogram = ({ data }) => {
             },
             subtitle: {
               display: true,
-              fontSize: 14,
               text: "number of respondents: " + data.n,
               padding: {
                 bottom: 10,
@@ -71,5 +70,3 @@ const Histogram = ({ data }) => {
     </div>
   );
 };
-
-export default Histogram;

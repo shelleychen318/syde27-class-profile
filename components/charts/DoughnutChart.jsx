@@ -3,7 +3,7 @@ import "chart.js/auto";
 import { Doughnut } from "react-chartjs-2";
 import styles from "./Chart.module.scss";
 
-const DoughnutChart = ({ data }) => {
+export default function DoughnutChart({ data }) {
   return (
     <div className={styles.chart}>
       <Doughnut
@@ -40,7 +40,6 @@ const DoughnutChart = ({ data }) => {
             },
             subtitle: {
               display: true,
-              fontSize: 14,
               text: "number of respondents: " + data.n,
               padding: {
                 bottom: 10,
@@ -54,5 +53,3 @@ const DoughnutChart = ({ data }) => {
     </div>
   );
 }
-
-export default DoughnutChart

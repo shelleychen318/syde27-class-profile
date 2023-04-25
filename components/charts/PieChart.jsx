@@ -3,7 +3,7 @@ import "chart.js/auto";
 import { Pie } from "react-chartjs-2";
 import styles from "./Chart.module.scss";
 
-const PieChart = ({ data }) => {
+export default function PieChart({ data }) {
   return (
     <div className={styles.chart}>
       <Pie
@@ -40,7 +40,6 @@ const PieChart = ({ data }) => {
             },
             subtitle: {
               display: true,
-              fontSize: 14,
               text: "number of respondents: " + data.n,
               padding: {
                 bottom: 10,
@@ -55,4 +54,4 @@ const PieChart = ({ data }) => {
   );
 };
 
-export default PieChart;
+// export default PieChart;

@@ -4,7 +4,7 @@ import Arrow from "@elsdoerfer/react-arrow";
 import styles from "./BottomNav.module.scss";
 import colors from "../../styles/colors.module.scss";
 
-const BottomNav = ({ currentPage }) => {
+export default function BottomNav({ currentPage }) {
   let backPageLink;
   let backPageName;
   let nextPageLink;
@@ -80,5 +80,3 @@ const BottomNav = ({ currentPage }) => {
     </div>
   );
 };
-
-export default BottomNav;
