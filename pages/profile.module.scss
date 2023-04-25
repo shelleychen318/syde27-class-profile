@@ -12,6 +12,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 2rem;
+    margin-bottom: 4rem;
 
     .textRight {
       margin-left: 6rem;
@@ -38,8 +39,10 @@
   .singleChart {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
     margin-top: 2rem;
+    margin-bottom: 4rem;
   }
 
   .wordCloudContainer {

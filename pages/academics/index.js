@@ -221,22 +221,6 @@ export default function Academics(data) {
     yAxis: "Number of Students",
   };
 
-  const favCourseData = {
-    label: data.favCourses,
-    val: data.favCourseValues,
-    color: colorTheme,
-    title: "Favourite Courses in 1A",
-    n: data.favCourseRespondents,
-  };
-
-  const leastFavCourseData = {
-    label: data.leastFavCourses,
-    val: data.leastFavCourseValues,
-    color: colorTheme,
-    title: "Least Favourite Courses in 1A",
-    n: data.leastFavCourseRespondents,
-  };
-
   const favVsLeastFavCourseData = {
     label: data.favCourses,
     val: [
@@ -271,6 +255,74 @@ export default function Academics(data) {
     color: colorTheme,
     title: "Most Difficult Courses in 1A",
     n: data.difficultCourseRespondents,
+  };
+
+  const exerciseVsAverageData = {
+    label: [
+      "Everyday",
+      "A few times a week",
+      "A few times a month",
+      "Once a month",
+      "Never",
+    ],
+    val: [
+      {
+        min: data.exerciseVsAverage["Everyday"][0],
+        q1: data.exerciseVsAverage["Everyday"][1],
+        q2: data.exerciseVsAverage["Everyday"][2],
+        q3: data.exerciseVsAverage["Everyday"][3],
+        max: data.exerciseVsAverage["Everyday"][4],
+        outliers: data.exerciseVsAverage["Everyday"][5],
+        mean: data.exerciseVsAverage["Everyday"][6],
+        median: data.exerciseVsAverage["Everyday"][7],
+      },
+      {
+        min: data.exerciseVsAverage["A few times a week"][0],
+        q1: data.exerciseVsAverage["A few times a week"][1],
+        q2: data.exerciseVsAverage["A few times a week"][2],
+        q3: data.exerciseVsAverage["A few times a week"][3],
+        max: data.exerciseVsAverage["A few times a week"][4],
+        outliers: data.exerciseVsAverage["A few times a week"][5],
+        mean: data.exerciseVsAverage["A few times a week"][6],
+        median: data.exerciseVsAverage["A few times a week"][7],
+      },
+      {
+        min: data.exerciseVsAverage["A few times a month"][0],
+        q1: data.exerciseVsAverage["A few times a month"][1],
+        q2: data.exerciseVsAverage["A few times a month"][2],
+        q3: data.exerciseVsAverage["A few times a month"][3],
+        max: data.exerciseVsAverage["A few times a month"][4],
+        outliers: data.exerciseVsAverage["A few times a month"][5],
+        mean: data.exerciseVsAverage["A few times a month"][6],
+        median: data.exerciseVsAverage["A few times a month"][7],
+      },
+      {
+        min: data.exerciseVsAverage["Once a month"][0],
+        q1: data.exerciseVsAverage["Once a month"][1],
+        q2: data.exerciseVsAverage["Once a month"][2],
+        q3: data.exerciseVsAverage["Once a month"][3],
+        max: data.exerciseVsAverage["Once a month"][4],
+        outliers: data.exerciseVsAverage["Once a month"][5],
+        mean: data.exerciseVsAverage["Once a month"][6],
+        median: data.exerciseVsAverage["Once a month"][7],
+      },
+      {
+        min: data.exerciseVsAverage["Never"][0],
+        q1: data.exerciseVsAverage["Never"][1],
+        q2: data.exerciseVsAverage["Never"][2],
+        q3: data.exerciseVsAverage["Never"][3],
+        max: data.exerciseVsAverage["Never"][4],
+        outliers: data.exerciseVsAverage["Never"][5],
+        mean: data.exerciseVsAverage["Never"][6],
+        median: data.exerciseVsAverage["Never"][7],
+      },
+    ],
+    color: colorTheme[2],
+    title: "Exercise Frequency vs 1A Average",
+    n: data.exerciseVsAverageRespondents,
+    xAxis: "Exercise Frequency",
+    yAxis: "1A Average (%)",
+    ymin: 50,
   };
 
   const lectureData = {
@@ -347,13 +399,7 @@ export default function Academics(data) {
             SYDE 2027, the median drop-off rate was 10%.
             <br />
             <br />
-            {/* While this finding suggests a decrease in academic performance for
-            the cohort as a whole upon entering university, it is important to
-            note that this trend is not necessarily indicative of the potential
-            or abilities of individual students. Instead, it may reflect the
-            significant increase in academic rigor and adjustment required for
-            university-level coursework. */}
-            In conclusion, everyone's mark dropped in 1A 😃
+            Ultimately, everyone's mark dropped in 1A 😃
           </p>
         </div>
 
@@ -364,9 +410,11 @@ export default function Academics(data) {
           TsTsians out there 🙄
         </p>
         <div className={styles.singleChart}>
-          {/* <Chart type="doughnut" data={favCourseData} layout="double" />
-          <Chart type="doughnut" data={leastFavCourseData} layout="double" /> */}
-          <Chart type="multiBar" data={favVsLeastFavCourseData} layout="single" />
+          <Chart
+            type="multiBar"
+            data={favVsLeastFavCourseData}
+            layout="single"
+          />
         </div>
 
         <h3>Most Useful and Difficult Courses in 1A</h3>
@@ -378,6 +426,17 @@ export default function Academics(data) {
         <div className={styles.doubleChart}>
           <Chart type="doughnut" data={usefulCourseData} layout="double" />
           <Chart type="doughnut" data={difficultCourseData} layout="double" />
+        </div>
+
+        <h3>Exercise Frequency vs 1A Average</h3>
+        <div className={styles.doubleChart}>
+          <Chart type="box" data={exerciseVsAverageData} layout="double" />
+          <p className={styles.textRight}>
+            Individuals who engaged in some form of physical exercise on a daily
+            basis had the highest median average. This suggests that higher
+            exercise frequency is correlated with increased academic
+            performance.
+          </p>
         </div>
 
         <h3>Lecture Attendance in 1A</h3>

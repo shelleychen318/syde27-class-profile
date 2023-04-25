@@ -24,7 +24,7 @@ export default function MultiBarChart({ data }) {
           plugins: {
             legend: {
               display: true,
-              position: "right",
+              position: "top",
               labels: {
                 usePointStyle: true,
                 padding: 16,

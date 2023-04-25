@@ -281,7 +281,6 @@ export default function Coop(data) {
     ymax: 35,
   };
 
-
   return (
     <>
       <Head>
@@ -294,7 +293,7 @@ export default function Coop(data) {
       <div className={`${styles.content} ${styles.coop}`}>
         <h2>Co-op</h2>
         <h4>
-          A peek at the numbers from our first co-op term including juicy details on our
+          A peek at the numbers from our first co-op term including info on our
           workplaces and earnings 💰
         </h4>
         <br />

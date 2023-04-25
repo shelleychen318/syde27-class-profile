@@ -142,7 +142,9 @@ export default function Lifestyle(data) {
 
       <div className={`${styles.content} ${styles.lifestyle}`}>
         <h2>Lifestyle</h2>
-        <h4>The juicy details of our lives</h4>
+        <h4>
+          In<i>syde</i> the lives of the SYDE 2027 cohort...
+        </h4>
         <br />
 
         <h3>Study and Sleep Time</h3>
@@ -216,9 +218,8 @@ export default function Lifestyle(data) {
           seriousness, the average rice purity score is 72.2.
           <br />
           <br />
-          Based on the data provided, there is no correlation between one's rice
-          purity score and their academic achievement (just in case you were
-          curious ... lol)
+          There is no correlation between one's rice purity score and their
+          academic performance (in case you were curious lol).
         </p>
         <div className={styles.doubleChart}>
           <Chart type="histogram" data={purityData} layout="double" />

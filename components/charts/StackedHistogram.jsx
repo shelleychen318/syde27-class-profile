@@ -25,7 +25,7 @@ export default function StackedHistogram({ data }) {
           plugins: {
             legend: {
               display: true,
-              position: "right",
+              position: "top",
               labels: {
                 usePointStyle: true,
                 padding: 16,
