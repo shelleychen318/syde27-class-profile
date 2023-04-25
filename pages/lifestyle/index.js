@@ -139,8 +139,8 @@ export default function Lifestyle(data) {
         <h3>Study and Sleep Time</h3>
         <p>
           On average, SYDE students spend 4.9 hours studying and 6.1 hours
-          sleeping. Shoutout to the 5 students who dedicate 9+ hours per day to
-          studying, y'all are the true embodiment of the "rise and grind"
+          sleeping. Shoutout to the 5 students who dedicate 9-10 hours per day
+          to studying, y'all are the true embodiment of the "rise and grind"
           mentality!
         </p>
         <div className={styles.doubleChart}>
@@ -171,11 +171,7 @@ export default function Lifestyle(data) {
 
         <h3>Exercise Frequency in 1A vs Co-op</h3>
         <div className={styles.doubleChart}>
-          <Chart
-            type="multiBar"
-            data={exerciseLevelsData}
-            layout="double"
-          />
+          <Chart type="multiBar" data={exerciseLevelsData} layout="double" />
           <p className={styles.textRight}>
             Data was collected on the stress levels of students during their 1A
             term and their first co-op term. The stress levels were rated on a

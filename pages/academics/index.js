@@ -238,22 +238,22 @@ export default function Academics(data) {
   };
 
   const favVsLeastFavCourseData = {
-    label: data.exerciseLevels1A,
+    label: data.favCourses,
     val: [
       {
-        label: "1A",
-        data: data.exerciseLevel1AValues,
+        label: "Favourite",
+        data: data.favCourseValues,
         backgroundColor: colorTheme[0],
       },
       {
-        label: "Co-op",
-        data: data.exerciseLevelCoopValues,
+        label: "Least Favourite",
+        data: data.leastFavCourseValues,
         backgroundColor: colorTheme[2],
       },
     ],
-    title: "Exercise Frequency in 1A vs Co-op",
-    n: data.exerciseLevel1ARespondents,
-    xAxis: "Exercise Frequency",
+    title: "Favourite and Least Favourite 1A Courses",
+    n: data.favCourseRespondents,
+    xAxis: "Course",
     yAxis: "Number of Students",
   };
 
@@ -363,9 +363,10 @@ export default function Academics(data) {
           least favourite course was SYDE 161. Sorry not sorry to all the
           TsTsians out there 🙄
         </p>
-        <div className={styles.doubleChart}>
+        <div className={styles.singleChart}>
           {/* <Chart type="doughnut" data={favCourseData} layout="double" />
           <Chart type="doughnut" data={leastFavCourseData} layout="double" /> */}
+          <Chart type="multiBar" data={favVsLeastFavCourseData} layout="single" />
         </div>
 
         <h3>Most Useful and Difficult Courses in 1A</h3>
