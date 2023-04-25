@@ -172,7 +172,7 @@ export default function Highschool(data) {
             <Image
               src="/assets/otherUniversities.png"
               alt="other university considerations"
-              layout="fill"
+              fill
               className={styles.wordCloud}
             />
           </div>
@@ -195,7 +195,7 @@ export default function Highschool(data) {
           <Image
             src="/assets/topChoice.png"
             alt="top choice programs"
-            layout="fill"
+            fill
             className={styles.wordCloud}
           />
         </div>
