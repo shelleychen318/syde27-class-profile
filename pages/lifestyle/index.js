@@ -30,7 +30,7 @@ export default function Lifestyle(data) {
     color: colorTheme[1],
     title: "Average Time Spent Studying Per Day in 1A",
     n: data.studyTimeRespondents,
-    xAxis: "Hours Spent Studying Per Day",
+    xAxis: "Number of Hours Spent Studying Per Day",
     yAxis: "Number of Students",
   };
 
@@ -40,7 +40,7 @@ export default function Lifestyle(data) {
     color: colorTheme[1],
     title: "Average Hours of Sleep Per Night in 1A",
     n: data.sleepTimeRespondents,
-    xAxis: "Hours of Sleep Per Night",
+    xAxis: "Number of Hours of Sleep Per Night",
     yAxis: "Number of Students",
   };
 
@@ -122,6 +122,15 @@ export default function Lifestyle(data) {
     yAxis: "Number of Students",
   };
 
+  const purityVsAverageData = {
+    val: data.purityVsAverage,
+    color: colorTheme[1],
+    title: "Rice Purity Score vs 1A Average",
+    n: data.purityVsAverageRespondents,
+    xAxis: "Rice Purity Score",
+    yAxis: "1A Average",
+  };
+
   return (
     <>
       <Head>
@@ -133,7 +142,7 @@ export default function Lifestyle(data) {
 
       <div className={`${styles.content} ${styles.lifestyle}`}>
         <h2>Lifestyle</h2>
-        <h4>How's life?</h4>
+        <h4>The juicy details of our lives</h4>
         <br />
 
         <h3>Study and Sleep Time</h3>
@@ -162,10 +171,9 @@ export default function Lifestyle(data) {
             indicated high stress.
             <br />
             <br />
-            In general, students experienced lower levels of stress during their
-            co-op term compared to their 1A term, as the average stress level
-            during 1A was 3.8, while the average stress level during co-op was
-            2.4.
+            In general, students experienced higher levels of stress during the
+            1A term, as the average stress level during 1A was 3.8, while the
+            average stress level during co-op was 2.4.
           </p>
         </div>
 
@@ -206,9 +214,15 @@ export default function Lifestyle(data) {
         <p>
           Looks like many of us strive for 90s even outside of school! In all
           seriousness, the average rice purity score is 72.2.
+          <br />
+          <br />
+          Based on the data provided, there is no correlation between one's rice
+          purity score and their academic achievement (just in case you were
+          curious ... lol)
         </p>
-        <div className={styles.singleChart}>
-          <Chart type="histogram" data={purityData} layout="single" />
+        <div className={styles.doubleChart}>
+          <Chart type="histogram" data={purityData} layout="double" />
+          <Chart type="scatter" data={purityVsAverageData} layout="double" />
         </div>
 
         <BottomNav currentPage="lifestyle" />

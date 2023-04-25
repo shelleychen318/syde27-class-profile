@@ -1,7 +1,7 @@
 @import "../../styles/colors.module";
 
 .backgroundTintCommon {
-  background-color: $darkBackground;
+  background-color: $background-dark;
   animation: fadeIn 1s;
   position: fixed;
   z-index: 99;
@@ -127,7 +127,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .headerContainer {
     padding: 2rem;
   }
