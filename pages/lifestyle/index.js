@@ -174,8 +174,8 @@ export default function Lifestyle(data) {
             <br />
             <br />
             In general, students experienced higher levels of stress during the
-            1A term, as the average stress level during 1A was 3.8, while the
-            average stress level during co-op was 2.4.
+            1A term compared to co-op, as indicated by the average stress level
+            of 3.8 during 1A versus 2.4 during co-op.
           </p>
         </div>
 
@@ -183,16 +183,14 @@ export default function Lifestyle(data) {
         <div className={styles.doubleChart}>
           <Chart type="multiBar" data={exerciseLevelsData} layout="double" />
           <p className={styles.textRight}>
-            Data was collected on the stress levels of students during their 1A
-            term and their first co-op term. The stress levels were rated on a
-            scale of 1 to 5, where 1 indicated little to no stress and 5
-            indicated high stress.
+            Overall, exercise frequency was higher during the co-op term
+            compared to the 1A term.
             <br />
             <br />
-            In general, students experienced lower levels of stress during their
-            co-op term compared to their 1A term, as the average stress level
-            during 1A was 3.8, while the average stress level during co-op was
-            2.4.
+            More students exercised every day or a few times a week during
+            co-op, and fewer students reported that they never exercised. This
+            suggests that students may have more time and motivation to exercise
+            during the co-op term.
           </p>
         </div>
 
@@ -215,7 +213,7 @@ export default function Lifestyle(data) {
         <h3>Rice Purity 😳</h3>
         <p>
           Looks like many of us strive for 90s even outside of school! In all
-          seriousness, the average rice purity score is 72.2.
+          seriousness, the average rice purity score is 67.8.
           <br />
           <br />
           There is no correlation between one's rice purity score and their

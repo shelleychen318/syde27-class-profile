@@ -259,7 +259,7 @@ export default function Academics(data) {
 
   const exerciseVsAverageData = {
     label: [
-      "Everyday",
+      "Every day",
       "A few times a week",
       "A few times a month",
       "Once a month",
@@ -267,14 +267,14 @@ export default function Academics(data) {
     ],
     val: [
       {
-        min: data.exerciseVsAverage["Everyday"][0],
-        q1: data.exerciseVsAverage["Everyday"][1],
-        q2: data.exerciseVsAverage["Everyday"][2],
-        q3: data.exerciseVsAverage["Everyday"][3],
-        max: data.exerciseVsAverage["Everyday"][4],
-        outliers: data.exerciseVsAverage["Everyday"][5],
-        mean: data.exerciseVsAverage["Everyday"][6],
-        median: data.exerciseVsAverage["Everyday"][7],
+        min: data.exerciseVsAverage["Every day"][0],
+        q1: data.exerciseVsAverage["Every day"][1],
+        q2: data.exerciseVsAverage["Every day"][2],
+        q3: data.exerciseVsAverage["Every day"][3],
+        max: data.exerciseVsAverage["Every day"][4],
+        outliers: data.exerciseVsAverage["Every day"][5],
+        mean: data.exerciseVsAverage["Every day"][6],
+        median: data.exerciseVsAverage["Every day"][7],
       },
       {
         min: data.exerciseVsAverage["A few times a week"][0],
@@ -355,7 +355,7 @@ export default function Academics(data) {
         <h3>1A Average</h3>
         <div className={styles.doubleChart}>
           <p className={styles.textLeft}>
-            The 1A average for SYDE 2027 was 85.4%.
+            The 1A average for SYDE 2027 was 85.2%.
             <br />
             <br />
             However, unlike the relatively narrow range of admission averages
@@ -366,13 +366,13 @@ export default function Academics(data) {
         </div>
 
         <h3>High School Admission Average vs 1A Average</h3>
-        <p>
-          Based on the data provided, there does not appear to be a clear
-          proportional trend between high school admission averages and 1A
-          averages.
-        </p>
-        <div className={styles.singleChart}>
-          <Chart type="box" data={highschoolVsUniAverageData} layout="single" />
+        <div className={styles.doubleChart}>
+          <Chart type="box" data={highschoolVsUniAverageData} layout="double" />
+          <p className={styles.textRight}>
+            Based on the data provided, there does not appear to be a clear
+            proportional trend between high school admission averages and 1A
+            averages.
+          </p>
         </div>
 
         <h3>High School Enrichment Program vs 1A Average</h3>
@@ -395,11 +395,11 @@ export default function Academics(data) {
         <div className={styles.doubleChart}>
           <Chart type="histogram" data={averageDropoffData} layout="double" />
           <p className={styles.textRight}>
-            The drop-off is calculated by: 1A average - admission average. For
-            SYDE 2027, the median drop-off rate was 10%.
+            The drop-off is calculated by subtracting the admission average from
+            the 1A average. For SYDE 2027, the median drop-off rate was 10%.
             <br />
             <br />
-            Ultimately, everyone's mark dropped in 1A 😃
+            Ultimately, everyone's average dropped in 1A 😃
           </p>
         </div>
 
@@ -443,7 +443,7 @@ export default function Academics(data) {
         <div className={styles.doubleChart}>
           <Chart type="histogram" data={lectureData} layout="double" />
           <p className={styles.textRight}>
-            On average, SYDE students attended lectures only 64% of the time in
+            On average, SYDE students attended lectures only 63% of the time in
             1A. The urge to hit snooze and sleep in during those 8am lectures
             was just too strong 😴
           </p>

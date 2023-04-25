@@ -312,7 +312,7 @@ export default function Coop(data) {
         <h3>Co-op Locations</h3>
         <div className={styles.doubleChart}>
           <p className={styles.textLeft}>
-            68% of us had an in-person job, while 32% of us had a remote job.
+            67% of us had an in-person job, while 33% of us had a remote job.
             Among those who had in-person jobs, most were located in the GTA.
           </p>
           <Chart type="bar" data={locationData} layout="double" />
@@ -320,8 +320,10 @@ export default function Coop(data) {
 
         <h3>Job Types</h3>
         <p>
-          The most popular co-op placement this term was Software Development,
-          followed by QA/Testing.
+          Software Development was the most popular choice for co-op placements
+          during this term. This was likely due to the large amount of
+          software-related job postings on WaterlooWorks and the high demand for
+          software engineering skills (during the time of application).
         </p>
         <div className={styles.singleChart}>
           <Chart type="bar" data={jobTypeData} layout="single" />
@@ -329,9 +331,10 @@ export default function Coop(data) {
 
         <h3>Job Type vs Pay</h3>
         <p>
-          The overall average pay for this term was $22, with the lowest
-          reported pay being $17 and the highest being $33.9. Product Management
-          has the highest median co-op pay among all job sectors.
+          The overall average pay for this term was $22/hr, with the lowest
+          reported pay being $17/hr and the highest being $33.9/hr. Product
+          Management had the highest median co-op pay among all job sectors this
+          term.
           <br />
           <br />
           Note: This data set, and the following data sets pertaining to co-op
@@ -346,8 +349,8 @@ export default function Coop(data) {
         <div className={styles.doubleChart}>
           <p className={styles.textLeft}>
             There doesn't appear to be any correlation between grades and co-op
-            pay. Achieving high grades does not necessarily result in higher pay
-            during a co-op placement.
+            pay. In other words, achieving high grades does not necessarily
+            result in higher pay during a co-op placement.
           </p>
           <Chart type="box" data={averageVsPayData} layout="double" />
         </div>
@@ -362,9 +365,9 @@ export default function Coop(data) {
             <br />
             <br />
             While the data reveals a discernible pattern, it is worth noting
-            that all individuals earning $25 or more rated their satisfaction
-            level 4 or higher. Maybe money <i>does</i> buy happiness after all
-            🤷‍♀️
+            that all individuals earning more than $24/hr rated their
+            satisfaction level 4 or higher. Maybe money <i>does</i> buy
+            happiness after all 🤷‍♀️
           </p>
         </div>
 

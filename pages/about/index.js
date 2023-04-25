@@ -97,8 +97,8 @@ export default function About() {
         <p>
           The findings in this profile were derived from the results of a class
           survey conducted by SYDE '27 students. 82 out of 106 students (77%) of
-          students in our first year class responded to the survey. A secondary
-          survey was sent out with 60 (57%) respondents so far. All questions
+          students in our first year class responded to the survey. A second
+          survey was sent out with 62 (58%) respondents so far. All questions
           were optional. The data presented in this class profile may not be a
           complete reflection of the class and as such, this profile includes
           the number of respondents for each data set.
@@ -112,7 +112,7 @@ export default function About() {
             <div className={styles.gridItem} key={id}>
               <div className={styles.photoContainer}>
                 {linkedin ? (
-                  <a href={linkedin} target="_blank" rel="noreferrer">
+                  <a href={linkedin} target="_blank">
                     <Image src={photo} alt={name} width={300} height={300} />
                   </a>
                 ) : (
@@ -120,7 +120,7 @@ export default function About() {
                 )}
               </div>
               {linkedin ? (
-                <a href={linkedin} target="_blank" rel="noreferrer">
+                <a href={linkedin} target="_blank">
                   <p className={styles.name}>{name}</p>
                 </a>
               ) : (
@@ -136,14 +136,16 @@ export default function About() {
         <br />
         <br />
 
-        <a
-          className={styles.github}
-          href="https://github.com/shelleychen318/syde27-class-profile"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <p>View GitHub repo {">"}</p>
-        </a>
+        <div className={styles.github}>
+          <a
+            href="https://github.com/shelleychen318/syde27-class-profile"
+            target="_blank"
+          >
+            <h5>
+              View GitHub repo <span>{">"}</span>
+            </h5>
+          </a>
+        </div>
 
         <BottomNav currentPage="about" />
       </div>

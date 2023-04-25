@@ -45,7 +45,7 @@
         background-color: $primary;
         position: absolute;
         left: 0;
-        bottom: 3px;
+        bottom: 2px;
         width: 100%;
         height: 6px;
         z-index: -1;
@@ -62,8 +62,7 @@
 
 @media (max-width: 900px) {
   .container {
-    height: 300px;
-    padding: 8rem 4rem 0;
+    padding: 0 4rem;
 
     .imageContainer {
       display: none;
@@ -71,12 +70,15 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .container {
-    padding: 10rem 2rem 0;
+    padding: 0 2rem;
 
-    .textContainer > .text > a > span {
-      font-size: 20px;
+    .textContainer {
+      height: 525px;
+      .text > a > span {
+        font-size: 20px;
+      }
     }
   }
 }

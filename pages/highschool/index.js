@@ -178,7 +178,6 @@ export default function Highschool(data) {
           </div>
         </div>
         <br />
-        <br />
 
         <h3>Top Choice</h3>
         <div className={styles.doubleChart}>
