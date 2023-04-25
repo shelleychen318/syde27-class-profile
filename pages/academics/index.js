@@ -237,6 +237,26 @@ export default function Academics(data) {
     n: data.leastFavCourseRespondents,
   };
 
+  const favVsLeastFavCourseData = {
+    label: data.exerciseLevels1A,
+    val: [
+      {
+        label: "1A",
+        data: data.exerciseLevel1AValues,
+        backgroundColor: colorTheme[0],
+      },
+      {
+        label: "Co-op",
+        data: data.exerciseLevelCoopValues,
+        backgroundColor: colorTheme[2],
+      },
+    ],
+    title: "Exercise Frequency in 1A vs Co-op",
+    n: data.exerciseLevel1ARespondents,
+    xAxis: "Exercise Frequency",
+    yAxis: "Number of Students",
+  };
+
   const usefulCourseData = {
     label: data.usefulCourses,
     val: data.usefulCourseValues,
@@ -327,13 +347,13 @@ export default function Academics(data) {
             SYDE 2027, the median drop-off rate was 10%.
             <br />
             <br />
-            In conclusion, everyone's mark dropped in 1A 😃
             {/* While this finding suggests a decrease in academic performance for
             the cohort as a whole upon entering university, it is important to
             note that this trend is not necessarily indicative of the potential
             or abilities of individual students. Instead, it may reflect the
             significant increase in academic rigor and adjustment required for
             university-level coursework. */}
+            In conclusion, everyone's mark dropped in 1A 😃
           </p>
         </div>
 
@@ -344,8 +364,8 @@ export default function Academics(data) {
           TsTsians out there 🙄
         </p>
         <div className={styles.doubleChart}>
-          <Chart type="doughnut" data={favCourseData} layout="double" />
-          <Chart type="doughnut" data={leastFavCourseData} layout="double" />
+          {/* <Chart type="doughnut" data={favCourseData} layout="double" />
+          <Chart type="doughnut" data={leastFavCourseData} layout="double" /> */}
         </div>
 
         <h3>Most Useful and Difficult Courses in 1A</h3>

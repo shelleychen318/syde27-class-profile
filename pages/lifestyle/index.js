@@ -45,7 +45,7 @@ export default function Lifestyle(data) {
   };
 
   const stressLevelsData = {
-    label: data.stressLevelsCoop,
+    label: data.stressLevels1A,
     val: [
       {
         label: "1A",
@@ -61,6 +61,26 @@ export default function Lifestyle(data) {
     title: "Stress Levels in 1A vs Co-op",
     n: data.stressLevel1ARespondents,
     xAxis: "Stress Level",
+    yAxis: "Number of Students",
+  };
+
+  const exerciseLevelsData = {
+    label: data.exerciseLevels1A,
+    val: [
+      {
+        label: "1A",
+        data: data.exerciseLevel1AValues,
+        backgroundColor: colorTheme[0],
+      },
+      {
+        label: "Co-op",
+        data: data.exerciseLevelCoopValues,
+        backgroundColor: colorTheme[2],
+      },
+    ],
+    title: "Exercise Frequency in 1A vs Co-op",
+    n: data.exerciseLevel1ARespondents,
+    xAxis: "Exercise Frequency",
     yAxis: "Number of Students",
   };
 
@@ -133,6 +153,27 @@ export default function Lifestyle(data) {
           <Chart
             type="stackedHistogram"
             data={stressLevelsData}
+            layout="double"
+          />
+          <p className={styles.textRight}>
+            Data was collected on the stress levels of students during their 1A
+            term and their first co-op term. The stress levels were rated on a
+            scale of 1 to 5, where 1 indicated little to no stress and 5
+            indicated high stress.
+            <br />
+            <br />
+            In general, students experienced lower levels of stress during their
+            co-op term compared to their 1A term, as the average stress level
+            during 1A was 3.8, while the average stress level during co-op was
+            2.4.
+          </p>
+        </div>
+
+        <h3>Exercise Frequency in 1A vs Co-op</h3>
+        <div className={styles.doubleChart}>
+          <Chart
+            type="multiBar"
+            data={exerciseLevelsData}
             layout="double"
           />
           <p className={styles.textRight}>

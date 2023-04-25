@@ -10,8 +10,6 @@ const MultiBarChart = ({ data }) => {
     backgroundColor: val.backgroundColor,
     borderWidth: 0.2,
     borderColor: "white",
-    barPercentage: 1,
-    categoryPercentage: 1,
   }));
 
   return (
