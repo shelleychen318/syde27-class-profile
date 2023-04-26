@@ -104,6 +104,7 @@
     li {
       list-style: none;
       transition: transform 0.3s ease-in-out;
+      line-height: 35px;
 
       h4:hover {
         color: $primary;
@@ -134,5 +135,10 @@
 
   .sideBar {
     width: 17rem;
+    padding-left: 2.5rem;
+
+    .menuHeader > .closeMenuIcon {
+      margin-right: 1rem;
+    }
   }
 }
