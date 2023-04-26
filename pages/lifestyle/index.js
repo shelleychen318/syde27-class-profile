@@ -189,8 +189,8 @@ export default function Lifestyle(data) {
             <br />
             More students exercised every day or a few times a week during
             co-op, and fewer students reported that they never exercised. This
-            suggests that students may have more time and motivation to exercise
-            during the co-op term.
+            suggests that students may have more time and/or motivation to
+            exercise during the co-op term.
           </p>
         </div>
 

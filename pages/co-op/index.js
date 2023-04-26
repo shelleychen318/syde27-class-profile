@@ -350,7 +350,7 @@ export default function Coop(data) {
           <p className={styles.textLeft}>
             There doesn't appear to be any correlation between grades and co-op
             pay. In other words, achieving high grades does not necessarily
-            result in higher pay during a co-op placement.
+            result in higher pay during co-op.
           </p>
           <Chart type="box" data={averageVsPayData} layout="double" />
         </div>
