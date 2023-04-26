@@ -204,9 +204,23 @@ export default function Lifestyle(data) {
           <Chart type="doughnut" data={residenceData} layout="double" />
         </div>
 
-        <h3>Friends and Home Visits</h3>
+        <h3>Friends in SYDE</h3>
         <div className={styles.doubleChart}>
           <Chart type="histogram" data={friendsData} layout="double" />
+          <p className={styles.textRight}>
+            Data was collected on how easily students felt they could make
+            friends in our cohort during 1A, using a score of 1 (extremely
+            difficult) to 5 (very easy). It turns out that the majority of
+            students rated it a 4 or 5!
+          </p>
+        </div>
+
+        <h3>Home Visits During 1A</h3>
+        <div className={styles.doubleChart}>
+          <p className={styles.textLeft}>
+            On average, students living away from home visited their homes 1.4
+            times per month.
+          </p>
           <Chart type="histogram" data={homeTimeData} layout="double" />
         </div>
 
