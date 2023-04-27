@@ -30,7 +30,7 @@ export default function Coop(data) {
     color: colorTheme[1],
     title: "Employment Rounds",
     n: data.roundRespondents,
-    xAxis: "Round",
+    xAxis: "Co-op Round",
     yAxis: "Number of Students",
   };
 
@@ -56,7 +56,7 @@ export default function Coop(data) {
     label: data.locations,
     val: data.locationValues,
     color: colorTheme[1],
-    title: "Job Locations",
+    title: "Co-op Locations",
     n: data.locationRespondents,
     xAxis: "Location",
     yAxis: "Number of Students",
@@ -150,7 +150,7 @@ export default function Coop(data) {
     title: "1A Average vs Co-op Pay",
     n: data.averageVsPayRespondents,
     xAxis: "1A Average (%)",
-    yAxis: "Co-op Pay ($CAD/hr)",
+    yAxis: "Pay ($CAD/hr)",
     ymin: 15,
     ymax: 35,
   };
@@ -276,7 +276,7 @@ export default function Coop(data) {
     title: "Job Type vs Pay",
     n: data.jobTypeVsPayRespondents,
     xAxis: "Job Type",
-    yAxis: "Co-op Pay ($CAD/hr)",
+    yAxis: "Pay ($CAD/hr)",
     ymin: 15,
     ymax: 35,
   };
@@ -293,7 +293,7 @@ export default function Coop(data) {
       <div className={`${styles.content} ${styles.coop}`}>
         <h2>Co-op</h2>
         <h4>
-          A peek at the numbers from our first co-op term including info on our
+          A peek at the numbers from our first co-op term, including info on our
           workplaces and earnings 💰
         </h4>
         <br />

@@ -215,7 +215,7 @@ export default function Academics(data) {
     label: data.averageDropoffs,
     val: data.averageDropoffValues,
     color: colorTheme[2],
-    title: "Average Drop-off",
+    title: "Average Drop-off Rates",
     n: data.averageDropoffRespondents,
     xAxis: "Drop-off (%)",
     yAxis: "Number of Students",
@@ -406,8 +406,8 @@ export default function Academics(data) {
         <h3>Favourite and Least Favourite Courses in 1A</h3>
         <p>
           The majority of the class voted SYDE 101L as their favorite course in
-          1A, while SYDE 161 was considered to be the worst. Sorry not sorry to
-          all the TsTsians out there 🙄
+          1A, while SYDE 161 was considered to be the least favourite. Sorry not
+          sorry to all the TsTsians out there 🙄
         </p>
         <div className={styles.singleChart}>
           <Chart
@@ -433,20 +433,20 @@ export default function Academics(data) {
           <Chart type="box" data={exerciseVsAverageData} layout="double" />
           <p className={styles.textRight}>
             Students who engaged in some form of physical exercise on a daily
-            basis had the highest median 1A average. This suggests that higher
-            exercise frequency is correlated with increased academic
+            basis during 1A had the highest median average. This suggests that
+            higher exercise frequency is correlated with increased academic
             performance.
           </p>
         </div>
 
         <h3>Lecture Attendance in 1A</h3>
         <div className={styles.doubleChart}>
-          <Chart type="histogram" data={lectureData} layout="double" />
-          <p className={styles.textRight}>
+          <p className={styles.textLeft}>
             On average, SYDE students attended lectures only 63% of the time in
             1A. The urge to hit snooze and sleep in during those 8am lectures
             was just too strong 😴
           </p>
+          <Chart type="histogram" data={lectureData} layout="double" />
         </div>
 
         <BottomNav currentPage="academics" />

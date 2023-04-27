@@ -128,7 +128,7 @@ export default function Lifestyle(data) {
     title: "Rice Purity Score vs 1A Average",
     n: data.purityVsAverageRespondents,
     xAxis: "Rice Purity Score",
-    yAxis: "1A Average",
+    yAxis: "1A Average (%)",
   };
 
   return (

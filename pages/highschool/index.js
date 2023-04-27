@@ -61,8 +61,8 @@ export default function Highschool(data) {
     color: colorTheme[3],
     title: "High School Enrichment Programs",
     n: data.enrichRespondents,
-    xAxis: "Number of Students",
-    yAxis: "Enrichment Program",
+    xAxis: "Enrichment Program",
+    yAxis: "Number of Students",
   };
 
   const postChoiceData = {
