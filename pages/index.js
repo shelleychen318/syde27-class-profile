@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import NavBar from "../components/navbar/NavBar";
+import Navbar from "../components/navbar/Navbar";
 import { BiPaperPlane } from "react-icons/bi";
 import styles from "../styles/Home.module.scss";
 
@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <NavBar />
+      <Navbar />
 
       <div className={styles.container}>
         <div className={styles.textContainer}>

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import NavBar from "../../components/navbar/NavBar";
+import Navbar from "../../components/navbar/Navbar";
 import BottomNav from "../../components/bottomNav/BottomNav";
 import styles from "./about.module.scss";
 
@@ -57,7 +57,7 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <NavBar />
+      <Navbar />
 
       <div className={styles.content}>
         <h2>About the Program</h2>

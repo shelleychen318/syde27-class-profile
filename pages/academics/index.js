@@ -1,5 +1,5 @@
 import Head from "next/head";
-import NavBar from "../../components/navbar/NavBar";
+import Navbar from "../../components/navbar/Navbar";
 import BottomNav from "../../components/bottomNav/BottomNav";
 import Chart from "../../components/charts/Chart";
 import styles from "../profile.module.scss";
@@ -342,7 +342,7 @@ export default function Academics(data) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <NavBar />
+      <Navbar />
 
       <div className={`${styles.content} ${styles.academics}`}>
         <h2>Academics</h2>

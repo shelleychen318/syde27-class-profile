@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { HiOutlineMenuAlt3, HiOutlineArrowRight } from "react-icons/hi";
 import { GiDuck } from "react-icons/gi";
-import styles from "./NavBar.module.scss";
+import styles from "./Navbar.module.scss";
 
-export default function NavBar() {
+export default function Navbar() {
   const links = [
     {
       id: 1,
