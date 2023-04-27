@@ -1,8 +1,8 @@
 $background: #f8f4ec;
-$backgroundDark: #b5b5b5;
+$background-dark: #b5b5b5;
 $primary: #8eccc1;
 $secondary: #ad6264;
-$mainText: #1f1d1d;
+$main-text: #1f1d1d;
 
 $demographics1: #9a464a;
 $demographics2: #e98c8d;
@@ -35,10 +35,10 @@ $lifestyle4: #bee3ba;
 $lifestyle5: #ddf2d1;
 
 :export {
-  backgroundDark: $backgroundDark;
+  backgroundDark: $background-dark;
   primary: $primary;
   secondary: $secondary;
-  mainText: $mainText;
+  mainText: $main-text;
   demographics1: $demographics1;
   demographics2: $demographics2;
   demographics3: $demographics3;
