@@ -34,8 +34,7 @@
   left: 0;
   padding: 2rem 6rem;
   background: $background;
-  z-index: 98;
-  box-sizing: border-box;
+  z-index: 98;  
 
   .logo {
     font-family: "Bitter";
@@ -122,13 +121,13 @@
   transform: translateX(100%);
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .headerContainer {
     padding: 2rem 4rem;
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .headerContainer {
     padding: 1.5rem;
   }

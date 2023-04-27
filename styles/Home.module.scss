@@ -60,7 +60,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .container {
     padding: 0 4rem;
 
@@ -70,7 +70,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .container {
     padding: 0 2rem;
 
@@ -81,5 +81,11 @@
         font-size: 20px;
       }
     }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container > .textContainer {
+    height: 650px;
   }
 }
