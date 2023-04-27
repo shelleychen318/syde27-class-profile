@@ -167,10 +167,10 @@ export default function Lifestyle(data) {
             layout="double"
           />
           <p className={styles.textRight}>
-            Data was collected on the stress levels of students during their 1A
-            term and their first co-op term. The stress levels were rated on a
-            scale of 1 to 5, where 1 indicated little to no stress and 5
-            indicated high stress.
+            Data was collected on students' stress levels during their 1A term
+            and their first co-op term. The stress levels were rated on a scale
+            of 1 to 5, where 1 indicated little to no stress and 5 indicated
+            high stress.
             <br />
             <br />
             In general, students experienced higher levels of stress during the
@@ -198,7 +198,7 @@ export default function Lifestyle(data) {
         <div className={styles.doubleChart}>
           <p className={styles.textLeft}>
             Over 90% of the cohort chose to live away from home for university.
-            The most popular on-campus housing was CMH, with UWP as the second
+            The most popular on-campus residence was CMH, with UWP as the second
             most popular.
           </p>
           <Chart type="doughnut" data={residenceData} layout="double" />
