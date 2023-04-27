@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Navbar from "../../components/navbar/Navbar-1";
+import Navbar from "../../components/navbar/Navbar";
 import BottomNav from "../../components/bottomNav/BottomNav";
 import Chart from "../../components/charts/Chart";
 import styles from "../profile.module.scss";

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import Navbar from "../../components/navbar/Navbar-1";
+import Navbar from "../../components/navbar/Navbar";
 import BottomNav from "../../components/bottomNav/BottomNav";
 import styles from "./about.module.scss";
 

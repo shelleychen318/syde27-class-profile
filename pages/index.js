@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import Navbar from "../components/navbar/Navbar-1";
+import Navbar from "../components/navbar/Navbar";
 import { BiPaperPlane } from "react-icons/bi";
 import styles from "../styles/Home.module.scss";
 
