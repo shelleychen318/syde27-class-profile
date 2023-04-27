@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import Navbar from "../../components/navbar/Navbar";
+import Navbar from "../../components/navbar/Navbar-1";
 import BottomNav from "../../components/bottomNav/BottomNav";
 import Chart from "../../components/charts/Chart";
 import styles from "../profile.module.scss";
