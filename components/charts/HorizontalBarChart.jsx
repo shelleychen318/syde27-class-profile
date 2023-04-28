@@ -66,4 +66,4 @@ export default function HorizontalBarChart({ data }) {
       />
     </div>
   );
-};
+}

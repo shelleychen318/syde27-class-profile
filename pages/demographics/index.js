@@ -77,7 +77,7 @@ export default function Demographics(data) {
       </Head>
 
       <Navbar />
-      
+
       <div className={`${styles.content} ${styles.demographics}`}>
         <h2>Demographics</h2>
         <h4>
@@ -85,7 +85,7 @@ export default function Demographics(data) {
           the SYDE 2027 cohort.
         </h4>
         <br />
-        
+
         <h3>Gender and Sexuality</h3>
         <p>
           SYDE stands out from most engineering programs due to its higher ratio

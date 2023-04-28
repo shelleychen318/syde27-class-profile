@@ -3,11 +3,7 @@ import clientPromise from "../../../lib/mongodb";
 
 export const getLifestyle = async () => {
   const mongoClient = await clientPromise;
-  const data = await mongoClient
-    .db("data")
-    .collection("lifestyle")
-    .find()
-    .toArray();
+  const data = await mongoClient.db("data").collection("lifestyle").find().toArray();
   return JSON.parse(JSON.stringify(data));
 };
 

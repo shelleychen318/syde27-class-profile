@@ -47,7 +47,10 @@ export default function BottomNav({ currentPage }) {
 
   return (
     <div
-      className={`${styles.navContainer} ${currentPage == "demographics" ? styles.nextLinkOnly : ""}`}>
+      className={`${styles.navContainer} ${
+        currentPage == "demographics" ? styles.nextLinkOnly : ""
+      }`}
+    >
       {backPageLink && (
         <Link href={backPageLink}>
           <div className={styles.linkContainer}>
@@ -79,4 +82,4 @@ export default function BottomNav({ currentPage }) {
       )}
     </div>
   );
-};
+}

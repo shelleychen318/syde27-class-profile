@@ -3,11 +3,7 @@ import clientPromise from "../../../lib/mongodb";
 
 export const getCoop = async () => {
   const mongoClient = await clientPromise;
-  const data = await mongoClient
-    .db("data")
-    .collection("coop")
-    .find()
-    .toArray();
+  const data = await mongoClient.db("data").collection("coop").find().toArray();
   return JSON.parse(JSON.stringify(data));
 };
 

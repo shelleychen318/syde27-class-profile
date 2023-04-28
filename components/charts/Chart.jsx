@@ -69,4 +69,4 @@ export default function Chart({ type, data, layout }) {
     default:
       return <h1>Invalid Chart Type!</h1>;
   }
-};
+}

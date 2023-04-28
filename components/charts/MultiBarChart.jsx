@@ -73,4 +73,4 @@ export default function MultiBarChart({ data }) {
       />
     </div>
   );
-};
+}

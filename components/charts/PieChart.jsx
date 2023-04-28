@@ -52,6 +52,4 @@ export default function PieChart({ data }) {
       />
     </div>
   );
-};
-
-// export default PieChart;
+}

@@ -74,4 +74,4 @@ export default function StackedHistogram({ data }) {
       />
     </div>
   );
-};
+}

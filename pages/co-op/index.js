@@ -323,7 +323,8 @@ export default function Coop(data) {
           Software Development was the most popular choice for co-op placements
           during this term. This was likely due to the large amount of
           software-related job postings on WaterlooWorks and the high demand for
-          software engineering skills (during the time of application).
+          software engineering skills in the job market (during the time of
+          application).
         </p>
         <div className={styles.singleChart}>
           <Chart type="bar" data={jobTypeData} layout="single" />

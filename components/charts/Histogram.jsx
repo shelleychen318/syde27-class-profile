@@ -69,4 +69,4 @@ export default function Histogram({ data }) {
       />
     </div>
   );
-};
+}
