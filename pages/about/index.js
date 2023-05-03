@@ -10,14 +10,14 @@ export default function About() {
       id: 1,
       name: "Shelley Chen",
       role: "Developer",
-      photo: "/assets/shelley.png",
+      photo: "/assets/shelley.jpg",
       linkedin: "https://www.linkedin.com/in/shelleychenn/",
     },
     {
       id: 2,
       name: "Nina Do",
       role: "Developer",
-      photo: "/assets/placeholder.jpeg",
+      photo: "/assets/nina.png",
       linkedin: "",
     },
     {
@@ -28,25 +28,25 @@ export default function About() {
       linkedin: "",
     },
     {
-      id: 1,
+      id: 4,
       name: "Nancy Huynh",
       role: "Data",
       photo: "/assets/placeholder.jpeg",
       linkedin: "",
     },
     {
-      id: 2,
+      id: 5,
       name: "Tam Mai",
       role: "Data",
-      photo: "/assets/placeholder.jpeg",
+      photo: "/assets/tam.jpg",
       linkedin: "",
     },
     {
-      id: 3,
+      id: 6,
       name: "Sunny Zhang",
       role: "Data",
-      photo: "/assets/placeholder.jpeg",
-      linkedin: "",
+      photo: "/assets/sunny.png",
+      linkedin: "https://www.linkedin.com/in/sun-z/",
     },
   ];
 
@@ -127,7 +127,7 @@ export default function About() {
                 <p className={styles.name}>{name}</p>
               )}
               <p className={styles.role}>
-                <i>{role}</i>
+                {role}
               </p>
             </div>
           ))}
