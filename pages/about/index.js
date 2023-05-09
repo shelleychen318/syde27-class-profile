@@ -31,7 +31,7 @@ export default function About() {
       id: 4,
       name: "Nancy Huynh",
       role: "Data",
-      photo: "/assets/placeholder.jpeg",
+      photo: "/assets/nancy.jpg",
       linkedin: "",
     },
     {
