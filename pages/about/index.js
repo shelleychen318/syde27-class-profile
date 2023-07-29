@@ -24,8 +24,8 @@ export default function About() {
       id: 3,
       name: "Albert Nguyen Tran",
       role: "Developer",
-      photo: "/assets/placeholder.jpeg",
-      linkedin: "",
+      photo: "/assets/albert.jpg",
+      linkedin: "https://www.linkedin.com/in/albertnguyentran/",
     },
     {
       id: 4,
